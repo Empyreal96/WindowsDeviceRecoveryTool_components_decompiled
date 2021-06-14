@@ -1,0 +1,63 @@
+<Grid
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Preparing.AbsoluteConfirmationView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:localization="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization" xmlns:resources="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Resources" xmlns:preparing="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Preparing">
+	<Grid.RowDefinitions>
+		<RowDefinition
+			Height="*" />
+		<RowDefinition
+			Height="Auto" />
+		<RowDefinition
+			Height="Auto" />
+		<RowDefinition
+			Height="*" />
+	</Grid.RowDefinitions>
+	<StackPanel
+		Grid.Row="1"
+		Margin="0,35,0,0"
+		KeyboardNavigation.DirectionalNavigation="Continue"
+		KeyboardNavigation.TabNavigation="None">
+		<TextBlock
+			Style="{StaticResource SubheaderTextStyle}"
+			HorizontalAlignment="Left"
+			Margin="5, 15"
+			Focusable="True"
+			Text="{localization:Localization AnalogRecoveryDisclaimerFirst}"
+			FocusVisualStyle="{x:Null}" />
+		<TextBlock
+			Style="{StaticResource SubheaderTextStyle}"
+			HorizontalAlignment="Left"
+			Margin="5, 15"
+			Focusable="True"
+			Text="{localization:Localization AnalogRecoveryDisclaimerSecond}"
+			FocusVisualStyle="{x:Null}" />
+		<TextBlock
+			Style="{StaticResource SubheaderTextStyle}"
+			HorizontalAlignment="Left"
+			Margin="5, 15"
+			Focusable="True"
+			Text="{localization:Localization AnalogRecoveryDisclaimerThird}"
+			FocusVisualStyle="{x:Null}" />
+		<TextBlock
+			Style="{StaticResource SubheaderTextStyle}"
+			HorizontalAlignment="Left"
+			Margin="5, 15"
+			Focusable="True"
+			Text="{localization:Localization DoYouWantToContinue}"
+			FocusVisualStyle="{x:Null}" />
+	</StackPanel>
+	<StackPanel
+		Orientation="Horizontal"
+		HorizontalAlignment="Center"
+		VerticalAlignment="Top"
+		Grid.Row="2">
+		<Button
+			Margin="20,10,5,10"
+			Content="{localization:Localization ButtonContinue}"
+			Command="{Binding ContinueCommand}" />
+		<Button
+			HorizontalAlignment="Center"
+			Margin="5,10,20,10"
+			CommandParameter="{x:Static resources:Consts.AutomaticManufacturerSelectionState}"
+			Content="{localization:Localization ButtonCancel}"
+			Command="{Binding Commands[SwitchToState]}" />
+	</StackPanel>
+</Grid>

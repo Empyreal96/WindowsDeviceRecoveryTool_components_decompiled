@@ -1,0 +1,1073 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="AppBarBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="AppBarBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="AppBarItemBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="AppBarItemDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="AppBarItemForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="AppBarItemPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="AppBarItemPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="AppBarItemPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="AppBarSeparatorForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="AppBarToggleButtonCheckedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="AppBarToggleButtonCheckedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="AppBarToggleButtonCheckedDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="Transparent"
+		x:Key="AppBarToggleButtonCheckedDisabledBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="AppBarToggleButtonCheckedDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="AppBarToggleButtonCheckedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="AppBarToggleButtonCheckedPointerOverBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="AppBarToggleButtonCheckedPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="AppBarToggleButtonCheckedPressedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="AppBarToggleButtonCheckedPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="AppBarToggleButtonPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowTextColorKey}"
+		x:Key="ApplicationForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowTextColorKey}"
+		x:Key="ApplicationHeaderForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowColorKey}"
+		x:Key="ApplicationPageBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HotTrackColorKey}"
+		x:Key="ApplicationPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HotTrackColorKey}"
+		x:Key="ApplicationPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowTextColorKey}"
+		x:Key="ApplicationSecondaryForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="BackButtonBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="BackButtonDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="BackButtonForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="BackButtonPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="BackButtonPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="BackButtonPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ButtonBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ButtonBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ButtonDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ButtonDisabledBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ButtonDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ButtonForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ButtonPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="ButtonPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ButtonPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ButtonPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="CheckBoxBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="CheckBoxBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="CheckBoxContentDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="CheckBoxContentForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="CheckBoxDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="CheckBoxDisabledBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="CheckBoxDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="CheckBoxForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="CheckBoxPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="CheckBoxPointerOverBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="CheckBoxPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="CheckBoxPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="CheckBoxPressedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="CheckBoxPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ComboBoxArrowDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ComboBoxArrowForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ComboBoxArrowPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ComboBoxBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ComboBoxBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ComboBoxDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ComboBoxDisabledBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ComboBoxDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ComboBoxFocusedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ComboBoxFocusedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="ComboBoxFocusedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ComboBoxForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ComboBoxHeaderForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ComboBoxItemDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ComboBoxItemPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="ComboBoxItemPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ComboBoxItemPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ComboBoxItemPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ComboBoxItemSelectedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ComboBoxItemSelectedDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ComboBoxItemSelectedDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="ComboBoxItemSelectedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ComboBoxItemSelectedPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="#88000000"
+		x:Key="ComboBoxPlaceholderTextForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ComboBoxPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ComboBoxPointerOverBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ComboBoxPopupBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ComboBoxPopupBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ComboBoxPopupForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ComboBoxPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ComboBoxPressedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ComboBoxPressedHighlightThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ComboBoxPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ComboBoxSelectedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ComboBoxSelectedPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="DatePickerHeaderForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="DatePickerForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowTextColorKey}"
+		x:Key="DefaultTextForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="FlipViewButtonBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="FlipViewButtonBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="FlipViewButtonForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="FlipViewButtonPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="FlipViewButtonPointerOverBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="FlipViewButtonPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="FlipViewButtonPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="FlipViewButtonPressedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="FlipViewButtonPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowColorKey}"
+		x:Key="FlyoutBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowTextColorKey}"
+		x:Key="FlyoutBorderThemeBrush" />
+	<SolidColorBrush
+		Color="Black"
+		x:Key="FocusVisualBlackStrokeThemeBrush" />
+	<SolidColorBrush
+		Color="White"
+		x:Key="FocusVisualWhiteStrokeThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="HyperlinkButtonBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowColorKey}"
+		x:Key="HyperlinkButtonBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="HyperlinkDisabledThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HotTrackColorKey}"
+		x:Key="HyperlinkForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HotTrackColorKey}"
+		x:Key="HyperlinkPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HotTrackColorKey}"
+		x:Key="HyperlinkPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HotTrackColorKey}"
+		x:Key="HubSectionHeaderPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HotTrackColorKey}"
+		x:Key="HubSectionHeaderPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="IMECandidateBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="IMECandidateForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="IMECandidatePointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="IMECandidatePointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="IMECandidateSecondaryForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="IMECandidateSelectedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="IMECandidateSelectedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="IMECandidateListBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="IMECandidateListPagingButtonBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="IMECandidateListPagingButtonBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="IMECandidateListPagingButtonForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="IMECandidateListPagingButtonPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="IMECandidateListPagingButtonPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="IMECandidateListPagingButtonPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="IMECandidateListPagingButtonPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowColorKey}"
+		x:Key="ListBoxBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ListBoxBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ListBoxDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ListBoxFocusBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ListBoxForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ListBoxItemDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ListBoxItemPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="ListBoxItemPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ListBoxItemPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ListBoxItemPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ListBoxItemSelectedDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ListBoxItemSelectedDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ListBoxItemSelectedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="ListBoxItemSelectedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ListBoxItemSelectedPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowTextColorKey}"
+		x:Key="ListViewGroupHeaderForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HotTrackColorKey}"
+		x:Key="ListViewGroupHeaderPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HotTrackColorKey}"
+		x:Key="ListViewGroupHeaderPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowTextColorKey}"
+		x:Key="ListViewItemCheckHintThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowTextColorKey}"
+		x:Key="ListViewItemCheckSelectingThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="ListViewItemCheckThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ListViewItemDragBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="ListViewItemDragForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ListViewItemFocusBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ListViewItemOverlayBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowTextColorKey}"
+		x:Key="ListViewItemOverlayForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowTextColorKey}"
+		x:Key="ListViewItemOverlaySecondaryForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ListViewItemPlaceholderBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ListViewItemPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ListViewItemSelectedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="ListViewItemSelectedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ListViewItemSelectedPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ListViewItemSelectedPointerOverBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="MediaButtonForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="MediaButtonBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HotTrackColorKey}"
+		x:Key="MediaButtonPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="MediaButtonPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="MediaButtonPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="MediaButtonPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="MediaButtonPressedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="MediaControlPanelVideoThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="MediaControlPanelAudioThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HotTrackColorKey}"
+		x:Key="MediaDownloadProgressIndicatorThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="MediaErrorBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="MediaTextThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="MenuFlyoutItemFocusedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="MenuFlyoutItemFocusedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="MenuFlyoutItemDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="MenuFlyoutItemPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="MenuFlyoutItemPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="MenuFlyoutItemPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="MenuFlyoutItemPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowTextColorKey}"
+		x:Key="MenuFlyoutSeparatorThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ProgressBarBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ProgressBarBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ProgressBarForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ProgressBarIndeterminateForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="RadioButtonBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="RadioButtonBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="RadioButtonContentDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="RadioButtonContentForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="RadioButtonContentPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="RadioButtonDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="RadioButtonDisabledBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="RadioButtonDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="RadioButtonForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="RadioButtonPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="RadioButtonPointerOverBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="RadioButtonPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="RadioButtonPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="RadioButtonPressedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="RadioButtonPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="RepeatButtonBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="RepeatButtonDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="RepeatButtonDisabledBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="RepeatButtonDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="RepeatButtonForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="RepeatButtonPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="RepeatButtonPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="RepeatButtonPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="RepeatButtonPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ScrollBarButtonForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ScrollBarButtonPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ScrollBarButtonPointerOverBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="ScrollBarButtonPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ScrollBarButtonPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ScrollBarButtonPressedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ScrollBarButtonPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ScrollBarPanningBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ScrollBarPanningBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ScrollBarThumbBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ScrollBarThumbBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ScrollBarThumbPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ScrollBarThumbPointerOverBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ScrollBarThumbPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ScrollBarThumbPressedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ScrollBarTrackBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ScrollBarTrackBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="SearchBoxBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SearchBoxBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="SearchBoxDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SearchBoxDisabledTextThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="SearchBoxDisabledBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="SearchBoxPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="SearchBoxPointerOverTextThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SearchBoxPointerOverBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="SearchBoxFocusedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SearchBoxFocusedTextThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SearchBoxFocusedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="SearchBoxButtonBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="SearchBoxButtonForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="SearchBoxButtonPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="SearchBoxButtonPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SearchBoxSeparatorSuggestionForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SearchBoxHitHighlightForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="SearchBoxHitHighlightSelectedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SearchBoxIMECandidateListSeparatorThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SearchBoxForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="SemanticZoomButtonBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SemanticZoomButtonBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SemanticZoomButtonForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="SemanticZoomButtonPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SemanticZoomButtonPointerOverBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="SemanticZoomButtonPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SemanticZoomButtonPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SemanticZoomButtonPressedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="SemanticZoomButtonPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowColorKey}"
+		x:Key="SettingsFlyoutBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="SettingsFlyoutBackButtonPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowColorKey}"
+		x:Key="SettingsFlyoutHeaderBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowTextColorKey}"
+		x:Key="SettingsFlyoutHeaderForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SliderBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="SliderDisabledBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SliderThumbBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="SliderThumbBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="SliderThumbDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="SliderThumbPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="SliderThumbPointerOverBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="SliderThumbPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SliderThumbPressedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SliderTickMarkInlineBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="SliderTickMarkInlineDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SliderTickmarkOutsideBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="SliderTickMarkOutsideDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="SliderTrackBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="SliderTrackDecreaseBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="SliderTrackDecreaseDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="SliderTrackDecreasePointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="SliderTrackDecreasePressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="SliderTrackDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="SliderTrackPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="SliderTrackPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="SliderHeaderForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="TextBoxForegroundHeaderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="TextBoxPlaceholderTextThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="TextBoxBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="TextSelectionHighlightColorThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="TextBoxBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="TextBoxButtonBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="Transparent"
+		x:Key="TextBoxButtonBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="TextBoxButtonForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="TextBoxButtonPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="TextBoxButtonPointerOverBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="TextBoxButtonPointerOverForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="TextBoxButtonPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="TextBoxButtonPressedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="TextBoxButtonPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="TextBoxDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="TextBoxDisabledBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="TextBoxDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="TextBoxFocusedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="TextBoxForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ThumbBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ThumbBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ThumbPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ThumbPointerOverBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ThumbPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ThumbPressedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="TimePickerForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="TimePickerHeaderForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ToggleButtonBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ToggleButtonBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ToggleButtonCheckedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ToggleButtonCheckedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ToggleButtonCheckedDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ToggleButtonCheckedDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightTextColorKey}"
+		x:Key="ToggleButtonCheckedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ToggleButtonCheckedPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ToggleButtonCheckedPointerOverBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ToggleButtonCheckedPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ToggleButtonCheckedPressedBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ToggleButtonCheckedPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ToggleButtonDisabledBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ToggleButtonDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ToggleButtonForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ToggleButtonPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ToggleButtonPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ToggleButtonPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ToggleSwitchCurtainBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ToggleSwitchCurtainDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ToggleSwitchCurtainPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ToggleSwitchCurtainPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ToggleSwitchDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ToggleSwitchForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ToggleSwitchHeaderDisabledForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ToggleSwitchHeaderForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ToggleSwitchOuterBorderBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ToggleSwitchOuterBorderDisabledBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ToggleSwitchThumbBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ToggleSwitchThumbBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ToggleSwitchThumbDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.GrayTextColorKey}"
+		x:Key="ToggleSwitchThumbDisabledBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.HighlightColorKey}"
+		x:Key="ToggleSwitchThumbPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ToggleSwitchThumbPointerOverBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ToggleSwitchThumbPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlTextColorKey}"
+		x:Key="ToggleSwitchThumbPressedForegroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ToggleSwitchTrackBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="Transparent"
+		x:Key="ToggleSwitchTrackBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ToggleSwitchTrackDisabledBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ToggleSwitchTrackPointerOverBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.ControlColorKey}"
+		x:Key="ToggleSwitchTrackPressedBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowColorKey}"
+		x:Key="ToolTipBackgroundThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowTextColorKey}"
+		x:Key="ToolTipBorderThemeBrush" />
+	<SolidColorBrush
+		Color="{DynamicResource SystemColors.WindowTextColorKey}"
+		x:Key="ToolTipForegroundThemeBrush" />
+	<SolidColorBrush
+		x:Key="MinorWithHalfOpacityBrush">#FFA8D3FF</SolidColorBrush>
+	<Thickness
+		x:Key="ButtonBorderThemeThickness">2</Thickness>
+	<Thickness
+		x:Key="ButtonPaddingThemeThickness">12,4,12,4</Thickness>
+</ResourceDictionary>

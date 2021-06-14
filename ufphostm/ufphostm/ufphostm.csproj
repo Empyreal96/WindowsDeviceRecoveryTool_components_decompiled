@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{8FB84F5D-49BE-460B-B0D8-89F7F19132DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ufphostm</RootNamespace>
+    <AssemblyName>ufphostm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualC" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$_s__CatchableTypeArray$_extraBytes_8.cs" />
+    <Compile Include="$_s__RTTIBaseClassArray$_extraBytes_4.cs" />
+    <Compile Include="$_s__RTTIBaseClassArray$_extraBytes_8.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_16.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_20.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_27.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_30.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_32.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_34.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_36.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_38.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_40.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_51.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_56.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_62.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_64.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_65.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_66.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_67.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_68.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_69.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_70.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_75.cs" />
+    <Compile Include="$_TypeDescriptor$_extraBytes_79.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY00Q6MPBXXZ.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY01$$CBD.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY01Q6AXXZ.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY01Q6GXXZ.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY02Q6AXXZ.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY02Q6GXXZ.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY03$$CBD.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY06$$CBD.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY06$$CB_W.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY08$$CBD.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0A@$$CBE.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0A@P6AHXZ.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0A@P6AXXZ.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0A@PAUioinfo@@.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0A@U_iobuf@@.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0BB@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0BD@Q6GXXZ.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0BE@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0BG@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0BI@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0BJ@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0BK@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0BL@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0BO@D.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0BP@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0CB@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0CC@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0CD@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0CI@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0CK@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0CL@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0DA@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0FC@$$CBG.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0FJ@$$CBE.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0M@$$CBD.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0N@$$CBD.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0O@$$CBD.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0P@$$CBD.cs" />
+    <Compile Include="-CppImplementationDetails-\$ArrayType$$$BY0P@Q6GXXZ.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@D.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@E.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@F.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@G.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@H.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@I.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@J.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@K.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@M.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@N.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PAD.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PAE.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PAF.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PAG.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PAH.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PAI.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PAJ.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PAK.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PAM.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PAN.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PAPAG.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PAPAUIDispatch@@.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PAPAUIUnknown@@.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PATtagCY@@.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PAUIDispatch@@.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PAUIUnknown@@.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PA_J.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@PA_K.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@TtagCY@@.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@_J.cs" />
+    <Compile Include="-CppImplementationDetails-\$PTMType$QQtagVARIANT@@_K.cs" />
+    <Compile Include="-CrtImplementationDetails-\LanguageSupport.cs" />
+    <Compile Include="-CrtImplementationDetails-\ModuleLoadException.cs" />
+    <Compile Include="-CrtImplementationDetails-\ModuleLoadExceptionHandlerException.cs" />
+    <Compile Include="-CrtImplementationDetails-\ModuleUninitializer.cs" />
+    <Compile Include="-CrtImplementationDetails-\Progress.cs" />
+    <Compile Include="-CrtImplementationDetails-\ThisModule.cs" />
+    <Compile Include="-CrtImplementationDetails-\TriBool.cs" />
+    <Compile Include="-Module-.cs" />
+    <Compile Include="ATL\CAtlComModule.cs" />
+    <Compile Include="ATL\CAtlReleaseManagedClassFactories.cs" />
+    <Compile Include="ATL\_ATL_OBJMAP_ENTRY30.cs" />
+    <Compile Include="CDeviceNotificationCallbackShim.cs" />
+    <Compile Include="CGenericProgressShim.cs" />
+    <Compile Include="EHExceptionRecord.cs" />
+    <Compile Include="EHRegistrationNode.cs" />
+    <Compile Include="exception.cs" />
+    <Compile Include="FlashingPlatform\IConnectedDevice.cs" />
+    <Compile Include="FlashingPlatform\IConnectedDeviceCollection.cs" />
+    <Compile Include="FlashingPlatform\IDeviceNotificationCallback.cs" />
+    <Compile Include="FlashingPlatform\IFlashingDevice.cs" />
+    <Compile Include="FlashingPlatform\IFlashingPlatform.cs" />
+    <Compile Include="FlashingPlatform\IGenericProgress.cs" />
+    <Compile Include="FlashingPlatform\ILogger.cs" />
+    <Compile Include="FlashingPlatform\LogLevel.cs" />
+    <Compile Include="gcroot-Microsoft.2.cs" />
+    <Compile Include="gcroot-Microsoft.cs" />
+    <Compile Include="gcroot-System.cs" />
+    <Compile Include="HINSTANCE__.cs" />
+    <Compile Include="ICLRRuntimeHost.cs" />
+    <Compile Include="ICorRuntimeHost.cs" />
+    <Compile Include="ioinfo.cs" />
+    <Compile Include="IUnknown.cs" />
+    <Compile Include="Microsoft\Windows\Flashing\Platform\ConnectedDevice.cs" />
+    <Compile Include="Microsoft\Windows\Flashing\Platform\ConnectedDeviceCollection.cs" />
+    <Compile Include="Microsoft\Windows\Flashing\Platform\DeviceNotificationCallback.cs" />
+    <Compile Include="Microsoft\Windows\Flashing\Platform\FlashFlags.cs" />
+    <Compile Include="Microsoft\Windows\Flashing\Platform\FlashingDevice.cs" />
+    <Compile Include="Microsoft\Windows\Flashing\Platform\FlashingPlatform.cs" />
+    <Compile Include="Microsoft\Windows\Flashing\Platform\GenericProgress.cs" />
+    <Compile Include="Microsoft\Windows\Flashing\Platform\Logger.cs" />
+    <Compile Include="Microsoft\Windows\Flashing\Platform\LogLevel.cs" />
+    <Compile Include="Microsoft\Windows\Flashing\Platform\NativeFlashingPlatform.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RAII\CAutoCleanupBase-CDeviceNotificationCallbackShim --.cs" />
+    <Compile Include="RAII\CAutoCleanupBase-CGenericProgressShim --.cs" />
+    <Compile Include="RAII\CAutoCleanupBase-FlashingPlatform.2.cs" />
+    <Compile Include="RAII\CAutoCleanupBase-FlashingPlatform.3.cs" />
+    <Compile Include="RAII\CAutoCleanupBase-FlashingPlatform.4.cs" />
+    <Compile Include="RAII\CAutoCleanupBase-FlashingPlatform.cs" />
+    <Compile Include="RAII\CAutoCleanupBase-unsigned char --.cs" />
+    <Compile Include="RAII\CAutoCleanupBase-unsigned short const --.cs" />
+    <Compile Include="RAII\CAutoComFree-unsigned short const --.cs" />
+    <Compile Include="RAII\CAutoDelete-CDeviceNotificationCallbackShim --.cs" />
+    <Compile Include="RAII\CAutoDelete-CGenericProgressShim --.cs" />
+    <Compile Include="RAII\CAutoDeleteArray-unsigned char-.cs" />
+    <Compile Include="RAII\CAutoDeleteArray-unsigned short const -.cs" />
+    <Compile Include="RAII\CAutoRelease-FlashingPlatform.2.cs" />
+    <Compile Include="RAII\CAutoRelease-FlashingPlatform.3.cs" />
+    <Compile Include="RAII\CAutoRelease-FlashingPlatform.4.cs" />
+    <Compile Include="RAII\CAutoRelease-FlashingPlatform.cs" />
+    <Compile Include="std\bad_alloc.cs" />
+    <Compile Include="_CRT_DOUBLE.cs" />
+    <Compile Include="_exception_handling_state_pointers_t.cs" />
+    <Compile Include="_EXCEPTION_POINTERS.cs" />
+    <Compile Include="_GUID.cs" />
+    <Compile Include="_iobuf.cs" />
+    <Compile Include="_MEMORY_BASIC_INFORMATION.cs" />
+    <Compile Include="_RTL_CRITICAL_SECTION.cs" />
+    <Compile Include="_s__CatchableType.cs" />
+    <Compile Include="_s__RTTIBaseClassDescriptor2.cs" />
+    <Compile Include="_s__RTTIClassHierarchyDescriptor.cs" />
+    <Compile Include="_s__RTTICompleteObjectLocator.cs" />
+    <Compile Include="_s__ThrowInfo.cs" />
+    <Compile Include="_tiddata_managed.cs" />
+    <Compile Include="__enative_startup_state.cs" />
+    <Compile Include="__s_GUID.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

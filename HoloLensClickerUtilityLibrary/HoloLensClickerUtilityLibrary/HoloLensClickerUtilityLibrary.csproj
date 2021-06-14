@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AAC36403-B82F-4495-9801-9626BA5E60B3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ClickerUtilityLibrary</RootNamespace>
+    <AssemblyName>HoloLensClickerUtilityLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlUpdaterEventArgs.cs" />
+    <Compile Include="BlUpdaterUpdateProgressEventParameters.cs" />
+    <Compile Include="ClickerBlUpdater.cs" />
+    <Compile Include="ClickerFwUpdater.cs" />
+    <Compile Include="Comm\AppProtocol.cs" />
+    <Compile Include="Comm\BootLoaderProtocol.cs" />
+    <Compile Include="Comm\CommandEngine.cs" />
+    <Compile Include="Comm\CommandResponse.cs" />
+    <Compile Include="Comm\IProtocol.cs" />
+    <Compile Include="Comm\NamespaceDoc.cs" />
+    <Compile Include="Comm\PacketReceiveStateMachine.cs" />
+    <Compile Include="Comm\USBDriver\AccessRights.cs" />
+    <Compile Include="Comm\USBDriver\CfgMgr.cs" />
+    <Compile Include="Comm\USBDriver\CreateFileDisposition.cs" />
+    <Compile Include="Comm\USBDriver\DeviceInformationData.cs" />
+    <Compile Include="Comm\USBDriver\DeviceInterfaceData.cs" />
+    <Compile Include="Comm\USBDriver\DeviceInterfaceDetailData.cs" />
+    <Compile Include="Comm\USBDriver\DeviceRegistryProperties.cs" />
+    <Compile Include="Comm\USBDriver\DIGCF.cs" />
+    <Compile Include="Comm\USBDriver\DTSFUsbStream.cs" />
+    <Compile Include="Comm\USBDriver\FileFlags.cs" />
+    <Compile Include="Comm\USBDriver\NamespaceDoc.cs" />
+    <Compile Include="Comm\USBDriver\NativeMethods.cs" />
+    <Compile Include="Comm\USBDriver\OnDeviceConnect.cs" />
+    <Compile Include="Comm\USBDriver\OnDeviceDisconnect.cs" />
+    <Compile Include="Comm\USBDriver\ShareModes.cs" />
+    <Compile Include="Comm\USBDriver\UsbConnectionManager.cs" />
+    <Compile Include="Comm\USBDriver\UsbDevice.cs" />
+    <Compile Include="Comm\USBDriver\UsbDevices.cs" />
+    <Compile Include="Comm\USBDriver\UsbRequest.cs" />
+    <Compile Include="Comm\USBDriver\WinError.cs" />
+    <Compile Include="Comm\USBDriver\WinUsbInterfaceDescriptor.cs" />
+    <Compile Include="Comm\USBDriver\WinUsbPipeInformation.cs" />
+    <Compile Include="Comm\USBDriver\WinUsbPipeType.cs" />
+    <Compile Include="Comm\USBDriver\WinUsbPolicyType.cs" />
+    <Compile Include="Comm\UsbManager.cs" />
+    <Compile Include="DataModel\CMD_CODE.cs" />
+    <Compile Include="DataModel\CommandDictionary.cs" />
+    <Compile Include="DataModel\DataElement.cs" />
+    <Compile Include="DataModel\DataElementDictionary.cs" />
+    <Compile Include="DataModel\DataElementType.cs" />
+    <Compile Include="DataModel\DataType.cs" />
+    <Compile Include="DataModel\FCommand.cs" />
+    <Compile Include="DataModel\FPacket.cs" />
+    <Compile Include="DataModel\IPacket.cs" />
+    <Compile Include="DataModel\NamespaceDoc.cs" />
+    <Compile Include="DataModel\PacketRingBuffer.cs" />
+    <Compile Include="DataModel\PacketRingBufferEventArgs.cs" />
+    <Compile Include="DataModel\PacketRingBufferEventType.cs" />
+    <Compile Include="FwUpdaterEventArgs.cs" />
+    <Compile Include="Misc\EventType.cs" />
+    <Compile Include="Misc\FEvent.cs" />
+    <Compile Include="Misc\FStatus.cs" />
+    <Compile Include="Misc\ILogger.cs" />
+    <Compile Include="Misc\ImageVersion.cs" />
+    <Compile Include="Misc\LogManager.cs" />
+    <Compile Include="Misc\NamespaceDoc.cs" />
+    <Compile Include="Misc\SUBSYSTEM.cs" />
+    <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

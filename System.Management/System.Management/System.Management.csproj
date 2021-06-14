@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{836A6392-DE2E-4ECF-A127-0FFF9B8BE80B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>System.Management</RootNamespace>
+    <AssemblyName>System.Management</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyRef.cs" />
+    <Compile Include="AuthenticationLevel.cs" />
+    <Compile Include="CimType.cs" />
+    <Compile Include="CodeLanguage.cs" />
+    <Compile Include="ComparisonSettings.cs" />
+    <Compile Include="CompatSwitches.cs" />
+    <Compile Include="CompletedEventArgs.cs" />
+    <Compile Include="CompletedEventHandler.cs" />
+    <Compile Include="ConnectionOptions.cs" />
+    <Compile Include="DeleteOptions.cs" />
+    <Compile Include="EnumerationOptions.cs" />
+    <Compile Include="EventArrivedEventArgs.cs" />
+    <Compile Include="EventArrivedEventHandler.cs" />
+    <Compile Include="EventQuery.cs" />
+    <Compile Include="EventWatcherOptions.cs" />
+    <Compile Include="FXAssembly.cs" />
+    <Compile Include="IdentifierChangedEventArgs.cs" />
+    <Compile Include="IdentifierChangedEventHandler.cs" />
+    <Compile Include="IEnumWbemClassObject.cs" />
+    <Compile Include="IErrorInfo.cs" />
+    <Compile Include="ImpersonationLevel.cs" />
+    <Compile Include="Instrumentation\AssemblyNameUtility.cs" />
+    <Compile Include="Instrumentation\BaseEvent.cs" />
+    <Compile Include="Instrumentation\CodeWriter.cs" />
+    <Compile Include="Instrumentation\ComThreadingInfo.cs" />
+    <Compile Include="Instrumentation\ConvertToWMI.cs" />
+    <Compile Include="Instrumentation\CorMetaDataDispenser.cs" />
+    <Compile Include="Instrumentation\DefaultManagementProjectInstaller.cs" />
+    <Compile Include="Instrumentation\EventSource.cs" />
+    <Compile Include="Instrumentation\IEvent.cs" />
+    <Compile Include="Instrumentation\IgnoreMemberAttribute.cs" />
+    <Compile Include="Instrumentation\IInstance.cs" />
+    <Compile Include="Instrumentation\IMetaDataDispenser.cs" />
+    <Compile Include="Instrumentation\IMetaDataImportInternalOnly.cs" />
+    <Compile Include="Instrumentation\Instance.cs" />
+    <Compile Include="Instrumentation\Instrumentation.cs" />
+    <Compile Include="Instrumentation\InstrumentationClassAttribute.cs" />
+    <Compile Include="Instrumentation\InstrumentationType.cs" />
+    <Compile Include="Instrumentation\InstrumentedAssembly.cs" />
+    <Compile Include="Instrumentation\InstrumentedAttribute.cs" />
+    <Compile Include="Instrumentation\ManagedNameAttribute.cs" />
+    <Compile Include="Instrumentation\ManagementInstaller.cs" />
+    <Compile Include="Instrumentation\MetaDataInfo.cs" />
+    <Compile Include="Instrumentation\ProvisionFunction.cs" />
+    <Compile Include="Instrumentation\ReferencesCollection.cs" />
+    <Compile Include="Instrumentation\SchemaMapping.cs" />
+    <Compile Include="Instrumentation\SchemaNaming.cs" />
+    <Compile Include="Instrumentation\SecurityHelper.cs" />
+    <Compile Include="Instrumentation\WMICapabilities.cs" />
+    <Compile Include="InternalObjectPutEventArgs.cs" />
+    <Compile Include="InternalObjectPutEventHandler.cs" />
+    <Compile Include="InvokeMethodOptions.cs" />
+    <Compile Include="IUnsecuredApartment.cs" />
+    <Compile Include="IWbemCallResult.cs" />
+    <Compile Include="IWbemClassObjectFreeThreaded.cs" />
+    <Compile Include="IWbemClassObject_DoNotMarshal.cs" />
+    <Compile Include="IWbemContext.cs" />
+    <Compile Include="IWbemDecoupledRegistrar.cs" />
+    <Compile Include="IWbemEventConsumerProvider.cs" />
+    <Compile Include="IWbemEventProvider.cs" />
+    <Compile Include="IWbemEventProviderQuerySink.cs" />
+    <Compile Include="IWbemEventProviderSecurity.cs" />
+    <Compile Include="IWbemEventSink.cs" />
+    <Compile Include="IWbemLocator.cs" />
+    <Compile Include="IWbemObjectAccess.cs" />
+    <Compile Include="IWbemObjectSink.cs" />
+    <Compile Include="IWbemObjectTextSrc.cs" />
+    <Compile Include="IWbemPath.cs" />
+    <Compile Include="IWbemPathKeyList.cs" />
+    <Compile Include="IWbemPropertyProvider.cs" />
+    <Compile Include="IWbemProviderIdentity.cs" />
+    <Compile Include="IWbemProviderInit.cs" />
+    <Compile Include="IWbemProviderInitSink.cs" />
+    <Compile Include="IWbemQualifierSetFreeThreaded.cs" />
+    <Compile Include="IWbemQualifierSet_DoNotMarshal.cs" />
+    <Compile Include="IWbemServices.cs" />
+    <Compile Include="IWbemServices_Old.cs" />
+    <Compile Include="IWbemShutdown.cs" />
+    <Compile Include="IWbemStatusCodeText.cs" />
+    <Compile Include="IWbemUnboundObjectSink.cs" />
+    <Compile Include="IWmiEventSource.cs" />
+    <Compile Include="ManagementBaseObject.cs" />
+    <Compile Include="ManagementClass.cs" />
+    <Compile Include="ManagementClassGenerator.cs" />
+    <Compile Include="ManagementDateTimeConverter.cs" />
+    <Compile Include="ManagementEventArgs.cs" />
+    <Compile Include="ManagementEventWatcher.cs" />
+    <Compile Include="ManagementException.cs" />
+    <Compile Include="ManagementNamedValueCollection.cs" />
+    <Compile Include="ManagementObject.cs" />
+    <Compile Include="ManagementObjectCollection.cs" />
+    <Compile Include="ManagementObjectSearcher.cs" />
+    <Compile Include="ManagementOperationObserver.cs" />
+    <Compile Include="ManagementOptions.cs" />
+    <Compile Include="ManagementPath.cs" />
+    <Compile Include="ManagementPathConverter.cs" />
+    <Compile Include="ManagementQuery.cs" />
+    <Compile Include="ManagementQueryConverter.cs" />
+    <Compile Include="ManagementScope.cs" />
+    <Compile Include="ManagementScopeConverter.cs" />
+    <Compile Include="ManagementStatus.cs" />
+    <Compile Include="MarshalWbemObject.cs" />
+    <Compile Include="MethodData.cs" />
+    <Compile Include="MethodDataCollection.cs" />
+    <Compile Include="MofCompiler.cs" />
+    <Compile Include="MTAHelper.cs" />
+    <Compile Include="ObjectGetOptions.cs" />
+    <Compile Include="ObjectPutEventArgs.cs" />
+    <Compile Include="ObjectPutEventHandler.cs" />
+    <Compile Include="ObjectQuery.cs" />
+    <Compile Include="ObjectReadyEventArgs.cs" />
+    <Compile Include="ObjectReadyEventHandler.cs" />
+    <Compile Include="ProgressEventArgs.cs" />
+    <Compile Include="ProgressEventHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyData.cs" />
+    <Compile Include="PropertyDataCollection.cs" />
+    <Compile Include="PutOptions.cs" />
+    <Compile Include="PutType.cs" />
+    <Compile Include="QualifierData.cs" />
+    <Compile Include="QualifierDataCollection.cs" />
+    <Compile Include="QualifierType.cs" />
+    <Compile Include="RC.cs" />
+    <Compile Include="RelatedObjectQuery.cs" />
+    <Compile Include="RelationshipQuery.cs" />
+    <Compile Include="SecuredConnectHandler.cs" />
+    <Compile Include="SecuredIEnumWbemClassObjectHandler.cs" />
+    <Compile Include="SecuredIWbemServicesHandler.cs" />
+    <Compile Include="SecurityHandler.cs" />
+    <Compile Include="SelectQuery.cs" />
+    <Compile Include="SinkForEventQuery.cs" />
+    <Compile Include="SR.cs" />
+    <Compile Include="SRCategoryAttribute.cs" />
+    <Compile Include="SRDescriptionAttribute.cs" />
+    <Compile Include="StoppedEventArgs.cs" />
+    <Compile Include="StoppedEventHandler.cs" />
+    <Compile Include="tag_CIMTYPE_ENUMERATION.cs" />
+    <Compile Include="tag_WBEMSTATUS.cs" />
+    <Compile Include="tag_WBEMSTATUS_FORMAT.cs" />
+    <Compile Include="tag_WBEM_BACKUP_RESTORE_FLAGS.cs" />
+    <Compile Include="tag_WBEM_BATCH_TYPE.cs" />
+    <Compile Include="tag_WBEM_CHANGE_FLAG_TYPE.cs" />
+    <Compile Include="tag_WBEM_COMPARISON_FLAG.cs" />
+    <Compile Include="tag_WBEM_COMPILER_OPTIONS.cs" />
+    <Compile Include="tag_WBEM_CONDITION_FLAG_TYPE.cs" />
+    <Compile Include="tag_WBEM_CONNECT_OPTIONS.cs" />
+    <Compile Include="tag_WBEM_EXTRA_RETURN_CODES.cs" />
+    <Compile Include="tag_WBEM_FLAVOR_TYPE.cs" />
+    <Compile Include="tag_WBEM_GENERIC_FLAG_TYPE.cs" />
+    <Compile Include="tag_WBEM_GENUS_TYPE.cs" />
+    <Compile Include="tag_WBEM_GET_KEY_FLAGS.cs" />
+    <Compile Include="tag_WBEM_GET_TEXT_FLAGS.cs" />
+    <Compile Include="tag_WBEM_INFORMATION_FLAG_TYPE.cs" />
+    <Compile Include="tag_WBEM_LIMITATION_FLAG_TYPE.cs" />
+    <Compile Include="tag_WBEM_LOCKING.cs" />
+    <Compile Include="tag_WBEM_PATH_CREATE_FLAG.cs" />
+    <Compile Include="tag_WBEM_PATH_STATUS_FLAG.cs" />
+    <Compile Include="tag_WBEM_PROVIDER_FLAGS.cs" />
+    <Compile Include="tag_WBEM_PROVIDER_REQUIREMENTS_TYPE.cs" />
+    <Compile Include="tag_WBEM_QUERY_FLAG_TYPE.cs" />
+    <Compile Include="tag_WBEM_REFRESHER_FLAGS.cs" />
+    <Compile Include="tag_WBEM_SECURITY_FLAGS.cs" />
+    <Compile Include="tag_WBEM_SHUTDOWN_FLAGS.cs" />
+    <Compile Include="tag_WBEM_STATUS_TYPE.cs" />
+    <Compile Include="tag_WBEM_TEXT_FLAG_TYPE.cs" />
+    <Compile Include="tag_WBEM_TIMEOUT_TYPE.cs" />
+    <Compile Include="tag_WMIQ_LANGUAGE_FEATURES.cs" />
+    <Compile Include="tag_WMIQ_RPNQ_FEATURE.cs" />
+    <Compile Include="tag_WMI_OBJ_TEXT.cs" />
+    <Compile Include="TextFormat.cs" />
+    <Compile Include="ThisAssembly.cs" />
+    <Compile Include="ThreadDispatch.cs" />
+    <Compile Include="UnsecuredApartment.cs" />
+    <Compile Include="ValueTypeSafety.cs" />
+    <Compile Include="WbemBackupRestore.cs" />
+    <Compile Include="WbemClassObject.cs" />
+    <Compile Include="WbemContext.cs" />
+    <Compile Include="WbemDecoupledBasicEventProvider.cs" />
+    <Compile Include="WbemDecoupledRegistrar.cs" />
+    <Compile Include="WbemDefPath.cs" />
+    <Compile Include="WbemErrorInfo.cs" />
+    <Compile Include="WbemLocator.cs" />
+    <Compile Include="WbemObjectTextSrc.cs" />
+    <Compile Include="WbemQuery.cs" />
+    <Compile Include="WbemStatusCodeText.cs" />
+    <Compile Include="WmiDelegateInvoker.cs" />
+    <Compile Include="WmiEventSink.cs" />
+    <Compile Include="WmiEventState.cs" />
+    <Compile Include="WmiGetEventSink.cs" />
+    <Compile Include="WmiNetUtilsHelper.cs" />
+    <Compile Include="WMIQ_ANALYSIS_TYPE.cs" />
+    <Compile Include="WMIQ_ASSOCQ_FLAGS.cs" />
+    <Compile Include="WMIQ_RPN_TOKEN_FLAGS.cs" />
+    <Compile Include="WqlEventQuery.cs" />
+    <Compile Include="WqlObjectQuery.cs" />
+    <Compile Include="__MIDL___MIDL_itf_wmi_0000_0001.cs" />
+    <Compile Include="__MIDL___MIDL_itf_wmi_0000_0002.cs" />
+    <Compile Include="__MIDL___MIDL_itf_wmi_0000_0003.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

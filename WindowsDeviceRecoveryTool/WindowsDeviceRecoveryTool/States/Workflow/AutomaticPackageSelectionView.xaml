@@ -1,0 +1,101 @@
+<Grid
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Workflow.AutomaticPackageSelectionView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:localization="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization" xmlns:resources="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Resources" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	Style="{DynamicResource ContentRoot}"
+	VerticalAlignment="Center" xmlns:workflow="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Workflow">
+	<Grid.RowDefinitions>
+		<RowDefinition
+			Height="Auto" />
+		<RowDefinition
+			Height="Auto" />
+		<RowDefinition
+			Height="Auto" />
+	</Grid.RowDefinitions>
+	<TextBlock
+		Style="{DynamicResource SubheaderTextStyle}"
+		Grid.Row="0"
+		Text="{localization:Localization AutomaticPackageFileSelection}"
+		Visibility="{Binding CheckingPackageDirectory, Converter={StaticResource BoolToVisibilityConverter}}" />
+	<Grid
+		Row="1"
+		VerticalAlignment="Center">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition
+				Height="Auto" />
+		</Grid.RowDefinitions>
+		<TextBlock
+			Grid.Row="0"
+			Style="{DynamicResource MediumTextStyle}"
+			Margin="3, 20, 3, 0"
+			HorizontalAlignment="Center"
+			Text="{Binding SelectedDirectoryDescription, Mode=OneWay}" />
+		<TextBlock
+			Grid.Row="1"
+			Style="{DynamicResource SubheaderTextStyle}"
+			Margin="0, 20, 0, 0"
+			TextWrapping="Wrap"
+			HorizontalAlignment="Center"
+			Text="{Binding StatusInfo}"
+			Visibility="{Binding CheckingPackageDirectory, Converter={StaticResource InvertedBooleanToVisibilityConverter}}" />
+		<StackPanel
+			Orientation="Horizontal"
+			Grid.Row="1"
+			Visibility="{Binding CheckingPackageDirectory, Converter={StaticResource BoolToVisibilityConverter}}">
+			<TextBlock
+				Style="{DynamicResource SubheaderTextStyle}"
+				Margin="3"
+				TextWrapping="Wrap"
+				HorizontalAlignment="Center"
+				Text="{localization:Localization FFUCheckingDirectory}" />
+			<ProgressBar
+				Style="{DynamicResource ProgressRingStyle}"
+				Margin="3"
+				AutomationProperties.Name="Automatic Package Selection Progress Ring" />
+		</StackPanel>
+		<TextBlock
+			Style="{DynamicResource MediumTextStyle}"
+			Margin="0, 20"
+			Grid.Row="2"
+			HorizontalAlignment="Center"
+			Text="{Binding PackagePath}"
+			Visibility="{Binding PackagesListVisible, Converter={StaticResource InvertedBooleanToVisibilityConverter}}" />
+		<DataGrid
+			Grid.Row="3"
+			IsReadOnly="True"
+			Margin="0, 20"
+			ItemsSource="{Binding FoundPackages}"
+			Visibility="{Binding PackagesListVisible, Converter={StaticResource BoolToVisibilityConverter}}"
+			SelectedItem="{Binding SelectedPackage, Mode=TwoWay}" />
+	</Grid>
+	<StackPanel
+		Orientation="Horizontal"
+		Grid.Row="2"
+		HorizontalAlignment="Center"
+		VerticalAlignment="Top">
+		<Button
+			Margin="5,10"
+			Command="{Binding Commands[ChangePackageDirectoryCommand]}"
+			Content="{localization:Localization ButtonBrowse}"
+			IsEnabled="{Binding CheckingPackageDirectory, Converter={StaticResource InverseBooleanConverter}}" />
+		<Button
+			Margin="5,10"
+			Content="Select package manually"
+			Command="{Binding Commands[CancelSearchingPackageAndSwitchToManual]}" />
+		<Button
+			CommandParameter="{x:Static resources:Consts.PackageIntegrityCheckState}"
+			Margin="5,10"
+			Command="{Binding Commands[SwitchToState]}"
+			Content="{localization:Localization ButtonNext}"
+			IsEnabled="{Binding NextButtonEnabled}" />
+		<Button
+			CommandParameter="{x:Static resources:Consts.AutomaticManufacturerSelectionState}"
+			Margin="5,10"
+			Content="{localization:Localization ButtonCancel}"
+			Command="{Binding Commands[SwitchToState]}" />
+	</StackPanel>
+</Grid>

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{7902D216-E048-4FC0-8D7D-8ADBB5516224}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.WindowsDeviceRecoveryTool.Styles</RootNamespace>
+    <AssemblyName>Microsoft.WindowsDeviceRecoveryTool.Styles</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Common">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Localization">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="mscorlib" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\DictionaryStyle.cs" />
+    <Compile Include="Assets\DictionaryStyleToStringConverter.cs" />
+    <Compile Include="Assets\ExtendedCultureInfo.cs" />
+    <Compile Include="Assets\Location.cs" />
+    <Compile Include="Assets\StyleLogic.cs" />
+    <Compile Include="Assets\ThemeStyle.cs" />
+    <Compile Include="Behaviors\ComboBoxBehavior.cs" />
+    <Compile Include="Behaviors\ListBoxBehavior.cs" />
+    <Compile Include="Behaviors\LiveRegionBehavior.cs" />
+    <Compile Include="Behaviors\LiveSetting.cs" />
+    <Compile Include="Behaviors\ScrollBehavior.cs" />
+    <Compile Include="Controls\TitleBar.cs" />
+    <Compile Include="Converters\BooleanToVisibilityHiddenConverter.cs" />
+    <Compile Include="Converters\BoolToOffOnConverter.cs" />
+    <Compile Include="Converters\EqualityToBoolConverter.cs" />
+    <Compile Include="Converters\EqualToVisibilityConverter.cs" />
+    <Compile Include="Converters\GenericBoolConverter.cs" />
+    <Compile Include="Converters\InverseBooleanConverter.cs" />
+    <Compile Include="Converters\InvertedBooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\NotEqualToBoolConverter.cs" />
+    <Compile Include="Converters\NotEqualToVisibilityConverter.cs" />
+    <Compile Include="Converters\ObjectNullToVisibilityConverter.cs" />
+    <Compile Include="Converters\SalesNameConverter.cs" />
+    <Compile Include="Converters\StringNullOrEmptyToVisibilityConverter.cs" />
+    <Compile Include="Converters\TextCombinatorConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TiltEffect.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="colors\blackdictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="colors\bluedictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="colors\cobaltdictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="colors\crimsondictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="colors\emeralddictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="colors\indigodictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="colors\mauvedictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="colors\siennadictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="convertersdictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="darktheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="highcontrasttheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="lighttheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="systemstyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

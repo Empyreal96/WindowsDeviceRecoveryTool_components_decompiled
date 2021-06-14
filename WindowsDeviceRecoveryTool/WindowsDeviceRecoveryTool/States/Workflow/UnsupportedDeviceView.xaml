@@ -1,0 +1,50 @@
+<Grid
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Workflow.UnsupportedDeviceView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	KeyboardNavigation.TabNavigation="None" xmlns:workflow="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Workflow">
+	<Grid.ColumnDefinitions>
+		<ColumnDefinition
+			Width="*" />
+		<ColumnDefinition
+			Width="Auto" />
+	</Grid.ColumnDefinitions>
+	<Grid.RowDefinitions>
+		<RowDefinition
+			Height="Auto" />
+		<RowDefinition
+			Height="*" />
+	</Grid.RowDefinitions>
+	<TextBlock
+		Grid.Row="0"
+		Grid.ColumnSpan="2"
+		Text="The connected device may not be supported..."
+		Style="{DynamicResource SubheaderTextStyle}"
+		Focusable="True"
+		FocusVisualStyle="{x:Null}" />
+	<StackPanel
+		Orientation="Vertical"
+		Grid.Column="0"
+		Grid.Row="1"
+		Margin="0,200,0,0">
+		<TextBlock
+			Text="1. Disconnect your device"
+			Style="{StaticResource BasicTextStyle}"
+			Focusable="True"
+			FocusVisualStyle="{x:Null}" />
+		<TextBlock
+			Text="2. Press the Back button"
+			Style="{StaticResource BasicTextStyle}"
+			Focusable="True"
+			FocusVisualStyle="{x:Null}" />
+		<TextBlock
+			Text="3. Connect supported device"
+			Style="{StaticResource BasicTextStyle}"
+			Focusable="True"
+			FocusVisualStyle="{x:Null}" />
+	</StackPanel>
+	<Image
+		Grid.Row="1"
+		Grid.Column="1"
+		MaxHeight="600"
+		Margin="50,0,0,50"
+		Source="../../Resources/UnsupportedDevice.png" />
+</Grid>

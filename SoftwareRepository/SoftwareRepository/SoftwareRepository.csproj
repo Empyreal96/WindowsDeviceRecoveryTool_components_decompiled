@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67FB07F5-DF73-45D6-8EFD-9C76838949BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SoftwareRepository</RootNamespace>
+    <AssemblyName>SoftwareRepository</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Diagnostics.cs" />
+    <Compile Include="DiscoveryException.cs" />
+    <Compile Include="Discovery\Discoverer.cs" />
+    <Compile Include="Discovery\DiscoveryCondition.cs" />
+    <Compile Include="Discovery\DiscoveryJsonResult.cs" />
+    <Compile Include="Discovery\DiscoveryParameters.cs" />
+    <Compile Include="Discovery\DiscoveryQueryParameters.cs" />
+    <Compile Include="Discovery\DiscoveryResult.cs" />
+    <Compile Include="Discovery\ExtendedAttributes.cs" />
+    <Compile Include="Discovery\SoftwareFile.cs" />
+    <Compile Include="Discovery\SoftwareFileChecksum.cs" />
+    <Compile Include="Discovery\SoftwarePackage.cs" />
+    <Compile Include="Discovery\SoftwarePackages.cs" />
+    <Compile Include="DownloadException.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="LogLevel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportException.cs" />
+    <Compile Include="Reporting\DownloadReport.cs" />
+    <Compile Include="Reporting\Reporter.cs" />
+    <Compile Include="Reporting\ReportUploadLocationParameters.cs" />
+    <Compile Include="Streaming\BestUrlSelectionEventHandler.cs" />
+    <Compile Include="Streaming\ChunkManager.cs" />
+    <Compile Include="Streaming\ChunkState.cs" />
+    <Compile Include="Streaming\DownloadChunk.cs" />
+    <Compile Include="Streaming\Downloader.cs" />
+    <Compile Include="Streaming\DownloadMetadata.cs" />
+    <Compile Include="Streaming\DownloadProgress.cs" />
+    <Compile Include="Streaming\DownloadProgressEventHandler.cs" />
+    <Compile Include="Streaming\DownloadProgressInfo.cs" />
+    <Compile Include="Streaming\DownloadReadyEventArgs.cs" />
+    <Compile Include="Streaming\DownloadReadyEventHandler.cs" />
+    <Compile Include="Streaming\FileStreamer.cs" />
+    <Compile Include="Streaming\FileUrlResult.cs" />
+    <Compile Include="Streaming\MemoryStreamer.cs" />
+    <Compile Include="Streaming\Streamer.cs" />
+    <Compile Include="Streaming\UrlResult.cs" />
+    <Compile Include="Streaming\UrlSelectionResult.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{39CCFB8D-79A5-4BDD-8C53-B029BE27BFBC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Tools.DeviceUpdate.DeviceUtils</RootNamespace>
+    <AssemblyName>Microsoft.Tools.DeviceUpdate.DeviceUtils</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CabApiWrapper" />
+    <Reference Include="FFUComponents">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\FFUComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Deployment.Compression" />
+    <Reference Include="Microsoft.Deployment.Compression.Cab" />
+    <Reference Include="Microsoft.Tools.Connectivity">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.Tools.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="ToolsCommon">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\ToolsCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeviceException.cs" />
+    <Compile Include="DevicePropertyAttribute.cs" />
+    <Compile Include="Disposable.cs" />
+    <Compile Include="GptDevice.cs" />
+    <Compile Include="GptPartition.cs" />
+    <Compile Include="IDevicePropertyCollection.cs" />
+    <Compile Include="IIpDevice.cs" />
+    <Compile Include="InstalledPackageInfo.cs" />
+    <Compile Include="IpDevice.cs" />
+    <Compile Include="IpDeviceCommunicator.cs" />
+    <Compile Include="IpDeviceFactory.cs" />
+    <Compile Include="IUefiDevice.cs" />
+    <Compile Include="IUpdateableDevice.cs" />
+    <Compile Include="IWpdDevice.cs" />
+    <Compile Include="MessageArgs.cs" />
+    <Compile Include="MessageHandler.cs" />
+    <Compile Include="MtpException.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="PortableDeviceApiLib\IPortableDevice.cs" />
+    <Compile Include="PortableDeviceApiLib\IPortableDeviceContent.cs" />
+    <Compile Include="PortableDeviceApiLib\IPortableDeviceContent2.cs" />
+    <Compile Include="PortableDeviceApiLib\IPortableDeviceKeyCollection.cs" />
+    <Compile Include="PortableDeviceApiLib\IPortableDeviceManager.cs" />
+    <Compile Include="PortableDeviceApiLib\IPortableDeviceProperties.cs" />
+    <Compile Include="PortableDeviceApiLib\IPortableDevicePropVariantCollection.cs" />
+    <Compile Include="PortableDeviceApiLib\IPortableDeviceService.cs" />
+    <Compile Include="PortableDeviceApiLib\IPortableDeviceServiceManager.cs" />
+    <Compile Include="PortableDeviceApiLib\IPortableDeviceValues.cs" />
+    <Compile Include="PortableDeviceApiLib\PortableDevice.cs" />
+    <Compile Include="PortableDeviceApiLib\PortableDeviceManager.cs" />
+    <Compile Include="PortableDeviceApiLib\PortableDeviceService.cs" />
+    <Compile Include="PortableDeviceApiLib\tag_inner_PROPVARIANT.cs" />
+    <Compile Include="PortableDeviceApiLib\_tagpropertykey.cs" />
+    <Compile Include="PortableDeviceApiLib\__MIDL___MIDL_itf_PortableDeviceApi_0001_0000_0001.cs" />
+    <Compile Include="PortableDeviceConstants\PortableDeviceGuids.cs" />
+    <Compile Include="PortableDeviceConstants\PortableDevicePKeys.cs" />
+    <Compile Include="PortableDeviceTypesLib\IPortableDeviceKeyCollection.cs" />
+    <Compile Include="PortableDeviceTypesLib\IPortableDevicePropVariantCollection.cs" />
+    <Compile Include="PortableDeviceTypesLib\IPortableDeviceValues.cs" />
+    <Compile Include="PortableDeviceTypesLib\PortableDeviceKeyCollection.cs" />
+    <Compile Include="PortableDeviceTypesLib\PortableDevicePropVariantCollection.cs" />
+    <Compile Include="PortableDeviceTypesLib\PortableDeviceValues.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyDeviceCollection.cs" />
+    <Compile Include="ServicingNotSupportedException.cs" />
+    <Compile Include="UefiDevice.cs" />
+    <Compile Include="UefiDeviceFactory.cs" />
+    <Compile Include="WpdDevice.cs" />
+    <Compile Include="WpdDeviceFactory.cs" />
+    <Compile Include="WpdUtils.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

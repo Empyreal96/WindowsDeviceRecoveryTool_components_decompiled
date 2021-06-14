@@ -1,0 +1,25 @@
+﻿using System;
+
+namespace System.Management
+{
+	// Token: 0x0200007B RID: 123
+	internal enum tag_WBEM_SECURITY_FLAGS
+	{
+		// Token: 0x04000295 RID: 661
+		WBEM_ENABLE = 1,
+		// Token: 0x04000296 RID: 662
+		WBEM_METHOD_EXECUTE,
+		// Token: 0x04000297 RID: 663
+		WBEM_FULL_WRITE_REP = 4,
+		// Token: 0x04000298 RID: 664
+		WBEM_PARTIAL_WRITE_REP = 8,
+		// Token: 0x04000299 RID: 665
+		WBEM_WRITE_PROVIDER = 16,
+		// Token: 0x0400029A RID: 666
+		WBEM_REMOTE_ACCESS = 32,
+		// Token: 0x0400029B RID: 667
+		WBEM_RIGHT_SUBSCRIBE = 1,
+		// Token: 0x0400029C RID: 668
+		WBEM_RIGHT_PUBLISH = 1
+	}
+}

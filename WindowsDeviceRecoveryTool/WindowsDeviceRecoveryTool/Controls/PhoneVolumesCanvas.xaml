@@ -1,0 +1,60 @@
+<Grid
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.Controls.PhoneVolumesCanvas" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	Name="PhoneVolumesCanvasName" xmlns:controls="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Controls">
+	<Grid.ColumnDefinitions>
+		<ColumnDefinition
+			Width="*" />
+		<ColumnDefinition
+			Width="Auto" />
+	</Grid.ColumnDefinitions>
+	<Grid
+		Column="1">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<Grid
+			Row="0"
+			MinHeight="40"
+			MinWidth="10"
+			VerticalAlignment="Top"
+			Margin="0,20,0,0"
+			Background="{Binding ElementName=PhoneVolumesCanvasName, Path=ButtonColor}" />
+		<Grid
+			Row="1"
+			MinHeight="40"
+			MinWidth="10"
+			VerticalAlignment="Top"
+			Margin="0,5,0,0"
+			Background="{Binding ElementName=PhoneVolumesCanvasName, Path=ButtonColor}" />
+	</Grid>
+	<Path
+		Name="PhoneName"
+		Grid.Column="0"
+		Stretch="Uniform"
+		Fill="{Binding ElementName=PhoneVolumesCanvasName, Path=PhoneColor}">
+		<Path.Data>
+			<GeometryGroup>
+				<PathGeometry>M 10,10 10,300 12,302 180,302 182,300 182,10 180,8 12,8 Z M 22,30 22,264 169,264 169,30 Z M 34,50 34,60 150,60 150,50 Z M 34,62 34,72 100,72 100,62 Z M 34,74 34,84 130,84 130,74 Z M 34,86 34,96 150,96 150,86 Z M 34,98 34,108 140,108 140,98 Z M 34,130 34,180 38,180 38,130 Z M 44,130 44,180 48,180 48,130 Z M 50,130 50,180 54,180 54,130 Z M 56,130 56,180 60,180 60,130 Z M 66,130 66,180 70,180 70,130 Z M 72,130 72,180 76,180 76,130 Z M 84,130 84,180 88,180 88,130 Z M 90,130 90,180 94,180 94,130 Z M 34,185 34,235 38,235 38,185 Z M 40,185 40,235 44,235 44,185 Z M 50,185 50,235 54,235 54,185 Z M 56,185 56,235 60,235 60,185 Z M 68,185 68,235 72,235 72,185 Z M 78,185 78,235 82,235 82,185 Z M 84,185 84,235 88,235 88,185 Z M 90,185 90,235 94,235 94,185 Z M 98,185 98,235 102,235 102,185 Z M 104,185 104,235 108,235 108,185 Z M 116,185 116,235 120,235 120,185 Z M 128,185 128,235 132,235 132,185 Z M 134,185 134,235 138,235 138,185 Z</PathGeometry>
+				<PathGeometry>M 89,274 89,285 103,287 103,272 Z</PathGeometry>
+				<PathGeometry>M 89,279 103,279 103,281 89,281 Z</PathGeometry>
+				<PathGeometry>M 95,273.1 97,272.9 97,279 95,279 Z</PathGeometry>
+				<PathGeometry>M 95,281 97,281 97,286.1 95,285.9 Z</PathGeometry>
+				<EllipseGeometry
+					Center="153,279"
+					RadiusX="4"
+					RadiusY="4" />
+				<EllipseGeometry
+					Center="153,279"
+					RadiusX="2"
+					RadiusY="2" />
+				<PathGeometry>M 149.5,281 150.5,282.2 146,286 145,285 Z</PathGeometry>
+				<PathGeometry>M 34,280 39,275 42,275 38,279 46,279 46,281 38,281 42,285 39,285 Z</PathGeometry>
+			</GeometryGroup>
+		</Path.Data>
+	</Path>
+</Grid>

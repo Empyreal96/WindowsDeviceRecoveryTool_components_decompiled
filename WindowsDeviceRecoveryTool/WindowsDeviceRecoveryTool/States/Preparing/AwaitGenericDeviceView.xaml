@@ -1,0 +1,82 @@
+<Grid
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Preparing.AwaitGenericDeviceView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:localization="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	Style="{DynamicResource ContentRoot}"
+	KeyboardNavigation.DirectionalNavigation="Continue"
+	KeyboardNavigation.TabNavigation="None" xmlns:preparing="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Preparing">
+	<Grid.RowDefinitions>
+		<RowDefinition
+			Height="Auto" />
+		<RowDefinition
+			Height="*" />
+	</Grid.RowDefinitions>
+	<Grid.ColumnDefinitions>
+		<ColumnDefinition
+			Width="*" />
+		<ColumnDefinition
+			Width="Auto" />
+	</Grid.ColumnDefinitions>
+	<TextBlock
+		Style="{DynamicResource SubheaderTextStyle}"
+		Focusable="True"
+		Text="{Binding FlashModeText}"
+		FocusVisualStyle="{x:Null}" />
+	<Grid
+		VerticalAlignment="Center"
+		Column="0"
+		Row="1"
+		HorizontalAlignment="Stretch">
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="Auto" />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		<TextBlock
+			Grid.Row="0"
+			Foreground="{DynamicResource ApplicationSecondaryForegroundThemeBrush}"
+			Style="{DynamicResource BasicTextStyle}"
+			Focusable="True"
+			FocusVisualStyle="{x:Null}">
+			<Run
+				Text="1. " /> <Run
+				Text="{localization:Localization TurnOffPhone}" /></TextBlock>
+		<TextBlock
+			Grid.Row="1"
+			Foreground="{DynamicResource ApplicationSecondaryForegroundThemeBrush}"
+			Style="{DynamicResource BasicTextStyle}"
+			Focusable="True"
+			FocusVisualStyle="{x:Null}">
+			<Run
+				Text="2. " /> <Run
+				Text="{localization:Localization PressThePowerButton}" /></TextBlock>
+		<TextBlock
+			Grid.Row="2"
+			Foreground="{DynamicResource ApplicationSecondaryForegroundThemeBrush}"
+			Style="{DynamicResource BasicTextStyle}"
+			Focusable="True"
+			FocusVisualStyle="{x:Null}">
+			<Run
+				Text="3. " /> <Run
+				Text="{localization:Localization ReleasePowerPressVolumeUp}" /></TextBlock>
+		<TextBlock
+			Grid.Row="3"
+			Foreground="{DynamicResource ApplicationSecondaryForegroundThemeBrush}"
+			Style="{DynamicResource BasicTextStyle}"
+			Focusable="True"
+			FocusVisualStyle="{x:Null}">
+			<Run
+				Text="4. " /> <Run
+				Text="{localization:Localization KeepButtonTillImage}" /></TextBlock>
+	</Grid>
+	<Image
+		Grid.Column="1"
+		Grid.Row="1"
+		Margin="50,0,0,50"
+		Source="../../Resources/blueprint.png"
+		MaxHeight="600" />
+</Grid>

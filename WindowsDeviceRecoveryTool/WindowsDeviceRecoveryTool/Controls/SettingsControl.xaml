@@ -1,0 +1,139 @@
+<Grid
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.Controls.SettingsControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:resources="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Resources" xmlns:controls="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Controls" xmlns:localization="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization"
+	Name="RootGrid"
+	KeyboardNavigation.TabNavigation="Continue"
+	Background="{DynamicResource ApplicationPageBackgroundThemeBrush}"
+	HorizontalAlignment="Stretch"
+	Margin="0,-7,0,0"
+	Height="105">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<Storyboard
+				x:Key="ShowSettingsButton">
+				<DoubleAnimationUsingKeyFrames
+					Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
+					Storyboard.TargetName="RootGrid">
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:0.5"
+						Value="10" />
+				</DoubleAnimationUsingKeyFrames>
+			</Storyboard>
+			<Storyboard
+				x:Key="HideSettingsButton">
+				<DoubleAnimationUsingKeyFrames
+					Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
+					Storyboard.TargetName="RootGrid">
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:0.5"
+						Value="98" />
+				</DoubleAnimationUsingKeyFrames>
+			</Storyboard>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<FrameworkElement.Triggers>
+		<EventTrigger
+			RoutedEvent="FocusManager.GotFocus">
+			<EventTrigger.Actions>
+				<BeginStoryboard
+					Storyboard="{StaticResource ShowSettingsButton}" />
+			</EventTrigger.Actions>
+		</EventTrigger>
+		<EventTrigger
+			RoutedEvent="controls:SettingsControl.Open">
+			<EventTrigger.Actions>
+				<BeginStoryboard
+					Storyboard="{StaticResource ShowSettingsButton}" />
+			</EventTrigger.Actions>
+		</EventTrigger>
+		<EventTrigger
+			RoutedEvent="controls:SettingsControl.Close">
+			<EventTrigger.Actions>
+				<BeginStoryboard
+					Storyboard="{StaticResource HideSettingsButton}" />
+			</EventTrigger.Actions>
+		</EventTrigger>
+		<EventTrigger
+			RoutedEvent="FrameworkElement.Loaded">
+			<BeginStoryboard
+				Storyboard="{StaticResource ShowSettingsButton}" />
+			<BeginStoryboard
+				Storyboard="{StaticResource HideSettingsButton}" />
+		</EventTrigger>
+	</FrameworkElement.Triggers>
+	<TextBlock
+		VerticalAlignment="Top"
+		KeyboardNavigation.TabNavigation="Local">
+		<FrameworkElement.Style>
+			<Style
+				TargetType="{x:Type TextBlock}">
+				<Setter
+					Property="Margin"
+					Value="0,0,5,0" />
+				<Setter
+					Property="VerticalAlignment"
+					Value="Top" />
+				<Setter
+					Property="HorizontalAlignment"
+					Value="Right" />
+				<Setter
+					Property="FontSize"
+					Value="30" />
+				<Setter
+					Property="Text"
+					Value="..." />
+				<Setter
+					Property="FrameworkElement.LayoutTransform">
+					<Setter.Value>
+						<RotateTransform
+							Angle="180" />
+					</Setter.Value>
+				</Setter>
+			</Style>
+		</FrameworkElement.Style>
+	</TextBlock>
+	<Rectangle
+		Fill="{DynamicResource ApplicationForegroundThemeBrush}"
+		Opacity="0.05"
+		KeyboardNavigation.TabNavigation="None" />
+	<StackPanel
+		Orientation="Horizontal"
+		Margin="0,15,0,0">
+		<Button
+			Name="SettingsButton"
+			Style="{DynamicResource SettingsAppBarButtonStyle}"
+			CommandParameter="{x:Static resources:Consts.SettingsState}"
+			VerticalAlignment="Bottom"
+			RenderTransformOrigin="0.5,0.5"
+			Margin="0,0,0,0"
+			Command="{Binding Commands[SwitchToState]}"
+			AutomationProperties.Name="{localization:Localization Settings}"
+			Click="SettingsButtonOnClick" />
+		<Button
+			Name="HelpButton"
+			Style="{DynamicResource HelpAppBarButtonStyle}"
+			CommandParameter="{x:Static resources:Consts.HelpState}"
+			VerticalAlignment="Bottom"
+			RenderTransformOrigin="0.5,0.5"
+			Command="{Binding Commands[SwitchToState]}"
+			AutomationProperties.Name="{localization:Localization Help}"
+			Click="HelpButtonOnClick" />
+	</StackPanel>
+	<controls:HyperlinkButton
+		RequestNavigate="HyperlinkButtonOnRequestNavigate"
+		FontSize="12"
+		FontWeight="Normal"
+		Margin="0,0,5,8"
+		Padding="0"
+		VerticalAlignment="Bottom"
+		HorizontalAlignment="Right"
+		NavigateUri="http://go.microsoft.com/fwlink/?LinkID=521839"
+		Content="{localization:Localization PrivacyPolicy}" />
+	<UIElement.RenderTransform>
+		<TransformGroup>
+			<ScaleTransform />
+			<SkewTransform />
+			<RotateTransform />
+			<TranslateTransform />
+		</TransformGroup>
+	</UIElement.RenderTransform>
+</Grid>

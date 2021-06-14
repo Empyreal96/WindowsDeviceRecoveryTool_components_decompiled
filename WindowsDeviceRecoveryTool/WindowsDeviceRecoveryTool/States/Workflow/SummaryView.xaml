@@ -1,0 +1,93 @@
+<Grid
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Workflow.SummaryView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:localization="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization" xmlns:converters="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Styles.Converters;assembly=Microsoft.WindowsDeviceRecoveryTool.Styles"
+	Style="{DynamicResource ContentRoot}" xmlns:workflow="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Workflow">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<converters:StringNullOrEmptyToVisibilityConverter
+				Collapse="False"
+				x:Key="StringNullOrEmptyToVisibilityConverter" />
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid.RowDefinitions>
+		<RowDefinition
+			Height="Auto" />
+		<RowDefinition
+			Height="*" />
+		<RowDefinition
+			Height="*" />
+		<RowDefinition
+			Height="*" />
+	</Grid.RowDefinitions>
+	<Grid
+		Row="0"
+		KeyboardNavigation.TabNavigation="None">
+		<TextBlock
+			Style="{DynamicResource SubheaderTextStyle}"
+			Focusable="True"
+			KeyboardNavigation.TabNavigation="None"
+			Text="{localization:Localization FlashingResult}"
+			FocusVisualStyle="{x:Null}" />
+	</Grid>
+	<Grid
+		Row="1"
+		VerticalAlignment="Center"
+		KeyboardNavigation.TabNavigation="None">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="Auto" />
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<Image
+			Margin="10"
+			Source="{DynamicResource AcceptGlyph}"
+			Height="40"
+			Grid.Row="0"
+			Grid.Column="0"
+			VerticalAlignment="Top"
+			Visibility="{Binding IsPassed, Converter={StaticResource BoolToVisibilityConverter}}" />
+		<Image
+			Margin="10"
+			Source="{DynamicResource DeclineGlyph}"
+			Height="40"
+			Grid.Row="0"
+			Grid.Column="0"
+			VerticalAlignment="Top"
+			Visibility="{Binding IsPassed, Converter={StaticResource InvertedBooleanToVisibilityConverter}}" />
+		<TextBlock
+			Margin="20,0,0,0"
+			Style="{DynamicResource SubheaderTextStyle}"
+			VerticalAlignment="Center"
+			Grid.Column="1"
+			Grid.Row="0"
+			TextWrapping="Wrap"
+			Foreground="{DynamicResource ApplicationSecondaryForegroundThemeBrush}"
+			Focusable="True"
+			Text="{Binding ResultMessage}"
+			FocusVisualStyle="{x:Null}" />
+		<TextBlock
+			Margin="20,0,0,0"
+			Style="{DynamicResource MediumTextStyle}"
+			VerticalAlignment="Center"
+			Grid.Column="1"
+			Grid.Row="1"
+			TextWrapping="Wrap"
+			Foreground="{DynamicResource ApplicationSecondaryForegroundThemeBrush}"
+			Focusable="True"
+			Text="{Binding InstructionMessage}"
+			FocusVisualStyle="{x:Null}"
+			Visibility="{Binding Text, Converter={StaticResource StringNullOrEmptyToVisibilityConverter}, RelativeSource={RelativeSource Self}}" />
+	</Grid>
+	<Button
+		Grid.Row="2"
+		VerticalAlignment="Top"
+		Command="{Binding Commands[Finish]}"
+		CommandParameter="{Binding IsPassed}"
+		Content="{Binding FinishText}" />
+</Grid>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{07C10F4E-C1B5-4464-B428-2AB9F62183DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.WindowsDeviceRecoveryTool.StateMachine</RootNamespace>
+    <AssemblyName>Microsoft.WindowsDeviceRecoveryTool.StateMachine</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Common">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseTypes\BaseErrorState.cs" />
+    <Compile Include="BaseTypes\BaseState.cs" />
+    <Compile Include="BaseTypes\BaseStateMachine.cs" />
+    <Compile Include="BaseTypes\BaseStateMachineErrorEventArgs.cs" />
+    <Compile Include="BaseTypes\BaseTransition.cs" />
+    <Compile Include="BaseTypes\Error.cs" />
+    <Compile Include="BaseTypes\ErrorTransition.cs" />
+    <Compile Include="BaseTypes\TransitionEventArgs.cs" />
+    <Compile Include="DefaultTypes\DefaultTransition.cs" />
+    <Compile Include="DefaultTypes\DelayedState.cs" />
+    <Compile Include="DefaultTypes\EndState.cs" />
+    <Compile Include="DefaultTypes\ErrorEndState.cs" />
+    <Compile Include="DefaultTypes\LambdaTransition.cs" />
+    <Compile Include="DefaultTypes\StartState.cs" />
+    <Compile Include="DefaultTypes\StateMachineState.cs" />
+    <Compile Include="DefaultTypes\TransitionFromErrorState.cs" />
+    <Compile Include="DefaultTypes\TransitionToErrorState.cs" />
+    <Compile Include="Exceptions\InternalException.cs" />
+    <Compile Include="Exceptions\UnexpectedErrorException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transitions\PropagateErrorTransition.cs" />
+    <Compile Include="Transitions\PropagateStateStatusTransition.cs" />
+    <Compile Include="Transitions\StateStatusTransition.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

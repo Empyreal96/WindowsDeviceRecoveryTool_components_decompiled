@@ -1,0 +1,31 @@
+<StackPanel
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Settings.TraceView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:localization="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization" xmlns:controls="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Controls" xmlns:settings="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Settings">
+	<TextBlock
+		Style="{DynamicResource BasicTextStyle}"
+		Margin="0,0,0,5"
+		Text="{localization:Localization TraceEnabled}" />
+	<StackPanel
+		Orientation="Horizontal">
+		<TextBlock
+			Style="{DynamicResource BasicTextStyle}"
+			FontWeight="Bold"
+			VerticalAlignment="Center"
+			MinWidth="100"
+			Margin="0,0,20,0"
+			Text="{Binding TraceEnabled, Converter={StaticResource BoolToOffOnConverter}}" />
+		<controls:InvokableToggleButton
+			Style="{DynamicResource ToggleSwitchStyle}"
+			VerticalAlignment="Center"
+			IsChecked="{Binding Path=TraceEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+			AutomationProperties.Name="{localization:Localization TraceEnabled}" />
+	</StackPanel>
+	<StackPanel
+		Margin="-5,10,0,0">
+		<Button
+			Name="CollectButton"
+			HorizontalAlignment="Left"
+			Content="{localization:Localization ButtonCollectLogs}"
+			Command="{Binding Commands[ChangeZipLogPath]}"
+			IsEnabled="{Binding ExportEnable}" />
+	</StackPanel>
+</StackPanel>

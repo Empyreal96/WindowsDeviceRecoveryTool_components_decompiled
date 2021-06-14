@@ -1,0 +1,2353 @@
+﻿using System;
+
+namespace System.Windows.Documents
+{
+	// Token: 0x020003A6 RID: 934
+	internal enum RtfControlWord
+	{
+		// Token: 0x04001F0D RID: 7949
+		Ctrl_Unknown = -1,
+		// Token: 0x04001F0E RID: 7950
+		Ctrl_AB,
+		// Token: 0x04001F0F RID: 7951
+		Ctrl_ABSH,
+		// Token: 0x04001F10 RID: 7952
+		Ctrl_ABSLOCK,
+		// Token: 0x04001F11 RID: 7953
+		Ctrl_ABSNOOVRLP,
+		// Token: 0x04001F12 RID: 7954
+		Ctrl_ABSW,
+		// Token: 0x04001F13 RID: 7955
+		Ctrl_ACAPS,
+		// Token: 0x04001F14 RID: 7956
+		Ctrl_ACCCOMMA,
+		// Token: 0x04001F15 RID: 7957
+		Ctrl_ACCDOT,
+		// Token: 0x04001F16 RID: 7958
+		Ctrl_ACCNONE,
+		// Token: 0x04001F17 RID: 7959
+		Ctrl_ACF,
+		// Token: 0x04001F18 RID: 7960
+		Ctrl_ADDITIVE,
+		// Token: 0x04001F19 RID: 7961
+		Ctrl_ADJUSTRIGHT,
+		// Token: 0x04001F1A RID: 7962
+		Ctrl_ADN,
+		// Token: 0x04001F1B RID: 7963
+		Ctrl_AENDDOC,
+		// Token: 0x04001F1C RID: 7964
+		Ctrl_AENDNOTES,
+		// Token: 0x04001F1D RID: 7965
+		Ctrl_AEXPND,
+		// Token: 0x04001F1E RID: 7966
+		Ctrl_AF,
+		// Token: 0x04001F1F RID: 7967
+		Ctrl_AFFIXED,
+		// Token: 0x04001F20 RID: 7968
+		Ctrl_AFS,
+		// Token: 0x04001F21 RID: 7969
+		Ctrl_AFTNBJ,
+		// Token: 0x04001F22 RID: 7970
+		Ctrl_AFTNCN,
+		// Token: 0x04001F23 RID: 7971
+		Ctrl_AFTNNALC,
+		// Token: 0x04001F24 RID: 7972
+		Ctrl_AFTNNAR,
+		// Token: 0x04001F25 RID: 7973
+		Ctrl_AFTNNAUC,
+		// Token: 0x04001F26 RID: 7974
+		Ctrl_AFTNNCHI,
+		// Token: 0x04001F27 RID: 7975
+		Ctrl_AFTNNCHOSUNG,
+		// Token: 0x04001F28 RID: 7976
+		Ctrl_AFTNNCNUM,
+		// Token: 0x04001F29 RID: 7977
+		Ctrl_AFTNNDBAR,
+		// Token: 0x04001F2A RID: 7978
+		Ctrl_AFTNNDBNUM,
+		// Token: 0x04001F2B RID: 7979
+		Ctrl_AFTNNDBNUMD,
+		// Token: 0x04001F2C RID: 7980
+		Ctrl_AFTNNDBNUMK,
+		// Token: 0x04001F2D RID: 7981
+		Ctrl_AFTNNDBNUMT,
+		// Token: 0x04001F2E RID: 7982
+		Ctrl_AFTNNGANADA,
+		// Token: 0x04001F2F RID: 7983
+		Ctrl_AFTNNGBNUM,
+		// Token: 0x04001F30 RID: 7984
+		Ctrl_AFTNNGBNUMD,
+		// Token: 0x04001F31 RID: 7985
+		Ctrl_AFTNNGBNUMK,
+		// Token: 0x04001F32 RID: 7986
+		Ctrl_AFTNNGBNUML,
+		// Token: 0x04001F33 RID: 7987
+		Ctrl_AFTNNRLC,
+		// Token: 0x04001F34 RID: 7988
+		Ctrl_AFTNNRUC,
+		// Token: 0x04001F35 RID: 7989
+		Ctrl_AFTNNZODIAC,
+		// Token: 0x04001F36 RID: 7990
+		Ctrl_AFTNNZODIACD,
+		// Token: 0x04001F37 RID: 7991
+		Ctrl_AFTNNZODIACL,
+		// Token: 0x04001F38 RID: 7992
+		Ctrl_AFTNRESTART,
+		// Token: 0x04001F39 RID: 7993
+		Ctrl_AFTNRSTCONT,
+		// Token: 0x04001F3A RID: 7994
+		Ctrl_AFTNSEP,
+		// Token: 0x04001F3B RID: 7995
+		Ctrl_AFTNSEPC,
+		// Token: 0x04001F3C RID: 7996
+		Ctrl_AFTNSTART,
+		// Token: 0x04001F3D RID: 7997
+		Ctrl_AFTNTJ,
+		// Token: 0x04001F3E RID: 7998
+		Ctrl_AI,
+		// Token: 0x04001F3F RID: 7999
+		Ctrl_ALANG,
+		// Token: 0x04001F40 RID: 8000
+		Ctrl_ALLPROT,
+		// Token: 0x04001F41 RID: 8001
+		Ctrl_ALNTBLIND,
+		// Token: 0x04001F42 RID: 8002
+		Ctrl_ALT,
+		// Token: 0x04001F43 RID: 8003
+		Ctrl_ANIMTEXT,
+		// Token: 0x04001F44 RID: 8004
+		Ctrl_ANNOTATION,
+		// Token: 0x04001F45 RID: 8005
+		Ctrl_ANNOTPROT,
+		// Token: 0x04001F46 RID: 8006
+		Ctrl_ANSI,
+		// Token: 0x04001F47 RID: 8007
+		Ctrl_ANSICPG,
+		// Token: 0x04001F48 RID: 8008
+		Ctrl_AOUTL,
+		// Token: 0x04001F49 RID: 8009
+		Ctrl_ASCAPS,
+		// Token: 0x04001F4A RID: 8010
+		Ctrl_ASHAD,
+		// Token: 0x04001F4B RID: 8011
+		Ctrl_ASPALPHA,
+		// Token: 0x04001F4C RID: 8012
+		Ctrl_ASPNUM,
+		// Token: 0x04001F4D RID: 8013
+		Ctrl_ASTRIKE,
+		// Token: 0x04001F4E RID: 8014
+		Ctrl_ATNAUTHOR,
+		// Token: 0x04001F4F RID: 8015
+		Ctrl_ATNICN,
+		// Token: 0x04001F50 RID: 8016
+		Ctrl_ATNID,
+		// Token: 0x04001F51 RID: 8017
+		Ctrl_ATNREF,
+		// Token: 0x04001F52 RID: 8018
+		Ctrl_ATNTIME,
+		// Token: 0x04001F53 RID: 8019
+		Ctrl_ATRFEND,
+		// Token: 0x04001F54 RID: 8020
+		Ctrl_ATRFSTART,
+		// Token: 0x04001F55 RID: 8021
+		Ctrl_AUL,
+		// Token: 0x04001F56 RID: 8022
+		Ctrl_AULD,
+		// Token: 0x04001F57 RID: 8023
+		Ctrl_AULDB,
+		// Token: 0x04001F58 RID: 8024
+		Ctrl_AULNONE,
+		// Token: 0x04001F59 RID: 8025
+		Ctrl_AULW,
+		// Token: 0x04001F5A RID: 8026
+		Ctrl_AUP,
+		// Token: 0x04001F5B RID: 8027
+		Ctrl_AUTHOR,
+		// Token: 0x04001F5C RID: 8028
+		Ctrl_B,
+		// Token: 0x04001F5D RID: 8029
+		Ctrl_BACKGROUND,
+		// Token: 0x04001F5E RID: 8030
+		Ctrl_BDBFHDR,
+		// Token: 0x04001F5F RID: 8031
+		Ctrl_BDRRLSWSIX,
+		// Token: 0x04001F60 RID: 8032
+		Ctrl_BGBDIAG,
+		// Token: 0x04001F61 RID: 8033
+		Ctrl_BGCROSS,
+		// Token: 0x04001F62 RID: 8034
+		Ctrl_BGDCROSS,
+		// Token: 0x04001F63 RID: 8035
+		Ctrl_BGDKBDIAG,
+		// Token: 0x04001F64 RID: 8036
+		Ctrl_BGDKCROSS,
+		// Token: 0x04001F65 RID: 8037
+		Ctrl_BGDKDCROSS,
+		// Token: 0x04001F66 RID: 8038
+		Ctrl_BGDKFDIAG,
+		// Token: 0x04001F67 RID: 8039
+		Ctrl_BGDKHORIZ,
+		// Token: 0x04001F68 RID: 8040
+		Ctrl_BGDKVERT,
+		// Token: 0x04001F69 RID: 8041
+		Ctrl_BGFDIAG,
+		// Token: 0x04001F6A RID: 8042
+		Ctrl_BGHORIZ,
+		// Token: 0x04001F6B RID: 8043
+		Ctrl_BGVERT,
+		// Token: 0x04001F6C RID: 8044
+		Ctrl_BIN,
+		// Token: 0x04001F6D RID: 8045
+		Ctrl_BINFSXN,
+		// Token: 0x04001F6E RID: 8046
+		Ctrl_BINSXN,
+		// Token: 0x04001F6F RID: 8047
+		Ctrl_BKMKCOLF,
+		// Token: 0x04001F70 RID: 8048
+		Ctrl_BKMKCOLL,
+		// Token: 0x04001F71 RID: 8049
+		Ctrl_BKMKEND,
+		// Token: 0x04001F72 RID: 8050
+		Ctrl_BKMKPUB,
+		// Token: 0x04001F73 RID: 8051
+		Ctrl_BKMKSTART,
+		// Token: 0x04001F74 RID: 8052
+		Ctrl_BLIPTAG,
+		// Token: 0x04001F75 RID: 8053
+		Ctrl_BLIPUID,
+		// Token: 0x04001F76 RID: 8054
+		Ctrl_BLIPUPI,
+		// Token: 0x04001F77 RID: 8055
+		Ctrl_BLUE,
+		// Token: 0x04001F78 RID: 8056
+		Ctrl_BOX,
+		// Token: 0x04001F79 RID: 8057
+		Ctrl_BRDRART,
+		// Token: 0x04001F7A RID: 8058
+		Ctrl_BRDRB,
+		// Token: 0x04001F7B RID: 8059
+		Ctrl_BRDRBAR,
+		// Token: 0x04001F7C RID: 8060
+		Ctrl_BRDRBTW,
+		// Token: 0x04001F7D RID: 8061
+		Ctrl_BRDRCF,
+		// Token: 0x04001F7E RID: 8062
+		Ctrl_BRDRDASH,
+		// Token: 0x04001F7F RID: 8063
+		Ctrl_BRDRDASHD,
+		// Token: 0x04001F80 RID: 8064
+		Ctrl_BRDRDASHDD,
+		// Token: 0x04001F81 RID: 8065
+		Ctrl_BRDRDASHDOTSTR,
+		// Token: 0x04001F82 RID: 8066
+		Ctrl_BRDRDASHSM,
+		// Token: 0x04001F83 RID: 8067
+		Ctrl_BRDRDB,
+		// Token: 0x04001F84 RID: 8068
+		Ctrl_BRDRDOT,
+		// Token: 0x04001F85 RID: 8069
+		Ctrl_BRDREMBOSS,
+		// Token: 0x04001F86 RID: 8070
+		Ctrl_BRDRENGRAVE,
+		// Token: 0x04001F87 RID: 8071
+		Ctrl_BRDRFRAME,
+		// Token: 0x04001F88 RID: 8072
+		Ctrl_BRDRHAIR,
+		// Token: 0x04001F89 RID: 8073
+		Ctrl_BRDRINSET,
+		// Token: 0x04001F8A RID: 8074
+		Ctrl_BRDRL,
+		// Token: 0x04001F8B RID: 8075
+		Ctrl_BRDROUTSET,
+		// Token: 0x04001F8C RID: 8076
+		Ctrl_BRDRNIL,
+		// Token: 0x04001F8D RID: 8077
+		Ctrl_BRDRNONE,
+		// Token: 0x04001F8E RID: 8078
+		Ctrl_BRDRTBL,
+		// Token: 0x04001F8F RID: 8079
+		Ctrl_BRDRR,
+		// Token: 0x04001F90 RID: 8080
+		Ctrl_BRDRS,
+		// Token: 0x04001F91 RID: 8081
+		Ctrl_BRDRSH,
+		// Token: 0x04001F92 RID: 8082
+		Ctrl_BRDRT,
+		// Token: 0x04001F93 RID: 8083
+		Ctrl_BRDRTH,
+		// Token: 0x04001F94 RID: 8084
+		Ctrl_BRDRTHTNLG,
+		// Token: 0x04001F95 RID: 8085
+		Ctrl_BRDRTHTNMG,
+		// Token: 0x04001F96 RID: 8086
+		Ctrl_BRDRTHTNSG,
+		// Token: 0x04001F97 RID: 8087
+		Ctrl_BRDRTNTHLG,
+		// Token: 0x04001F98 RID: 8088
+		Ctrl_BRDRTNTHMG,
+		// Token: 0x04001F99 RID: 8089
+		Ctrl_BRDRTNTHSG,
+		// Token: 0x04001F9A RID: 8090
+		Ctrl_BRDRTNTHTNLG,
+		// Token: 0x04001F9B RID: 8091
+		Ctrl_BRDRTNTHTNMG,
+		// Token: 0x04001F9C RID: 8092
+		Ctrl_BRDRTNTHTNSG,
+		// Token: 0x04001F9D RID: 8093
+		Ctrl_BRDRTRIPLE,
+		// Token: 0x04001F9E RID: 8094
+		Ctrl_BRDRW,
+		// Token: 0x04001F9F RID: 8095
+		Ctrl_BRDRWAVY,
+		// Token: 0x04001FA0 RID: 8096
+		Ctrl_BRDRWAVYDB,
+		// Token: 0x04001FA1 RID: 8097
+		Ctrl_BRKFRM,
+		// Token: 0x04001FA2 RID: 8098
+		Ctrl_BRSP,
+		// Token: 0x04001FA3 RID: 8099
+		Ctrl_BULLET,
+		// Token: 0x04001FA4 RID: 8100
+		Ctrl_BUPTIM,
+		// Token: 0x04001FA5 RID: 8101
+		Ctrl_BXE,
+		// Token: 0x04001FA6 RID: 8102
+		Ctrl_CAPS,
+		// Token: 0x04001FA7 RID: 8103
+		Ctrl_CATEGORY,
+		// Token: 0x04001FA8 RID: 8104
+		Ctrl_CB,
+		// Token: 0x04001FA9 RID: 8105
+		Ctrl_CBPAT,
+		// Token: 0x04001FAA RID: 8106
+		Ctrl_CCHS,
+		// Token: 0x04001FAB RID: 8107
+		Ctrl_CELL,
+		// Token: 0x04001FAC RID: 8108
+		Ctrl_CELLX,
+		// Token: 0x04001FAD RID: 8109
+		Ctrl_CF,
+		// Token: 0x04001FAE RID: 8110
+		Ctrl_CFPAT,
+		// Token: 0x04001FAF RID: 8111
+		Ctrl_CGRID,
+		// Token: 0x04001FB0 RID: 8112
+		Ctrl_CHARSCALEX,
+		// Token: 0x04001FB1 RID: 8113
+		Ctrl_CHATN,
+		// Token: 0x04001FB2 RID: 8114
+		Ctrl_CHBGBDIAG,
+		// Token: 0x04001FB3 RID: 8115
+		Ctrl_CHBGCROSS,
+		// Token: 0x04001FB4 RID: 8116
+		Ctrl_CHBGDCROSS,
+		// Token: 0x04001FB5 RID: 8117
+		Ctrl_CHBGDKBDIAG,
+		// Token: 0x04001FB6 RID: 8118
+		Ctrl_CHBGDKCROSS,
+		// Token: 0x04001FB7 RID: 8119
+		Ctrl_CHBGDKDCROSS,
+		// Token: 0x04001FB8 RID: 8120
+		Ctrl_CHBGDKFDIAG,
+		// Token: 0x04001FB9 RID: 8121
+		Ctrl_CHBGDKHORIZ,
+		// Token: 0x04001FBA RID: 8122
+		Ctrl_CHBGDKVERT,
+		// Token: 0x04001FBB RID: 8123
+		Ctrl_CHBGFDIAG,
+		// Token: 0x04001FBC RID: 8124
+		Ctrl_CHBGHORIZ,
+		// Token: 0x04001FBD RID: 8125
+		Ctrl_CHBGVERT,
+		// Token: 0x04001FBE RID: 8126
+		Ctrl_CHBRDR,
+		// Token: 0x04001FBF RID: 8127
+		Ctrl_CHCBPAT,
+		// Token: 0x04001FC0 RID: 8128
+		Ctrl_CHCFPAT,
+		// Token: 0x04001FC1 RID: 8129
+		Ctrl_CHDATE,
+		// Token: 0x04001FC2 RID: 8130
+		Ctrl_CHDPA,
+		// Token: 0x04001FC3 RID: 8131
+		Ctrl_CHDPL,
+		// Token: 0x04001FC4 RID: 8132
+		Ctrl_CHFTN,
+		// Token: 0x04001FC5 RID: 8133
+		Ctrl_CHFTNSEP,
+		// Token: 0x04001FC6 RID: 8134
+		Ctrl_CHFTNSEPC,
+		// Token: 0x04001FC7 RID: 8135
+		Ctrl_CHPGN,
+		// Token: 0x04001FC8 RID: 8136
+		Ctrl_CHSHDNG,
+		// Token: 0x04001FC9 RID: 8137
+		Ctrl_CHTIME,
+		// Token: 0x04001FCA RID: 8138
+		Ctrl_CLBGBDIAG,
+		// Token: 0x04001FCB RID: 8139
+		Ctrl_CLBGCROSS,
+		// Token: 0x04001FCC RID: 8140
+		Ctrl_CLBGDCROSS,
+		// Token: 0x04001FCD RID: 8141
+		Ctrl_CLBGDKBDIAG,
+		// Token: 0x04001FCE RID: 8142
+		Ctrl_CLBGDKCROSS,
+		// Token: 0x04001FCF RID: 8143
+		Ctrl_CLBGDKDCROSS,
+		// Token: 0x04001FD0 RID: 8144
+		Ctrl_CLBGDKFDIAG,
+		// Token: 0x04001FD1 RID: 8145
+		Ctrl_CLBGDKHOR,
+		// Token: 0x04001FD2 RID: 8146
+		Ctrl_CLBGDKVERT,
+		// Token: 0x04001FD3 RID: 8147
+		Ctrl_CLBGFDIAG,
+		// Token: 0x04001FD4 RID: 8148
+		Ctrl_CLBGHORIZ,
+		// Token: 0x04001FD5 RID: 8149
+		Ctrl_CLBGVERT,
+		// Token: 0x04001FD6 RID: 8150
+		Ctrl_CLBRDRB,
+		// Token: 0x04001FD7 RID: 8151
+		Ctrl_CLBRDRL,
+		// Token: 0x04001FD8 RID: 8152
+		Ctrl_CLBRDRR,
+		// Token: 0x04001FD9 RID: 8153
+		Ctrl_CLBRDRT,
+		// Token: 0x04001FDA RID: 8154
+		Ctrl_CLCBPAT,
+		// Token: 0x04001FDB RID: 8155
+		Ctrl_CLCFPAT,
+		// Token: 0x04001FDC RID: 8156
+		Ctrl_CLDGLL,
+		// Token: 0x04001FDD RID: 8157
+		Ctrl_CLDGLU,
+		// Token: 0x04001FDE RID: 8158
+		Ctrl_CLFITTEXT,
+		// Token: 0x04001FDF RID: 8159
+		Ctrl_CLFTSWIDTH,
+		// Token: 0x04001FE0 RID: 8160
+		Ctrl_CLMGF,
+		// Token: 0x04001FE1 RID: 8161
+		Ctrl_CLMRG,
+		// Token: 0x04001FE2 RID: 8162
+		Ctrl_CLOWRAP,
+		// Token: 0x04001FE3 RID: 8163
+		Ctrl_CLPADB,
+		// Token: 0x04001FE4 RID: 8164
+		Ctrl_CLPADFB,
+		// Token: 0x04001FE5 RID: 8165
+		Ctrl_CLPADFL,
+		// Token: 0x04001FE6 RID: 8166
+		Ctrl_CLPADFR,
+		// Token: 0x04001FE7 RID: 8167
+		Ctrl_CLPADFT,
+		// Token: 0x04001FE8 RID: 8168
+		Ctrl_CLPADL,
+		// Token: 0x04001FE9 RID: 8169
+		Ctrl_CLPADR,
+		// Token: 0x04001FEA RID: 8170
+		Ctrl_CLPADT,
+		// Token: 0x04001FEB RID: 8171
+		Ctrl_CLSHDNG,
+		// Token: 0x04001FEC RID: 8172
+		Ctrl_CLSHDRAWNIL,
+		// Token: 0x04001FED RID: 8173
+		Ctrl_CLTXBTLR,
+		// Token: 0x04001FEE RID: 8174
+		Ctrl_CLTXLRTB,
+		// Token: 0x04001FEF RID: 8175
+		Ctrl_CLTXLRTBV,
+		// Token: 0x04001FF0 RID: 8176
+		Ctrl_CLTXTBRL,
+		// Token: 0x04001FF1 RID: 8177
+		Ctrl_CLTXTBRLV,
+		// Token: 0x04001FF2 RID: 8178
+		Ctrl_CLVERTALB,
+		// Token: 0x04001FF3 RID: 8179
+		Ctrl_CLVERTALC,
+		// Token: 0x04001FF4 RID: 8180
+		Ctrl_CLVERTALT,
+		// Token: 0x04001FF5 RID: 8181
+		Ctrl_CLVMGF,
+		// Token: 0x04001FF6 RID: 8182
+		Ctrl_CLVMRG,
+		// Token: 0x04001FF7 RID: 8183
+		Ctrl_CLWWIDTH,
+		// Token: 0x04001FF8 RID: 8184
+		Ctrl_COLLAPSED,
+		// Token: 0x04001FF9 RID: 8185
+		Ctrl_COLNO,
+		// Token: 0x04001FFA RID: 8186
+		Ctrl_COLORTBL,
+		// Token: 0x04001FFB RID: 8187
+		Ctrl_COLS,
+		// Token: 0x04001FFC RID: 8188
+		Ctrl_COLSR,
+		// Token: 0x04001FFD RID: 8189
+		Ctrl_COLSX,
+		// Token: 0x04001FFE RID: 8190
+		Ctrl_COLUMN,
+		// Token: 0x04001FFF RID: 8191
+		Ctrl_COLW,
+		// Token: 0x04002000 RID: 8192
+		Ctrl_COMMENT,
+		// Token: 0x04002001 RID: 8193
+		Ctrl_COMPANY,
+		// Token: 0x04002002 RID: 8194
+		Ctrl_CPG,
+		// Token: 0x04002003 RID: 8195
+		Ctrl_CRAUTH,
+		// Token: 0x04002004 RID: 8196
+		Ctrl_CRDATE,
+		// Token: 0x04002005 RID: 8197
+		Ctrl_CREATIM,
+		// Token: 0x04002006 RID: 8198
+		Ctrl_CS,
+		// Token: 0x04002007 RID: 8199
+		Ctrl_CTRL,
+		// Token: 0x04002008 RID: 8200
+		Ctrl_CTS,
+		// Token: 0x04002009 RID: 8201
+		Ctrl_CUFI,
+		// Token: 0x0400200A RID: 8202
+		Ctrl_CULI,
+		// Token: 0x0400200B RID: 8203
+		Ctrl_CURI,
+		// Token: 0x0400200C RID: 8204
+		Ctrl_CVMME,
+		// Token: 0x0400200D RID: 8205
+		Ctrl_DATAFIELD,
+		// Token: 0x0400200E RID: 8206
+		Ctrl_DATE,
+		// Token: 0x0400200F RID: 8207
+		Ctrl_DBCH,
+		// Token: 0x04002010 RID: 8208
+		Ctrl_DEFF,
+		// Token: 0x04002011 RID: 8209
+		Ctrl_DEFFORMAT,
+		// Token: 0x04002012 RID: 8210
+		Ctrl_DEFLANG,
+		// Token: 0x04002013 RID: 8211
+		Ctrl_DEFLANGA,
+		// Token: 0x04002014 RID: 8212
+		Ctrl_DEFLANGFE,
+		// Token: 0x04002015 RID: 8213
+		Ctrl_DEFSHP,
+		// Token: 0x04002016 RID: 8214
+		Ctrl_DEFTAB,
+		// Token: 0x04002017 RID: 8215
+		Ctrl_DELETED,
+		// Token: 0x04002018 RID: 8216
+		Ctrl_DFRAUTH,
+		// Token: 0x04002019 RID: 8217
+		Ctrl_DFRDATE,
+		// Token: 0x0400201A RID: 8218
+		Ctrl_DFRMTXTX,
+		// Token: 0x0400201B RID: 8219
+		Ctrl_DFRMTXTY,
+		// Token: 0x0400201C RID: 8220
+		Ctrl_DFRSTART,
+		// Token: 0x0400201D RID: 8221
+		Ctrl_DFRSTOP,
+		// Token: 0x0400201E RID: 8222
+		Ctrl_DFRXST,
+		// Token: 0x0400201F RID: 8223
+		Ctrl_DGHORIGIN,
+		// Token: 0x04002020 RID: 8224
+		Ctrl_DGHSHOW,
+		// Token: 0x04002021 RID: 8225
+		Ctrl_DGHSPACE,
+		// Token: 0x04002022 RID: 8226
+		Ctrl_DGMARGIN,
+		// Token: 0x04002023 RID: 8227
+		Ctrl_DGSNAP,
+		// Token: 0x04002024 RID: 8228
+		Ctrl_DGVORIGIN,
+		// Token: 0x04002025 RID: 8229
+		Ctrl_DGVSHOW,
+		// Token: 0x04002026 RID: 8230
+		Ctrl_DGVSPACE,
+		// Token: 0x04002027 RID: 8231
+		Ctrl_DIBITMAP,
+		// Token: 0x04002028 RID: 8232
+		Ctrl_DN,
+		// Token: 0x04002029 RID: 8233
+		Ctrl_DNTBLNSBDB,
+		// Token: 0x0400202A RID: 8234
+		Ctrl_DO,
+		// Token: 0x0400202B RID: 8235
+		Ctrl_DOBXCOLUMN,
+		// Token: 0x0400202C RID: 8236
+		Ctrl_DOBXMARGIN,
+		// Token: 0x0400202D RID: 8237
+		Ctrl_DOBXPAGE,
+		// Token: 0x0400202E RID: 8238
+		Ctrl_DOBYMARGIN,
+		// Token: 0x0400202F RID: 8239
+		Ctrl_DOBYPAGE,
+		// Token: 0x04002030 RID: 8240
+		Ctrl_DOBYPARA,
+		// Token: 0x04002031 RID: 8241
+		Ctrl_DOCCOMM,
+		// Token: 0x04002032 RID: 8242
+		Ctrl_DOCTEMP,
+		// Token: 0x04002033 RID: 8243
+		Ctrl_DOCTYPE,
+		// Token: 0x04002034 RID: 8244
+		Ctrl_DOCVAR,
+		// Token: 0x04002035 RID: 8245
+		Ctrl_DODHGT,
+		// Token: 0x04002036 RID: 8246
+		Ctrl_DOLOCK,
+		// Token: 0x04002037 RID: 8247
+		Ctrl_DPAENDHOL,
+		// Token: 0x04002038 RID: 8248
+		Ctrl_DPAENDL,
+		// Token: 0x04002039 RID: 8249
+		Ctrl_DPAENDSOL,
+		// Token: 0x0400203A RID: 8250
+		Ctrl_DPAENDW,
+		// Token: 0x0400203B RID: 8251
+		Ctrl_DPARC,
+		// Token: 0x0400203C RID: 8252
+		Ctrl_DPARCFLIPX,
+		// Token: 0x0400203D RID: 8253
+		Ctrl_DPARCFLIPY,
+		// Token: 0x0400203E RID: 8254
+		Ctrl_DPASTARTHOL,
+		// Token: 0x0400203F RID: 8255
+		Ctrl_DPASTARTL,
+		// Token: 0x04002040 RID: 8256
+		Ctrl_DPASTARTSOL,
+		// Token: 0x04002041 RID: 8257
+		Ctrl_DPASTARTW,
+		// Token: 0x04002042 RID: 8258
+		Ctrl_DPCALLOUT,
+		// Token: 0x04002043 RID: 8259
+		Ctrl_DPCOA,
+		// Token: 0x04002044 RID: 8260
+		Ctrl_DPCOACCENT,
+		// Token: 0x04002045 RID: 8261
+		Ctrl_DPCOBESTFIT,
+		// Token: 0x04002046 RID: 8262
+		Ctrl_DPCOBORDER,
+		// Token: 0x04002047 RID: 8263
+		Ctrl_DPCODABS,
+		// Token: 0x04002048 RID: 8264
+		Ctrl_DPCODBOTTOM,
+		// Token: 0x04002049 RID: 8265
+		Ctrl_DPCODCENTER,
+		// Token: 0x0400204A RID: 8266
+		Ctrl_DPCODESCENT,
+		// Token: 0x0400204B RID: 8267
+		Ctrl_DPCODTOP,
+		// Token: 0x0400204C RID: 8268
+		Ctrl_DPCOLENGTH,
+		// Token: 0x0400204D RID: 8269
+		Ctrl_DPCOMINUSX,
+		// Token: 0x0400204E RID: 8270
+		Ctrl_DPCOMINUSY,
+		// Token: 0x0400204F RID: 8271
+		Ctrl_DPCOOFFSET,
+		// Token: 0x04002050 RID: 8272
+		Ctrl_DPCOSMARTA,
+		// Token: 0x04002051 RID: 8273
+		Ctrl_DPCOTDOUBLE,
+		// Token: 0x04002052 RID: 8274
+		Ctrl_DPCOTRIGHT,
+		// Token: 0x04002053 RID: 8275
+		Ctrl_DPCOTSINGLE,
+		// Token: 0x04002054 RID: 8276
+		Ctrl_DPCOTTRIPLE,
+		// Token: 0x04002055 RID: 8277
+		Ctrl_DPCOUNT,
+		// Token: 0x04002056 RID: 8278
+		Ctrl_DPELLIPSE,
+		// Token: 0x04002057 RID: 8279
+		Ctrl_DPENDGROUP,
+		// Token: 0x04002058 RID: 8280
+		Ctrl_DPFILLBGCB,
+		// Token: 0x04002059 RID: 8281
+		Ctrl_DPFILLBGCG,
+		// Token: 0x0400205A RID: 8282
+		Ctrl_DPFILLBGCR,
+		// Token: 0x0400205B RID: 8283
+		Ctrl_DPFILLBGGRAY,
+		// Token: 0x0400205C RID: 8284
+		Ctrl_DPFILLBGPAL,
+		// Token: 0x0400205D RID: 8285
+		Ctrl_DPFILLFGCB,
+		// Token: 0x0400205E RID: 8286
+		Ctrl_DPFILLFGCG,
+		// Token: 0x0400205F RID: 8287
+		Ctrl_DPFILLFGCR,
+		// Token: 0x04002060 RID: 8288
+		Ctrl_DPFILLFGGRAY,
+		// Token: 0x04002061 RID: 8289
+		Ctrl_DPFILLFGPAL,
+		// Token: 0x04002062 RID: 8290
+		Ctrl_DPFILLPAT,
+		// Token: 0x04002063 RID: 8291
+		Ctrl_DPGROUP,
+		// Token: 0x04002064 RID: 8292
+		Ctrl_DPLINE,
+		// Token: 0x04002065 RID: 8293
+		Ctrl_DPLINECOB,
+		// Token: 0x04002066 RID: 8294
+		Ctrl_DPLINECOG,
+		// Token: 0x04002067 RID: 8295
+		Ctrl_DPLINECOR,
+		// Token: 0x04002068 RID: 8296
+		Ctrl_DPLINEDADO,
+		// Token: 0x04002069 RID: 8297
+		Ctrl_DPLINEDADODO,
+		// Token: 0x0400206A RID: 8298
+		Ctrl_DPLINEDASH,
+		// Token: 0x0400206B RID: 8299
+		Ctrl_DPLINEDOT,
+		// Token: 0x0400206C RID: 8300
+		Ctrl_DPLINEGRAY,
+		// Token: 0x0400206D RID: 8301
+		Ctrl_DPLINEHOLLOW,
+		// Token: 0x0400206E RID: 8302
+		Ctrl_DPLINEPAL,
+		// Token: 0x0400206F RID: 8303
+		Ctrl_DPLINESOLID,
+		// Token: 0x04002070 RID: 8304
+		Ctrl_DPLINEW,
+		// Token: 0x04002071 RID: 8305
+		Ctrl_DPPOLYCOUNT,
+		// Token: 0x04002072 RID: 8306
+		Ctrl_DPPOLYGON,
+		// Token: 0x04002073 RID: 8307
+		Ctrl_DPPOLYLINE,
+		// Token: 0x04002074 RID: 8308
+		Ctrl_DPPTX,
+		// Token: 0x04002075 RID: 8309
+		Ctrl_DPPTY,
+		// Token: 0x04002076 RID: 8310
+		Ctrl_DPRECT,
+		// Token: 0x04002077 RID: 8311
+		Ctrl_DPROUNDR,
+		// Token: 0x04002078 RID: 8312
+		Ctrl_DPSHADOW,
+		// Token: 0x04002079 RID: 8313
+		Ctrl_DPSHADX,
+		// Token: 0x0400207A RID: 8314
+		Ctrl_DPSHADY,
+		// Token: 0x0400207B RID: 8315
+		Ctrl_DPTXBTLR,
+		// Token: 0x0400207C RID: 8316
+		Ctrl_DPTXBX,
+		// Token: 0x0400207D RID: 8317
+		Ctrl_DPTXBXMAR,
+		// Token: 0x0400207E RID: 8318
+		Ctrl_DPTXBXTEXT,
+		// Token: 0x0400207F RID: 8319
+		Ctrl_DPTXLRTB,
+		// Token: 0x04002080 RID: 8320
+		Ctrl_DPTXLRTBV,
+		// Token: 0x04002081 RID: 8321
+		Ctrl_DPTXTBRL,
+		// Token: 0x04002082 RID: 8322
+		Ctrl_DPTXTBRLV,
+		// Token: 0x04002083 RID: 8323
+		Ctrl_DPX,
+		// Token: 0x04002084 RID: 8324
+		Ctrl_DPXSIZE,
+		// Token: 0x04002085 RID: 8325
+		Ctrl_DPY,
+		// Token: 0x04002086 RID: 8326
+		Ctrl_DPYSIZE,
+		// Token: 0x04002087 RID: 8327
+		Ctrl_DROPCAPLI,
+		// Token: 0x04002088 RID: 8328
+		Ctrl_DROPCAPT,
+		// Token: 0x04002089 RID: 8329
+		Ctrl_DS,
+		// Token: 0x0400208A RID: 8330
+		Ctrl_DXFRTEXT,
+		// Token: 0x0400208B RID: 8331
+		Ctrl_DY,
+		// Token: 0x0400208C RID: 8332
+		Ctrl_EDMINS,
+		// Token: 0x0400208D RID: 8333
+		Ctrl_EMBO,
+		// Token: 0x0400208E RID: 8334
+		Ctrl_EMDASH,
+		// Token: 0x0400208F RID: 8335
+		Ctrl_EMFBLIP,
+		// Token: 0x04002090 RID: 8336
+		Ctrl_EMSPACE,
+		// Token: 0x04002091 RID: 8337
+		Ctrl_ENDASH,
+		// Token: 0x04002092 RID: 8338
+		Ctrl_ENDDOC,
+		// Token: 0x04002093 RID: 8339
+		Ctrl_ENDNHERE,
+		// Token: 0x04002094 RID: 8340
+		Ctrl_ENDNOTES,
+		// Token: 0x04002095 RID: 8341
+		Ctrl_ENSPACE,
+		// Token: 0x04002096 RID: 8342
+		Ctrl_EXPND,
+		// Token: 0x04002097 RID: 8343
+		Ctrl_EXPNDTW,
+		// Token: 0x04002098 RID: 8344
+		Ctrl_EXPSHRTN,
+		// Token: 0x04002099 RID: 8345
+		Ctrl_F,
+		// Token: 0x0400209A RID: 8346
+		Ctrl_FAAUTO,
+		// Token: 0x0400209B RID: 8347
+		Ctrl_FACENTER,
+		// Token: 0x0400209C RID: 8348
+		Ctrl_FACINGP,
+		// Token: 0x0400209D RID: 8349
+		Ctrl_FAHANG,
+		// Token: 0x0400209E RID: 8350
+		Ctrl_FALT,
+		// Token: 0x0400209F RID: 8351
+		Ctrl_FAROMAN,
+		// Token: 0x040020A0 RID: 8352
+		Ctrl_FAVAR,
+		// Token: 0x040020A1 RID: 8353
+		Ctrl_FBIAS,
+		// Token: 0x040020A2 RID: 8354
+		Ctrl_FBIDI,
+		// Token: 0x040020A3 RID: 8355
+		Ctrl_FCHARS,
+		// Token: 0x040020A4 RID: 8356
+		Ctrl_FCHARSET,
+		// Token: 0x040020A5 RID: 8357
+		Ctrl_FDECOR,
+		// Token: 0x040020A6 RID: 8358
+		Ctrl_FET,
+		// Token: 0x040020A7 RID: 8359
+		Ctrl_FETCH,
+		// Token: 0x040020A8 RID: 8360
+		Ctrl_FFDEFRES,
+		// Token: 0x040020A9 RID: 8361
+		Ctrl_FFDEFTEXT,
+		// Token: 0x040020AA RID: 8362
+		Ctrl_FFENTRYMCR,
+		// Token: 0x040020AB RID: 8363
+		Ctrl_FFEXITMCR,
+		// Token: 0x040020AC RID: 8364
+		Ctrl_FFFORMAT,
+		// Token: 0x040020AD RID: 8365
+		Ctrl_FFHASLISTBOX,
+		// Token: 0x040020AE RID: 8366
+		Ctrl_FFHELPTEXT,
+		// Token: 0x040020AF RID: 8367
+		Ctrl_FFHPS,
+		// Token: 0x040020B0 RID: 8368
+		Ctrl_FFL,
+		// Token: 0x040020B1 RID: 8369
+		Ctrl_FFMAXLEN,
+		// Token: 0x040020B2 RID: 8370
+		Ctrl_FFNAME,
+		// Token: 0x040020B3 RID: 8371
+		Ctrl_FFOWNHELP,
+		// Token: 0x040020B4 RID: 8372
+		Ctrl_FFOWNSTAT,
+		// Token: 0x040020B5 RID: 8373
+		Ctrl_FFPROT,
+		// Token: 0x040020B6 RID: 8374
+		Ctrl_FFRECALC,
+		// Token: 0x040020B7 RID: 8375
+		Ctrl_FFRES,
+		// Token: 0x040020B8 RID: 8376
+		Ctrl_FFSIZE,
+		// Token: 0x040020B9 RID: 8377
+		Ctrl_FFSTATTEXT,
+		// Token: 0x040020BA RID: 8378
+		Ctrl_FFTYPE,
+		// Token: 0x040020BB RID: 8379
+		Ctrl_FFTYPETXT,
+		// Token: 0x040020BC RID: 8380
+		Ctrl_FI,
+		// Token: 0x040020BD RID: 8381
+		Ctrl_FID,
+		// Token: 0x040020BE RID: 8382
+		Ctrl_FIELD,
+		// Token: 0x040020BF RID: 8383
+		Ctrl_FILE,
+		// Token: 0x040020C0 RID: 8384
+		Ctrl_FILETBL,
+		// Token: 0x040020C1 RID: 8385
+		Ctrl_FITTEXT,
+		// Token: 0x040020C2 RID: 8386
+		Ctrl_FLDALT,
+		// Token: 0x040020C3 RID: 8387
+		Ctrl_FLDDIRTY,
+		// Token: 0x040020C4 RID: 8388
+		Ctrl_FLDEDIT,
+		// Token: 0x040020C5 RID: 8389
+		Ctrl_FLDINST,
+		// Token: 0x040020C6 RID: 8390
+		Ctrl_FLDLOCK,
+		// Token: 0x040020C7 RID: 8391
+		Ctrl_FLDPRIV,
+		// Token: 0x040020C8 RID: 8392
+		Ctrl_FLDRSLT,
+		// Token: 0x040020C9 RID: 8393
+		Ctrl_FLDTYPE,
+		// Token: 0x040020CA RID: 8394
+		Ctrl_FMODERN,
+		// Token: 0x040020CB RID: 8395
+		Ctrl_FN,
+		// Token: 0x040020CC RID: 8396
+		Ctrl_FNAME,
+		// Token: 0x040020CD RID: 8397
+		Ctrl_FNETWORK,
+		// Token: 0x040020CE RID: 8398
+		Ctrl_FNIL,
+		// Token: 0x040020CF RID: 8399
+		Ctrl_FONTEMB,
+		// Token: 0x040020D0 RID: 8400
+		Ctrl_FONTFILE,
+		// Token: 0x040020D1 RID: 8401
+		Ctrl_FONTTBL,
+		// Token: 0x040020D2 RID: 8402
+		Ctrl_FOOTER,
+		// Token: 0x040020D3 RID: 8403
+		Ctrl_FOOTERF,
+		// Token: 0x040020D4 RID: 8404
+		Ctrl_FOOTERL,
+		// Token: 0x040020D5 RID: 8405
+		Ctrl_FOOTERR,
+		// Token: 0x040020D6 RID: 8406
+		Ctrl_FOOTERY,
+		// Token: 0x040020D7 RID: 8407
+		Ctrl_FOOTNOTE,
+		// Token: 0x040020D8 RID: 8408
+		Ctrl_FORMDISP,
+		// Token: 0x040020D9 RID: 8409
+		Ctrl_FORMFIELD,
+		// Token: 0x040020DA RID: 8410
+		Ctrl_FORMPROT,
+		// Token: 0x040020DB RID: 8411
+		Ctrl_FORMSHADE,
+		// Token: 0x040020DC RID: 8412
+		Ctrl_FOSNUM,
+		// Token: 0x040020DD RID: 8413
+		Ctrl_FPRQ,
+		// Token: 0x040020DE RID: 8414
+		Ctrl_FRACWIDTH,
+		// Token: 0x040020DF RID: 8415
+		Ctrl_FRELATIVE,
+		// Token: 0x040020E0 RID: 8416
+		Ctrl_FRMTXBTLR,
+		// Token: 0x040020E1 RID: 8417
+		Ctrl_FRMTXLRTB,
+		// Token: 0x040020E2 RID: 8418
+		Ctrl_FRMTXLRTBV,
+		// Token: 0x040020E3 RID: 8419
+		Ctrl_FRMTXTBRL,
+		// Token: 0x040020E4 RID: 8420
+		Ctrl_FRMTXTBRLV,
+		// Token: 0x040020E5 RID: 8421
+		Ctrl_FROMAN,
+		// Token: 0x040020E6 RID: 8422
+		Ctrl_FROMHTML,
+		// Token: 0x040020E7 RID: 8423
+		Ctrl_FROMTEXT,
+		// Token: 0x040020E8 RID: 8424
+		Ctrl_FS,
+		// Token: 0x040020E9 RID: 8425
+		Ctrl_FSCRIPT,
+		// Token: 0x040020EA RID: 8426
+		Ctrl_FSWISS,
+		// Token: 0x040020EB RID: 8427
+		Ctrl_FTNALT,
+		// Token: 0x040020EC RID: 8428
+		Ctrl_FTNBJ,
+		// Token: 0x040020ED RID: 8429
+		Ctrl_FTNCN,
+		// Token: 0x040020EE RID: 8430
+		Ctrl_FTNIL,
+		// Token: 0x040020EF RID: 8431
+		Ctrl_FTNLYTWNINE,
+		// Token: 0x040020F0 RID: 8432
+		Ctrl_FTNNALC,
+		// Token: 0x040020F1 RID: 8433
+		Ctrl_FTNNAR,
+		// Token: 0x040020F2 RID: 8434
+		Ctrl_FTNNAUC,
+		// Token: 0x040020F3 RID: 8435
+		Ctrl_FTNNCHI,
+		// Token: 0x040020F4 RID: 8436
+		Ctrl_FTNNCHOSUNG,
+		// Token: 0x040020F5 RID: 8437
+		Ctrl_FTNNCNUM,
+		// Token: 0x040020F6 RID: 8438
+		Ctrl_FTNNDBAR,
+		// Token: 0x040020F7 RID: 8439
+		Ctrl_FTNNDBNUM,
+		// Token: 0x040020F8 RID: 8440
+		Ctrl_FTNNDBNUMD,
+		// Token: 0x040020F9 RID: 8441
+		Ctrl_FTNNDBNUMK,
+		// Token: 0x040020FA RID: 8442
+		Ctrl_FTNNDBNUMT,
+		// Token: 0x040020FB RID: 8443
+		Ctrl_FTNNGANADA,
+		// Token: 0x040020FC RID: 8444
+		Ctrl_FTNNGBNUM,
+		// Token: 0x040020FD RID: 8445
+		Ctrl_FTNNGBNUMD,
+		// Token: 0x040020FE RID: 8446
+		Ctrl_FTNNGBNUMK,
+		// Token: 0x040020FF RID: 8447
+		Ctrl_FTNNGBNUML,
+		// Token: 0x04002100 RID: 8448
+		Ctrl_FTNNRLC,
+		// Token: 0x04002101 RID: 8449
+		Ctrl_FTNNRUC,
+		// Token: 0x04002102 RID: 8450
+		Ctrl_FTNNZODIAC,
+		// Token: 0x04002103 RID: 8451
+		Ctrl_FTNNZODIACD,
+		// Token: 0x04002104 RID: 8452
+		Ctrl_FTNNZODIACL,
+		// Token: 0x04002105 RID: 8453
+		Ctrl_FTNRESTART,
+		// Token: 0x04002106 RID: 8454
+		Ctrl_FTNRSTCONT,
+		// Token: 0x04002107 RID: 8455
+		Ctrl_FTNRSTPG,
+		// Token: 0x04002108 RID: 8456
+		Ctrl_FTNSEP,
+		// Token: 0x04002109 RID: 8457
+		Ctrl_FTNSEPC,
+		// Token: 0x0400210A RID: 8458
+		Ctrl_FTNSTART,
+		// Token: 0x0400210B RID: 8459
+		Ctrl_FTNTJ,
+		// Token: 0x0400210C RID: 8460
+		Ctrl_FTTRUETYPE,
+		// Token: 0x0400210D RID: 8461
+		Ctrl_FVALIDDOS,
+		// Token: 0x0400210E RID: 8462
+		Ctrl_FVALIDHPFS,
+		// Token: 0x0400210F RID: 8463
+		Ctrl_FVALIDMAC,
+		// Token: 0x04002110 RID: 8464
+		Ctrl_FVALIDNTFS,
+		// Token: 0x04002111 RID: 8465
+		Ctrl_G,
+		// Token: 0x04002112 RID: 8466
+		Ctrl_GCW,
+		// Token: 0x04002113 RID: 8467
+		Ctrl_GREEN,
+		// Token: 0x04002114 RID: 8468
+		Ctrl_GRIDTBL,
+		// Token: 0x04002115 RID: 8469
+		Ctrl_GUTTER,
+		// Token: 0x04002116 RID: 8470
+		Ctrl_GUTTERPRL,
+		// Token: 0x04002117 RID: 8471
+		Ctrl_GUTTERSXN,
+		// Token: 0x04002118 RID: 8472
+		Ctrl_HEADER,
+		// Token: 0x04002119 RID: 8473
+		Ctrl_HEADERF,
+		// Token: 0x0400211A RID: 8474
+		Ctrl_HEADERL,
+		// Token: 0x0400211B RID: 8475
+		Ctrl_HEADERR,
+		// Token: 0x0400211C RID: 8476
+		Ctrl_HEADERY,
+		// Token: 0x0400211D RID: 8477
+		Ctrl_HICH,
+		// Token: 0x0400211E RID: 8478
+		Ctrl_HIGHLIGHT,
+		// Token: 0x0400211F RID: 8479
+		Ctrl_HLFR,
+		// Token: 0x04002120 RID: 8480
+		Ctrl_HLINKBASE,
+		// Token: 0x04002121 RID: 8481
+		Ctrl_HLLOC,
+		// Token: 0x04002122 RID: 8482
+		Ctrl_HLSRC,
+		// Token: 0x04002123 RID: 8483
+		Ctrl_HORZDOC,
+		// Token: 0x04002124 RID: 8484
+		Ctrl_HORZSECT,
+		// Token: 0x04002125 RID: 8485
+		Ctrl_HR,
+		// Token: 0x04002126 RID: 8486
+		Ctrl_HTMAUTSP,
+		// Token: 0x04002127 RID: 8487
+		Ctrl_HTMLBASE,
+		// Token: 0x04002128 RID: 8488
+		Ctrl_HTMLRTF,
+		// Token: 0x04002129 RID: 8489
+		Ctrl_HTMLTAG,
+		// Token: 0x0400212A RID: 8490
+		Ctrl_HYPHAUTO,
+		// Token: 0x0400212B RID: 8491
+		Ctrl_HYPHCAPS,
+		// Token: 0x0400212C RID: 8492
+		Ctrl_HYPHCONSEC,
+		// Token: 0x0400212D RID: 8493
+		Ctrl_HYPHHOTZ,
+		// Token: 0x0400212E RID: 8494
+		Ctrl_HYPHPAR,
+		// Token: 0x0400212F RID: 8495
+		Ctrl_I,
+		// Token: 0x04002130 RID: 8496
+		Ctrl_ID,
+		// Token: 0x04002131 RID: 8497
+		Ctrl_ILVL,
+		// Token: 0x04002132 RID: 8498
+		Ctrl_IMPR,
+		// Token: 0x04002133 RID: 8499
+		Ctrl_INFO,
+		// Token: 0x04002134 RID: 8500
+		Ctrl_INTBL,
+		// Token: 0x04002135 RID: 8501
+		Ctrl_ITAP,
+		// Token: 0x04002136 RID: 8502
+		Ctrl_IXE,
+		// Token: 0x04002137 RID: 8503
+		Ctrl_JCOMPRESS,
+		// Token: 0x04002138 RID: 8504
+		Ctrl_JEXPAND,
+		// Token: 0x04002139 RID: 8505
+		Ctrl_JPEGBLIP,
+		// Token: 0x0400213A RID: 8506
+		Ctrl_JSKSU,
+		// Token: 0x0400213B RID: 8507
+		Ctrl_KEEP,
+		// Token: 0x0400213C RID: 8508
+		Ctrl_KEEPN,
+		// Token: 0x0400213D RID: 8509
+		Ctrl_KERNING,
+		// Token: 0x0400213E RID: 8510
+		Ctrl_KEYCODE,
+		// Token: 0x0400213F RID: 8511
+		Ctrl_KEYWORDS,
+		// Token: 0x04002140 RID: 8512
+		Ctrl_KSULANG,
+		// Token: 0x04002141 RID: 8513
+		Ctrl_LANDSCAPE,
+		// Token: 0x04002142 RID: 8514
+		Ctrl_LANG,
+		// Token: 0x04002143 RID: 8515
+		Ctrl_LANGFE,
+		// Token: 0x04002144 RID: 8516
+		Ctrl_LANGFENP,
+		// Token: 0x04002145 RID: 8517
+		Ctrl_LANGNP,
+		// Token: 0x04002146 RID: 8518
+		Ctrl_LBR,
+		// Token: 0x04002147 RID: 8519
+		Ctrl_LCHARS,
+		// Token: 0x04002148 RID: 8520
+		Ctrl_LDBLQUOTE,
+		// Token: 0x04002149 RID: 8521
+		Ctrl_LEVEL,
+		// Token: 0x0400214A RID: 8522
+		Ctrl_LEVELFOLLOW,
+		// Token: 0x0400214B RID: 8523
+		Ctrl_LEVELINDENT,
+		// Token: 0x0400214C RID: 8524
+		Ctrl_LEVELJC,
+		// Token: 0x0400214D RID: 8525
+		Ctrl_LEVELJCN,
+		// Token: 0x0400214E RID: 8526
+		Ctrl_LEVELLEGAL,
+		// Token: 0x0400214F RID: 8527
+		Ctrl_LEVELNFC,
+		// Token: 0x04002150 RID: 8528
+		Ctrl_LEVELNFCN,
+		// Token: 0x04002151 RID: 8529
+		Ctrl_LEVELNORESTART,
+		// Token: 0x04002152 RID: 8530
+		Ctrl_LEVELNUMBERS,
+		// Token: 0x04002153 RID: 8531
+		Ctrl_LEVELOLD,
+		// Token: 0x04002154 RID: 8532
+		Ctrl_LEVELPREV,
+		// Token: 0x04002155 RID: 8533
+		Ctrl_LEVELPREVSPACE,
+		// Token: 0x04002156 RID: 8534
+		Ctrl_LEVELSPACE,
+		// Token: 0x04002157 RID: 8535
+		Ctrl_LEVELSTARTAT,
+		// Token: 0x04002158 RID: 8536
+		Ctrl_LEVELTEMPLATEID,
+		// Token: 0x04002159 RID: 8537
+		Ctrl_LEVELTEXT,
+		// Token: 0x0400215A RID: 8538
+		Ctrl_LFOLEVEL,
+		// Token: 0x0400215B RID: 8539
+		Ctrl_LI,
+		// Token: 0x0400215C RID: 8540
+		Ctrl_LINE,
+		// Token: 0x0400215D RID: 8541
+		Ctrl_LINEBETCOL,
+		// Token: 0x0400215E RID: 8542
+		Ctrl_LINECONT,
+		// Token: 0x0400215F RID: 8543
+		Ctrl_LINEMOD,
+		// Token: 0x04002160 RID: 8544
+		Ctrl_LINEPPAGE,
+		// Token: 0x04002161 RID: 8545
+		Ctrl_LINERESTART,
+		// Token: 0x04002162 RID: 8546
+		Ctrl_LINESTART,
+		// Token: 0x04002163 RID: 8547
+		Ctrl_LINESTARTS,
+		// Token: 0x04002164 RID: 8548
+		Ctrl_LINEX,
+		// Token: 0x04002165 RID: 8549
+		Ctrl_LINKSELF,
+		// Token: 0x04002166 RID: 8550
+		Ctrl_LINKSTYLES,
+		// Token: 0x04002167 RID: 8551
+		Ctrl_LINKVAL,
+		// Token: 0x04002168 RID: 8552
+		Ctrl_LIN,
+		// Token: 0x04002169 RID: 8553
+		Ctrl_LISA,
+		// Token: 0x0400216A RID: 8554
+		Ctrl_LISB,
+		// Token: 0x0400216B RID: 8555
+		Ctrl_LIST,
+		// Token: 0x0400216C RID: 8556
+		Ctrl_LISTHYBRID,
+		// Token: 0x0400216D RID: 8557
+		Ctrl_LISTID,
+		// Token: 0x0400216E RID: 8558
+		Ctrl_LISTLEVEL,
+		// Token: 0x0400216F RID: 8559
+		Ctrl_LISTNAME,
+		// Token: 0x04002170 RID: 8560
+		Ctrl_LISTOVERRIDE,
+		// Token: 0x04002171 RID: 8561
+		Ctrl_LISTOVERRIDECOUNT,
+		// Token: 0x04002172 RID: 8562
+		Ctrl_LISTOVERRIDEFORMAT,
+		// Token: 0x04002173 RID: 8563
+		Ctrl_LISTOVERRIDESTART,
+		// Token: 0x04002174 RID: 8564
+		Ctrl_LISTPICTURE,
+		// Token: 0x04002175 RID: 8565
+		Ctrl_LISTRESTARTHDN,
+		// Token: 0x04002176 RID: 8566
+		Ctrl_LISTSIMPLE,
+		// Token: 0x04002177 RID: 8567
+		Ctrl_LISTTABLE,
+		// Token: 0x04002178 RID: 8568
+		Ctrl_LISTOVERRIDETABLE,
+		// Token: 0x04002179 RID: 8569
+		Ctrl_LISTTEMPLATEID,
+		// Token: 0x0400217A RID: 8570
+		Ctrl_LISTTEXT,
+		// Token: 0x0400217B RID: 8571
+		Ctrl_LNBRKRULE,
+		// Token: 0x0400217C RID: 8572
+		Ctrl_LNDSCPSXN,
+		// Token: 0x0400217D RID: 8573
+		Ctrl_LNONGRID,
+		// Token: 0x0400217E RID: 8574
+		Ctrl_LOCH,
+		// Token: 0x0400217F RID: 8575
+		Ctrl_LQUOTE,
+		// Token: 0x04002180 RID: 8576
+		Ctrl_LS,
+		// Token: 0x04002181 RID: 8577
+		Ctrl_LTRCH,
+		// Token: 0x04002182 RID: 8578
+		Ctrl_LTRDOC,
+		// Token: 0x04002183 RID: 8579
+		Ctrl_LTRMARK,
+		// Token: 0x04002184 RID: 8580
+		Ctrl_LTRPAR,
+		// Token: 0x04002185 RID: 8581
+		Ctrl_LTRROW,
+		// Token: 0x04002186 RID: 8582
+		Ctrl_LTRSECT,
+		// Token: 0x04002187 RID: 8583
+		Ctrl_LYTCALCTBLWD,
+		// Token: 0x04002188 RID: 8584
+		Ctrl_LYTEXCTTP,
+		// Token: 0x04002189 RID: 8585
+		Ctrl_LYTPRTMET,
+		// Token: 0x0400218A RID: 8586
+		Ctrl_LYTTBLRTGR,
+		// Token: 0x0400218B RID: 8587
+		Ctrl_MAC,
+		// Token: 0x0400218C RID: 8588
+		Ctrl_MACPICT,
+		// Token: 0x0400218D RID: 8589
+		Ctrl_MAKEBACKUP,
+		// Token: 0x0400218E RID: 8590
+		Ctrl_MANAGER,
+		// Token: 0x0400218F RID: 8591
+		Ctrl_MARGB,
+		// Token: 0x04002190 RID: 8592
+		Ctrl_MARGBSXN,
+		// Token: 0x04002191 RID: 8593
+		Ctrl_MARGL,
+		// Token: 0x04002192 RID: 8594
+		Ctrl_MARGLSXN,
+		// Token: 0x04002193 RID: 8595
+		Ctrl_MARGMIRROR,
+		// Token: 0x04002194 RID: 8596
+		Ctrl_MARGR,
+		// Token: 0x04002195 RID: 8597
+		Ctrl_MARGRSXN,
+		// Token: 0x04002196 RID: 8598
+		Ctrl_MARGT,
+		// Token: 0x04002197 RID: 8599
+		Ctrl_MARGTSXN,
+		// Token: 0x04002198 RID: 8600
+		Ctrl_MHTMLTAG,
+		// Token: 0x04002199 RID: 8601
+		Ctrl_MIN,
+		// Token: 0x0400219A RID: 8602
+		Ctrl_MO,
+		// Token: 0x0400219B RID: 8603
+		Ctrl_MSMCAP,
+		// Token: 0x0400219C RID: 8604
+		Ctrl_NESTCELL,
+		// Token: 0x0400219D RID: 8605
+		Ctrl_NESTROW,
+		// Token: 0x0400219E RID: 8606
+		Ctrl_NESTTABLEPROPS,
+		// Token: 0x0400219F RID: 8607
+		Ctrl_NEXTFILE,
+		// Token: 0x040021A0 RID: 8608
+		Ctrl_NOCOLBAL,
+		// Token: 0x040021A1 RID: 8609
+		Ctrl_NOCWRAP,
+		// Token: 0x040021A2 RID: 8610
+		Ctrl_NOEXTRASPRL,
+		// Token: 0x040021A3 RID: 8611
+		Ctrl_NOFCHARS,
+		// Token: 0x040021A4 RID: 8612
+		Ctrl_NOFCHARSWS,
+		// Token: 0x040021A5 RID: 8613
+		Ctrl_NOFPAGES,
+		// Token: 0x040021A6 RID: 8614
+		Ctrl_NOFWORDS,
+		// Token: 0x040021A7 RID: 8615
+		Ctrl_NOLEAD,
+		// Token: 0x040021A8 RID: 8616
+		Ctrl_NOLINE,
+		// Token: 0x040021A9 RID: 8617
+		Ctrl_NOLNHTADJTBL,
+		// Token: 0x040021AA RID: 8618
+		Ctrl_NONESTTABLES,
+		// Token: 0x040021AB RID: 8619
+		Ctrl_NONSHPPICT,
+		// Token: 0x040021AC RID: 8620
+		Ctrl_NOOVERFLOW,
+		// Token: 0x040021AD RID: 8621
+		Ctrl_NOPROOF,
+		// Token: 0x040021AE RID: 8622
+		Ctrl_NOSECTEXPAND,
+		// Token: 0x040021AF RID: 8623
+		Ctrl_NOSNAPLINEGRID,
+		// Token: 0x040021B0 RID: 8624
+		Ctrl_NOSPACEFORUL,
+		// Token: 0x040021B1 RID: 8625
+		Ctrl_NOSUPERSUB,
+		// Token: 0x040021B2 RID: 8626
+		Ctrl_NOTABIND,
+		// Token: 0x040021B3 RID: 8627
+		Ctrl_NOULTRLSPC,
+		// Token: 0x040021B4 RID: 8628
+		Ctrl_NOWIDCTLPAR,
+		// Token: 0x040021B5 RID: 8629
+		Ctrl_NOWRAP,
+		// Token: 0x040021B6 RID: 8630
+		Ctrl_NOWWRAP,
+		// Token: 0x040021B7 RID: 8631
+		Ctrl_NOXLATTOYEN,
+		// Token: 0x040021B8 RID: 8632
+		Ctrl_OBJALIAS,
+		// Token: 0x040021B9 RID: 8633
+		Ctrl_OBJALIGN,
+		// Token: 0x040021BA RID: 8634
+		Ctrl_OBJATTPH,
+		// Token: 0x040021BB RID: 8635
+		Ctrl_OBJAUTLINK,
+		// Token: 0x040021BC RID: 8636
+		Ctrl_OBJCLASS,
+		// Token: 0x040021BD RID: 8637
+		Ctrl_OBJCROPB,
+		// Token: 0x040021BE RID: 8638
+		Ctrl_OBJCROPL,
+		// Token: 0x040021BF RID: 8639
+		Ctrl_OBJCROPR,
+		// Token: 0x040021C0 RID: 8640
+		Ctrl_OBJCROPT,
+		// Token: 0x040021C1 RID: 8641
+		Ctrl_OBJDATA,
+		// Token: 0x040021C2 RID: 8642
+		Ctrl_OBJECT,
+		// Token: 0x040021C3 RID: 8643
+		Ctrl_OBJEMB,
+		// Token: 0x040021C4 RID: 8644
+		Ctrl_OBJH,
+		// Token: 0x040021C5 RID: 8645
+		Ctrl_OBJHTML,
+		// Token: 0x040021C6 RID: 8646
+		Ctrl_OBJICEMB,
+		// Token: 0x040021C7 RID: 8647
+		Ctrl_OBJLINK,
+		// Token: 0x040021C8 RID: 8648
+		Ctrl_OBJLOCK,
+		// Token: 0x040021C9 RID: 8649
+		Ctrl_OBJNAME,
+		// Token: 0x040021CA RID: 8650
+		Ctrl_OBJOCX,
+		// Token: 0x040021CB RID: 8651
+		Ctrl_OBJPUB,
+		// Token: 0x040021CC RID: 8652
+		Ctrl_OBJSCALEX,
+		// Token: 0x040021CD RID: 8653
+		Ctrl_OBJSCALEY,
+		// Token: 0x040021CE RID: 8654
+		Ctrl_OBJSECT,
+		// Token: 0x040021CF RID: 8655
+		Ctrl_OBJSETSIZE,
+		// Token: 0x040021D0 RID: 8656
+		Ctrl_OBJSUB,
+		// Token: 0x040021D1 RID: 8657
+		Ctrl_OBJTIME,
+		// Token: 0x040021D2 RID: 8658
+		Ctrl_OBJTRANSY,
+		// Token: 0x040021D3 RID: 8659
+		Ctrl_OBJUPDATE,
+		// Token: 0x040021D4 RID: 8660
+		Ctrl_OBJW,
+		// Token: 0x040021D5 RID: 8661
+		Ctrl_OLDAS,
+		// Token: 0x040021D6 RID: 8662
+		Ctrl_OLDLINEWRAP,
+		// Token: 0x040021D7 RID: 8663
+		Ctrl_OPERATOR,
+		// Token: 0x040021D8 RID: 8664
+		Ctrl_OTBLRUL,
+		// Token: 0x040021D9 RID: 8665
+		Ctrl_OUTL,
+		// Token: 0x040021DA RID: 8666
+		Ctrl_OUTLINELEVEL,
+		// Token: 0x040021DB RID: 8667
+		Ctrl_OVERLAY,
+		// Token: 0x040021DC RID: 8668
+		Ctrl_PAGE,
+		// Token: 0x040021DD RID: 8669
+		Ctrl_PAGEBB,
+		// Token: 0x040021DE RID: 8670
+		Ctrl_PANOSE,
+		// Token: 0x040021DF RID: 8671
+		Ctrl_PAPERH,
+		// Token: 0x040021E0 RID: 8672
+		Ctrl_PAPERW,
+		// Token: 0x040021E1 RID: 8673
+		Ctrl_PAR,
+		// Token: 0x040021E2 RID: 8674
+		Ctrl_PARD,
+		// Token: 0x040021E3 RID: 8675
+		Ctrl_PC,
+		// Token: 0x040021E4 RID: 8676
+		Ctrl_PCA,
+		// Token: 0x040021E5 RID: 8677
+		Ctrl_PGBRDRB,
+		// Token: 0x040021E6 RID: 8678
+		Ctrl_PGBRDRFOOT,
+		// Token: 0x040021E7 RID: 8679
+		Ctrl_PGBRDRHEAD,
+		// Token: 0x040021E8 RID: 8680
+		Ctrl_PGBRDRL,
+		// Token: 0x040021E9 RID: 8681
+		Ctrl_PGBRDROPT,
+		// Token: 0x040021EA RID: 8682
+		Ctrl_PGBRDRR,
+		// Token: 0x040021EB RID: 8683
+		Ctrl_PGBRDRSNAP,
+		// Token: 0x040021EC RID: 8684
+		Ctrl_PGBRDRT,
+		// Token: 0x040021ED RID: 8685
+		Ctrl_PGHSXN,
+		// Token: 0x040021EE RID: 8686
+		Ctrl_PGNBIDIA,
+		// Token: 0x040021EF RID: 8687
+		Ctrl_PGNBIDIB,
+		// Token: 0x040021F0 RID: 8688
+		Ctrl_PGNCHOSUNG,
+		// Token: 0x040021F1 RID: 8689
+		Ctrl_PGNCNUM,
+		// Token: 0x040021F2 RID: 8690
+		Ctrl_PGNCONT,
+		// Token: 0x040021F3 RID: 8691
+		Ctrl_PGNDBNUM,
+		// Token: 0x040021F4 RID: 8692
+		Ctrl_PGNDBNUMD,
+		// Token: 0x040021F5 RID: 8693
+		Ctrl_PGNDBNUMK,
+		// Token: 0x040021F6 RID: 8694
+		Ctrl_PGNDBNUMT,
+		// Token: 0x040021F7 RID: 8695
+		Ctrl_PGNDEC,
+		// Token: 0x040021F8 RID: 8696
+		Ctrl_PGNDECD,
+		// Token: 0x040021F9 RID: 8697
+		Ctrl_PGNGANADA,
+		// Token: 0x040021FA RID: 8698
+		Ctrl_PGNGBNUM,
+		// Token: 0x040021FB RID: 8699
+		Ctrl_PGNGBNUMD,
+		// Token: 0x040021FC RID: 8700
+		Ctrl_PGNGBNUMK,
+		// Token: 0x040021FD RID: 8701
+		Ctrl_PGNGBNUML,
+		// Token: 0x040021FE RID: 8702
+		Ctrl_PGNHN,
+		// Token: 0x040021FF RID: 8703
+		Ctrl_PGNHNSC,
+		// Token: 0x04002200 RID: 8704
+		Ctrl_PGNHNSH,
+		// Token: 0x04002201 RID: 8705
+		Ctrl_PGNHNSM,
+		// Token: 0x04002202 RID: 8706
+		Ctrl_PGNHNSN,
+		// Token: 0x04002203 RID: 8707
+		Ctrl_PGNHNSP,
+		// Token: 0x04002204 RID: 8708
+		Ctrl_PGNLCLTR,
+		// Token: 0x04002205 RID: 8709
+		Ctrl_PGNLCRM,
+		// Token: 0x04002206 RID: 8710
+		Ctrl_PGNRESTART,
+		// Token: 0x04002207 RID: 8711
+		Ctrl_PGNSTART,
+		// Token: 0x04002208 RID: 8712
+		Ctrl_PGNSTARTS,
+		// Token: 0x04002209 RID: 8713
+		Ctrl_PGNUCLTR,
+		// Token: 0x0400220A RID: 8714
+		Ctrl_PGNUCRM,
+		// Token: 0x0400220B RID: 8715
+		Ctrl_PGNX,
+		// Token: 0x0400220C RID: 8716
+		Ctrl_PGNY,
+		// Token: 0x0400220D RID: 8717
+		Ctrl_PGNZODIAC,
+		// Token: 0x0400220E RID: 8718
+		Ctrl_PGNZODIACD,
+		// Token: 0x0400220F RID: 8719
+		Ctrl_PGNZODIACL,
+		// Token: 0x04002210 RID: 8720
+		Ctrl_PGWSXN,
+		// Token: 0x04002211 RID: 8721
+		Ctrl_PHCOL,
+		// Token: 0x04002212 RID: 8722
+		Ctrl_PHMRG,
+		// Token: 0x04002213 RID: 8723
+		Ctrl_PHPG,
+		// Token: 0x04002214 RID: 8724
+		Ctrl_PICBMP,
+		// Token: 0x04002215 RID: 8725
+		Ctrl_PICBPP,
+		// Token: 0x04002216 RID: 8726
+		Ctrl_PICCROPB,
+		// Token: 0x04002217 RID: 8727
+		Ctrl_PICCROPL,
+		// Token: 0x04002218 RID: 8728
+		Ctrl_PICCROPR,
+		// Token: 0x04002219 RID: 8729
+		Ctrl_PICCROPT,
+		// Token: 0x0400221A RID: 8730
+		Ctrl_PICH,
+		// Token: 0x0400221B RID: 8731
+		Ctrl_PICHGOAL,
+		// Token: 0x0400221C RID: 8732
+		Ctrl_PICPROP,
+		// Token: 0x0400221D RID: 8733
+		Ctrl_PICSCALED,
+		// Token: 0x0400221E RID: 8734
+		Ctrl_PICSCALEX,
+		// Token: 0x0400221F RID: 8735
+		Ctrl_PICSCALEY,
+		// Token: 0x04002220 RID: 8736
+		Ctrl_PICT,
+		// Token: 0x04002221 RID: 8737
+		Ctrl_PICW,
+		// Token: 0x04002222 RID: 8738
+		Ctrl_PICWGOAL,
+		// Token: 0x04002223 RID: 8739
+		Ctrl_PLAIN,
+		// Token: 0x04002224 RID: 8740
+		Ctrl_PMMETAFILE,
+		// Token: 0x04002225 RID: 8741
+		Ctrl_PN,
+		// Token: 0x04002226 RID: 8742
+		Ctrl_PNACROSS,
+		// Token: 0x04002227 RID: 8743
+		Ctrl_PNAIU,
+		// Token: 0x04002228 RID: 8744
+		Ctrl_PNAIUD,
+		// Token: 0x04002229 RID: 8745
+		Ctrl_PNAIUEO,
+		// Token: 0x0400222A RID: 8746
+		Ctrl_PNAIUEOD,
+		// Token: 0x0400222B RID: 8747
+		Ctrl_PNB,
+		// Token: 0x0400222C RID: 8748
+		Ctrl_PNBIDIA,
+		// Token: 0x0400222D RID: 8749
+		Ctrl_PNBIDIB,
+		// Token: 0x0400222E RID: 8750
+		Ctrl_PNCAPS,
+		// Token: 0x0400222F RID: 8751
+		Ctrl_PNCARD,
+		// Token: 0x04002230 RID: 8752
+		Ctrl_PNCF,
+		// Token: 0x04002231 RID: 8753
+		Ctrl_PNCHOSUNG,
+		// Token: 0x04002232 RID: 8754
+		Ctrl_PNCNUM,
+		// Token: 0x04002233 RID: 8755
+		Ctrl_PNDBNUM,
+		// Token: 0x04002234 RID: 8756
+		Ctrl_PNDBNUMD,
+		// Token: 0x04002235 RID: 8757
+		Ctrl_PNDBNUMK,
+		// Token: 0x04002236 RID: 8758
+		Ctrl_PNDBNUML,
+		// Token: 0x04002237 RID: 8759
+		Ctrl_PNDBNUMT,
+		// Token: 0x04002238 RID: 8760
+		Ctrl_PNDEC,
+		// Token: 0x04002239 RID: 8761
+		Ctrl_PNDECD,
+		// Token: 0x0400223A RID: 8762
+		Ctrl_PNF,
+		// Token: 0x0400223B RID: 8763
+		Ctrl_PNFS,
+		// Token: 0x0400223C RID: 8764
+		Ctrl_PNGANADA,
+		// Token: 0x0400223D RID: 8765
+		Ctrl_PNGBLIP,
+		// Token: 0x0400223E RID: 8766
+		Ctrl_PNGBNUM,
+		// Token: 0x0400223F RID: 8767
+		Ctrl_PNGBNUMD,
+		// Token: 0x04002240 RID: 8768
+		Ctrl_PNGBNUMK,
+		// Token: 0x04002241 RID: 8769
+		Ctrl_PNGBNUML,
+		// Token: 0x04002242 RID: 8770
+		Ctrl_PNHANG,
+		// Token: 0x04002243 RID: 8771
+		Ctrl_PNI,
+		// Token: 0x04002244 RID: 8772
+		Ctrl_PNINDENT,
+		// Token: 0x04002245 RID: 8773
+		Ctrl_PNIROHA,
+		// Token: 0x04002246 RID: 8774
+		Ctrl_PNIROHAD,
+		// Token: 0x04002247 RID: 8775
+		Ctrl_PNLCLTR,
+		// Token: 0x04002248 RID: 8776
+		Ctrl_PNLCRM,
+		// Token: 0x04002249 RID: 8777
+		Ctrl_PNLVL,
+		// Token: 0x0400224A RID: 8778
+		Ctrl_PNLVLBLT,
+		// Token: 0x0400224B RID: 8779
+		Ctrl_PNLVLBODY,
+		// Token: 0x0400224C RID: 8780
+		Ctrl_PNLVLCONT,
+		// Token: 0x0400224D RID: 8781
+		Ctrl_PNNUMONCE,
+		// Token: 0x0400224E RID: 8782
+		Ctrl_PNORD,
+		// Token: 0x0400224F RID: 8783
+		Ctrl_PNORDT,
+		// Token: 0x04002250 RID: 8784
+		Ctrl_PNPREV,
+		// Token: 0x04002251 RID: 8785
+		Ctrl_PNQC,
+		// Token: 0x04002252 RID: 8786
+		Ctrl_PNQL,
+		// Token: 0x04002253 RID: 8787
+		Ctrl_PNQR,
+		// Token: 0x04002254 RID: 8788
+		Ctrl_PNRAUTH,
+		// Token: 0x04002255 RID: 8789
+		Ctrl_PNRDATE,
+		// Token: 0x04002256 RID: 8790
+		Ctrl_PNRESTART,
+		// Token: 0x04002257 RID: 8791
+		Ctrl_PNRNFC,
+		// Token: 0x04002258 RID: 8792
+		Ctrl_PNRNOT,
+		// Token: 0x04002259 RID: 8793
+		Ctrl_PNRPNBR,
+		// Token: 0x0400225A RID: 8794
+		Ctrl_PNRRGB,
+		// Token: 0x0400225B RID: 8795
+		Ctrl_PNRSTART,
+		// Token: 0x0400225C RID: 8796
+		Ctrl_PNRSTOP,
+		// Token: 0x0400225D RID: 8797
+		Ctrl_PNRXST,
+		// Token: 0x0400225E RID: 8798
+		Ctrl_PNSCAPS,
+		// Token: 0x0400225F RID: 8799
+		Ctrl_PNSECLVL,
+		// Token: 0x04002260 RID: 8800
+		Ctrl_PNSP,
+		// Token: 0x04002261 RID: 8801
+		Ctrl_PNSTART,
+		// Token: 0x04002262 RID: 8802
+		Ctrl_PNSTRIKE,
+		// Token: 0x04002263 RID: 8803
+		Ctrl_PNTEXT,
+		// Token: 0x04002264 RID: 8804
+		Ctrl_PNTXTA,
+		// Token: 0x04002265 RID: 8805
+		Ctrl_PNTXTB,
+		// Token: 0x04002266 RID: 8806
+		Ctrl_PNUCLTR,
+		// Token: 0x04002267 RID: 8807
+		Ctrl_PNUCRM,
+		// Token: 0x04002268 RID: 8808
+		Ctrl_PNUL,
+		// Token: 0x04002269 RID: 8809
+		Ctrl_PNULD,
+		// Token: 0x0400226A RID: 8810
+		Ctrl_PNULDASH,
+		// Token: 0x0400226B RID: 8811
+		Ctrl_PNULDASHD,
+		// Token: 0x0400226C RID: 8812
+		Ctrl_PNULDASHDD,
+		// Token: 0x0400226D RID: 8813
+		Ctrl_PNULDB,
+		// Token: 0x0400226E RID: 8814
+		Ctrl_PNULHAIR,
+		// Token: 0x0400226F RID: 8815
+		Ctrl_PNULNONE,
+		// Token: 0x04002270 RID: 8816
+		Ctrl_PNULTH,
+		// Token: 0x04002271 RID: 8817
+		Ctrl_PNULW,
+		// Token: 0x04002272 RID: 8818
+		Ctrl_PNULWAVE,
+		// Token: 0x04002273 RID: 8819
+		Ctrl_PNZODIAC,
+		// Token: 0x04002274 RID: 8820
+		Ctrl_PNZODIACD,
+		// Token: 0x04002275 RID: 8821
+		Ctrl_PNZODIACL,
+		// Token: 0x04002276 RID: 8822
+		Ctrl_POSNEGX,
+		// Token: 0x04002277 RID: 8823
+		Ctrl_POSNEGY,
+		// Token: 0x04002278 RID: 8824
+		Ctrl_POSX,
+		// Token: 0x04002279 RID: 8825
+		Ctrl_POSXC,
+		// Token: 0x0400227A RID: 8826
+		Ctrl_POSXI,
+		// Token: 0x0400227B RID: 8827
+		Ctrl_POSXL,
+		// Token: 0x0400227C RID: 8828
+		Ctrl_POSXO,
+		// Token: 0x0400227D RID: 8829
+		Ctrl_POSXR,
+		// Token: 0x0400227E RID: 8830
+		Ctrl_POSY,
+		// Token: 0x0400227F RID: 8831
+		Ctrl_POSYB,
+		// Token: 0x04002280 RID: 8832
+		Ctrl_POSYC,
+		// Token: 0x04002281 RID: 8833
+		Ctrl_POSYIL,
+		// Token: 0x04002282 RID: 8834
+		Ctrl_POSYIN,
+		// Token: 0x04002283 RID: 8835
+		Ctrl_POSYOUT,
+		// Token: 0x04002284 RID: 8836
+		Ctrl_POSYT,
+		// Token: 0x04002285 RID: 8837
+		Ctrl_PRCOLBL,
+		// Token: 0x04002286 RID: 8838
+		Ctrl_PRINTDATA,
+		// Token: 0x04002287 RID: 8839
+		Ctrl_PRINTIM,
+		// Token: 0x04002288 RID: 8840
+		Ctrl_PRIVATE,
+		// Token: 0x04002289 RID: 8841
+		Ctrl_PROPNAME,
+		// Token: 0x0400228A RID: 8842
+		Ctrl_PROPTYPE,
+		// Token: 0x0400228B RID: 8843
+		Ctrl_PSOVER,
+		// Token: 0x0400228C RID: 8844
+		Ctrl_PSZ,
+		// Token: 0x0400228D RID: 8845
+		Ctrl_PUBAUTO,
+		// Token: 0x0400228E RID: 8846
+		Ctrl_PVMRG,
+		// Token: 0x0400228F RID: 8847
+		Ctrl_PVPARA,
+		// Token: 0x04002290 RID: 8848
+		Ctrl_PVPG,
+		// Token: 0x04002291 RID: 8849
+		Ctrl_PWD,
+		// Token: 0x04002292 RID: 8850
+		Ctrl_PXE,
+		// Token: 0x04002293 RID: 8851
+		Ctrl_QC,
+		// Token: 0x04002294 RID: 8852
+		Ctrl_QD,
+		// Token: 0x04002295 RID: 8853
+		Ctrl_QJ,
+		// Token: 0x04002296 RID: 8854
+		Ctrl_QL,
+		// Token: 0x04002297 RID: 8855
+		Ctrl_QMSPACE,
+		// Token: 0x04002298 RID: 8856
+		Ctrl_QR,
+		// Token: 0x04002299 RID: 8857
+		Ctrl_RDBLQUOTE,
+		// Token: 0x0400229A RID: 8858
+		Ctrl_RED,
+		// Token: 0x0400229B RID: 8859
+		Ctrl_RESULT,
+		// Token: 0x0400229C RID: 8860
+		Ctrl_REVAUTH,
+		// Token: 0x0400229D RID: 8861
+		Ctrl_REVAUTHDEL,
+		// Token: 0x0400229E RID: 8862
+		Ctrl_REVBAR,
+		// Token: 0x0400229F RID: 8863
+		Ctrl_REVDTTM,
+		// Token: 0x040022A0 RID: 8864
+		Ctrl_REVDTTMDEL,
+		// Token: 0x040022A1 RID: 8865
+		Ctrl_REVISED,
+		// Token: 0x040022A2 RID: 8866
+		Ctrl_REVISIONS,
+		// Token: 0x040022A3 RID: 8867
+		Ctrl_REVPROP,
+		// Token: 0x040022A4 RID: 8868
+		Ctrl_REVPROT,
+		// Token: 0x040022A5 RID: 8869
+		Ctrl_REVTBL,
+		// Token: 0x040022A6 RID: 8870
+		Ctrl_REVTIM,
+		// Token: 0x040022A7 RID: 8871
+		Ctrl_RI,
+		// Token: 0x040022A8 RID: 8872
+		Ctrl_RIN,
+		// Token: 0x040022A9 RID: 8873
+		Ctrl_ROW,
+		// Token: 0x040022AA RID: 8874
+		Ctrl_RQUOTE,
+		// Token: 0x040022AB RID: 8875
+		Ctrl_RSLTBMP,
+		// Token: 0x040022AC RID: 8876
+		Ctrl_RSLTHTML,
+		// Token: 0x040022AD RID: 8877
+		Ctrl_RSLTMERGE,
+		// Token: 0x040022AE RID: 8878
+		Ctrl_RSLTPICT,
+		// Token: 0x040022AF RID: 8879
+		Ctrl_RSLTRTF,
+		// Token: 0x040022B0 RID: 8880
+		Ctrl_RSLTTXT,
+		// Token: 0x040022B1 RID: 8881
+		Ctrl_RTF,
+		// Token: 0x040022B2 RID: 8882
+		Ctrl_RTLCH,
+		// Token: 0x040022B3 RID: 8883
+		Ctrl_RTLDOC,
+		// Token: 0x040022B4 RID: 8884
+		Ctrl_RTLGUTTER,
+		// Token: 0x040022B5 RID: 8885
+		Ctrl_RTLMARK,
+		// Token: 0x040022B6 RID: 8886
+		Ctrl_RTLPAR,
+		// Token: 0x040022B7 RID: 8887
+		Ctrl_RTLROW,
+		// Token: 0x040022B8 RID: 8888
+		Ctrl_RTLSECT,
+		// Token: 0x040022B9 RID: 8889
+		Ctrl_RXE,
+		// Token: 0x040022BA RID: 8890
+		Ctrl_S,
+		// Token: 0x040022BB RID: 8891
+		Ctrl_SA,
+		// Token: 0x040022BC RID: 8892
+		Ctrl_SAAUTO,
+		// Token: 0x040022BD RID: 8893
+		Ctrl_SAUTOUPD,
+		// Token: 0x040022BE RID: 8894
+		Ctrl_SB,
+		// Token: 0x040022BF RID: 8895
+		Ctrl_SBASEDON,
+		// Token: 0x040022C0 RID: 8896
+		Ctrl_SBAUTO,
+		// Token: 0x040022C1 RID: 8897
+		Ctrl_SBKCOL,
+		// Token: 0x040022C2 RID: 8898
+		Ctrl_SBKEVEN,
+		// Token: 0x040022C3 RID: 8899
+		Ctrl_SBKNONE,
+		// Token: 0x040022C4 RID: 8900
+		Ctrl_SBKODD,
+		// Token: 0x040022C5 RID: 8901
+		Ctrl_SBKPAGE,
+		// Token: 0x040022C6 RID: 8902
+		Ctrl_SBYS,
+		// Token: 0x040022C7 RID: 8903
+		Ctrl_SCAPS,
+		// Token: 0x040022C8 RID: 8904
+		Ctrl_SCOMPOSE,
+		// Token: 0x040022C9 RID: 8905
+		Ctrl_SEC,
+		// Token: 0x040022CA RID: 8906
+		Ctrl_SECT,
+		// Token: 0x040022CB RID: 8907
+		Ctrl_SECTD,
+		// Token: 0x040022CC RID: 8908
+		Ctrl_SECTDEFAULTCL,
+		// Token: 0x040022CD RID: 8909
+		Ctrl_SECTEXPAND,
+		// Token: 0x040022CE RID: 8910
+		Ctrl_SECTLINEGRID,
+		// Token: 0x040022CF RID: 8911
+		Ctrl_SECTNUM,
+		// Token: 0x040022D0 RID: 8912
+		Ctrl_SECTSPECIFYCL,
+		// Token: 0x040022D1 RID: 8913
+		Ctrl_SECTSPECIFYGEN,
+		// Token: 0x040022D2 RID: 8914
+		Ctrl_SECTSPECIFYL,
+		// Token: 0x040022D3 RID: 8915
+		Ctrl_SECTUNLOCKED,
+		// Token: 0x040022D4 RID: 8916
+		Ctrl_SHAD,
+		// Token: 0x040022D5 RID: 8917
+		Ctrl_SHADING,
+		// Token: 0x040022D6 RID: 8918
+		Ctrl_SHIDDEN,
+		// Token: 0x040022D7 RID: 8919
+		Ctrl_SHIFT,
+		// Token: 0x040022D8 RID: 8920
+		Ctrl_SHPBOTTOM,
+		// Token: 0x040022D9 RID: 8921
+		Ctrl_SHPBXCOLUMN,
+		// Token: 0x040022DA RID: 8922
+		Ctrl_SHPBXIGNORE,
+		// Token: 0x040022DB RID: 8923
+		Ctrl_SHPBXMARGIN,
+		// Token: 0x040022DC RID: 8924
+		Ctrl_SHPBXPAGE,
+		// Token: 0x040022DD RID: 8925
+		Ctrl_SHPBYIGNORE,
+		// Token: 0x040022DE RID: 8926
+		Ctrl_SHPBYMARGIN,
+		// Token: 0x040022DF RID: 8927
+		Ctrl_SHPBYPAGE,
+		// Token: 0x040022E0 RID: 8928
+		Ctrl_SHPBYPARA,
+		// Token: 0x040022E1 RID: 8929
+		Ctrl_SHPFBLWTXT,
+		// Token: 0x040022E2 RID: 8930
+		Ctrl_SHPFHDR,
+		// Token: 0x040022E3 RID: 8931
+		Ctrl_SHPGRP,
+		// Token: 0x040022E4 RID: 8932
+		Ctrl_SHPINST,
+		// Token: 0x040022E5 RID: 8933
+		Ctrl_SHPLEFT,
+		// Token: 0x040022E6 RID: 8934
+		Ctrl_SHPLID,
+		// Token: 0x040022E7 RID: 8935
+		Ctrl_SHPLOCKANCHOR,
+		// Token: 0x040022E8 RID: 8936
+		Ctrl_SHPPICT,
+		// Token: 0x040022E9 RID: 8937
+		Ctrl_SHPRIGHT,
+		// Token: 0x040022EA RID: 8938
+		Ctrl_SHPRSLT,
+		// Token: 0x040022EB RID: 8939
+		Ctrl_SHPTOP,
+		// Token: 0x040022EC RID: 8940
+		Ctrl_SHPTXT,
+		// Token: 0x040022ED RID: 8941
+		Ctrl_SHPWRK,
+		// Token: 0x040022EE RID: 8942
+		Ctrl_SHPWR,
+		// Token: 0x040022EF RID: 8943
+		Ctrl_SHPZ,
+		// Token: 0x040022F0 RID: 8944
+		Ctrl_SL,
+		// Token: 0x040022F1 RID: 8945
+		Ctrl_SLMULT,
+		// Token: 0x040022F2 RID: 8946
+		Ctrl_SNEXT,
+		// Token: 0x040022F3 RID: 8947
+		Ctrl_SOFTCOL,
+		// Token: 0x040022F4 RID: 8948
+		Ctrl_SOFTLHEIGHT,
+		// Token: 0x040022F5 RID: 8949
+		Ctrl_SOFTLINE,
+		// Token: 0x040022F6 RID: 8950
+		Ctrl_SOFTPAGE,
+		// Token: 0x040022F7 RID: 8951
+		Ctrl_SPERSONAL,
+		// Token: 0x040022F8 RID: 8952
+		Ctrl_SPLYTWNINE,
+		// Token: 0x040022F9 RID: 8953
+		Ctrl_SPRSBSP,
+		// Token: 0x040022FA RID: 8954
+		Ctrl_SPRSLNSP,
+		// Token: 0x040022FB RID: 8955
+		Ctrl_SPRSSPBF,
+		// Token: 0x040022FC RID: 8956
+		Ctrl_SPRSTSM,
+		// Token: 0x040022FD RID: 8957
+		Ctrl_SPRSTSP,
+		// Token: 0x040022FE RID: 8958
+		Ctrl_SREPLY,
+		// Token: 0x040022FF RID: 8959
+		Ctrl_STATICVAL,
+		// Token: 0x04002300 RID: 8960
+		Ctrl_STEXTFLOW,
+		// Token: 0x04002301 RID: 8961
+		Ctrl_STRIKE,
+		// Token: 0x04002302 RID: 8962
+		Ctrl_STRIKED,
+		// Token: 0x04002303 RID: 8963
+		Ctrl_STYLESHEET,
+		// Token: 0x04002304 RID: 8964
+		Ctrl_SUB,
+		// Token: 0x04002305 RID: 8965
+		Ctrl_SUBDOCUMENT,
+		// Token: 0x04002306 RID: 8966
+		Ctrl_SUBFONTBYSIZE,
+		// Token: 0x04002307 RID: 8967
+		Ctrl_SUBJECT,
+		// Token: 0x04002308 RID: 8968
+		Ctrl_SUPER,
+		// Token: 0x04002309 RID: 8969
+		Ctrl_SWPBDR,
+		// Token: 0x0400230A RID: 8970
+		Ctrl_TAB,
+		// Token: 0x0400230B RID: 8971
+		Ctrl_TABSNOOVRLP,
+		// Token: 0x0400230C RID: 8972
+		Ctrl_TAPRTL,
+		// Token: 0x0400230D RID: 8973
+		Ctrl_TB,
+		// Token: 0x0400230E RID: 8974
+		Ctrl_TC,
+		// Token: 0x0400230F RID: 8975
+		Ctrl_TCELLD,
+		// Token: 0x04002310 RID: 8976
+		Ctrl_TCF,
+		// Token: 0x04002311 RID: 8977
+		Ctrl_TCL,
+		// Token: 0x04002312 RID: 8978
+		Ctrl_TCN,
+		// Token: 0x04002313 RID: 8979
+		Ctrl_TDFRMTXTBOTTOM,
+		// Token: 0x04002314 RID: 8980
+		Ctrl_TDFRMTXTLEFT,
+		// Token: 0x04002315 RID: 8981
+		Ctrl_TDFRMTXTRIGHT,
+		// Token: 0x04002316 RID: 8982
+		Ctrl_TDFRMTXTTOP,
+		// Token: 0x04002317 RID: 8983
+		Ctrl_TEMPLATE,
+		// Token: 0x04002318 RID: 8984
+		Ctrl_TIME,
+		// Token: 0x04002319 RID: 8985
+		Ctrl_TITLE,
+		// Token: 0x0400231A RID: 8986
+		Ctrl_TITLEPG,
+		// Token: 0x0400231B RID: 8987
+		Ctrl_TLDOT,
+		// Token: 0x0400231C RID: 8988
+		Ctrl_TLEQ,
+		// Token: 0x0400231D RID: 8989
+		Ctrl_TLHYPH,
+		// Token: 0x0400231E RID: 8990
+		Ctrl_TLMDOT,
+		// Token: 0x0400231F RID: 8991
+		Ctrl_TLTH,
+		// Token: 0x04002320 RID: 8992
+		Ctrl_TLUL,
+		// Token: 0x04002321 RID: 8993
+		Ctrl_TPHCOL,
+		// Token: 0x04002322 RID: 8994
+		Ctrl_TPHMRG,
+		// Token: 0x04002323 RID: 8995
+		Ctrl_TPHPG,
+		// Token: 0x04002324 RID: 8996
+		Ctrl_TPOSNEGX,
+		// Token: 0x04002325 RID: 8997
+		Ctrl_TPOSNEGY,
+		// Token: 0x04002326 RID: 8998
+		Ctrl_TPOSXC,
+		// Token: 0x04002327 RID: 8999
+		Ctrl_TPOSXI,
+		// Token: 0x04002328 RID: 9000
+		Ctrl_TPOSXL,
+		// Token: 0x04002329 RID: 9001
+		Ctrl_TPOSX,
+		// Token: 0x0400232A RID: 9002
+		Ctrl_TPOSXO,
+		// Token: 0x0400232B RID: 9003
+		Ctrl_TPOSXR,
+		// Token: 0x0400232C RID: 9004
+		Ctrl_TPOSY,
+		// Token: 0x0400232D RID: 9005
+		Ctrl_TPOSYB,
+		// Token: 0x0400232E RID: 9006
+		Ctrl_TPOSYC,
+		// Token: 0x0400232F RID: 9007
+		Ctrl_TPOSYIL,
+		// Token: 0x04002330 RID: 9008
+		Ctrl_TPOSYIN,
+		// Token: 0x04002331 RID: 9009
+		Ctrl_TPOSYOUTV,
+		// Token: 0x04002332 RID: 9010
+		Ctrl_TPOSYT,
+		// Token: 0x04002333 RID: 9011
+		Ctrl_TPVMRG,
+		// Token: 0x04002334 RID: 9012
+		Ctrl_TPVPARA,
+		// Token: 0x04002335 RID: 9013
+		Ctrl_TPVPG,
+		// Token: 0x04002336 RID: 9014
+		Ctrl_TQC,
+		// Token: 0x04002337 RID: 9015
+		Ctrl_TQDEC,
+		// Token: 0x04002338 RID: 9016
+		Ctrl_TQR,
+		// Token: 0x04002339 RID: 9017
+		Ctrl_TRANSMF,
+		// Token: 0x0400233A RID: 9018
+		Ctrl_TRAUTOFIT,
+		// Token: 0x0400233B RID: 9019
+		Ctrl_TRBRDRB,
+		// Token: 0x0400233C RID: 9020
+		Ctrl_TRBRDRH,
+		// Token: 0x0400233D RID: 9021
+		Ctrl_TRBRDRL,
+		// Token: 0x0400233E RID: 9022
+		Ctrl_TRBRDRR,
+		// Token: 0x0400233F RID: 9023
+		Ctrl_TRBRDRT,
+		// Token: 0x04002340 RID: 9024
+		Ctrl_TRBRDRV,
+		// Token: 0x04002341 RID: 9025
+		Ctrl_TRFTSWIDTHA,
+		// Token: 0x04002342 RID: 9026
+		Ctrl_TRFTSWIDTHB,
+		// Token: 0x04002343 RID: 9027
+		Ctrl_TRFTSWIDTH,
+		// Token: 0x04002344 RID: 9028
+		Ctrl_TRGAPH,
+		// Token: 0x04002345 RID: 9029
+		Ctrl_TRHDR,
+		// Token: 0x04002346 RID: 9030
+		Ctrl_TRKEEP,
+		// Token: 0x04002347 RID: 9031
+		Ctrl_TRLEFT,
+		// Token: 0x04002348 RID: 9032
+		Ctrl_TROWD,
+		// Token: 0x04002349 RID: 9033
+		Ctrl_TRPADDB,
+		// Token: 0x0400234A RID: 9034
+		Ctrl_TRPADDFB,
+		// Token: 0x0400234B RID: 9035
+		Ctrl_TRPADDFL,
+		// Token: 0x0400234C RID: 9036
+		Ctrl_TRPADDFR,
+		// Token: 0x0400234D RID: 9037
+		Ctrl_TRPADDFT,
+		// Token: 0x0400234E RID: 9038
+		Ctrl_TRPADDL,
+		// Token: 0x0400234F RID: 9039
+		Ctrl_TRPADDR,
+		// Token: 0x04002350 RID: 9040
+		Ctrl_TRPADDT,
+		// Token: 0x04002351 RID: 9041
+		Ctrl_TRQC,
+		// Token: 0x04002352 RID: 9042
+		Ctrl_TRQL,
+		// Token: 0x04002353 RID: 9043
+		Ctrl_TRQR,
+		// Token: 0x04002354 RID: 9044
+		Ctrl_TRRH,
+		// Token: 0x04002355 RID: 9045
+		Ctrl_TRSPDB,
+		// Token: 0x04002356 RID: 9046
+		Ctrl_TRSPDFB,
+		// Token: 0x04002357 RID: 9047
+		Ctrl_TRSPDFL,
+		// Token: 0x04002358 RID: 9048
+		Ctrl_TRSPDFR,
+		// Token: 0x04002359 RID: 9049
+		Ctrl_TRSPDFT,
+		// Token: 0x0400235A RID: 9050
+		Ctrl_TRSPDL,
+		// Token: 0x0400235B RID: 9051
+		Ctrl_TRSPDR,
+		// Token: 0x0400235C RID: 9052
+		Ctrl_TRSPDT,
+		// Token: 0x0400235D RID: 9053
+		Ctrl_TRUNCATEFONTHEIGHT,
+		// Token: 0x0400235E RID: 9054
+		Ctrl_TRWWIDTHA,
+		// Token: 0x0400235F RID: 9055
+		Ctrl_TRWWIDTHB,
+		// Token: 0x04002360 RID: 9056
+		Ctrl_TRWWIDTH,
+		// Token: 0x04002361 RID: 9057
+		Ctrl_TWOONONE,
+		// Token: 0x04002362 RID: 9058
+		Ctrl_TX,
+		// Token: 0x04002363 RID: 9059
+		Ctrl_TXE,
+		// Token: 0x04002364 RID: 9060
+		Ctrl_UC,
+		// Token: 0x04002365 RID: 9061
+		Ctrl_UD,
+		// Token: 0x04002366 RID: 9062
+		Ctrl_UL,
+		// Token: 0x04002367 RID: 9063
+		Ctrl_ULC,
+		// Token: 0x04002368 RID: 9064
+		Ctrl_ULD,
+		// Token: 0x04002369 RID: 9065
+		Ctrl_ULDASH,
+		// Token: 0x0400236A RID: 9066
+		Ctrl_ULDASHD,
+		// Token: 0x0400236B RID: 9067
+		Ctrl_ULDASHDD,
+		// Token: 0x0400236C RID: 9068
+		Ctrl_ULDB,
+		// Token: 0x0400236D RID: 9069
+		Ctrl_ULHAIR,
+		// Token: 0x0400236E RID: 9070
+		Ctrl_ULHWAVE,
+		// Token: 0x0400236F RID: 9071
+		Ctrl_ULLDASH,
+		// Token: 0x04002370 RID: 9072
+		Ctrl_ULNONE,
+		// Token: 0x04002371 RID: 9073
+		Ctrl_ULTH,
+		// Token: 0x04002372 RID: 9074
+		Ctrl_ULTHD,
+		// Token: 0x04002373 RID: 9075
+		Ctrl_ULTHDASH,
+		// Token: 0x04002374 RID: 9076
+		Ctrl_ULTHDASHD,
+		// Token: 0x04002375 RID: 9077
+		Ctrl_ULTHDASHDD,
+		// Token: 0x04002376 RID: 9078
+		Ctrl_ULTHLDASH,
+		// Token: 0x04002377 RID: 9079
+		Ctrl_ULULDBWAVE,
+		// Token: 0x04002378 RID: 9080
+		Ctrl_ULW,
+		// Token: 0x04002379 RID: 9081
+		Ctrl_ULWAVE,
+		// Token: 0x0400237A RID: 9082
+		Ctrl_U,
+		// Token: 0x0400237B RID: 9083
+		Ctrl_UP,
+		// Token: 0x0400237C RID: 9084
+		Ctrl_UPR,
+		// Token: 0x0400237D RID: 9085
+		Ctrl_URTF,
+		// Token: 0x0400237E RID: 9086
+		Ctrl_USELTBALN,
+		// Token: 0x0400237F RID: 9087
+		Ctrl_USERPROPS,
+		// Token: 0x04002380 RID: 9088
+		Ctrl_V,
+		// Token: 0x04002381 RID: 9089
+		Ctrl_VERN,
+		// Token: 0x04002382 RID: 9090
+		Ctrl_VERSION,
+		// Token: 0x04002383 RID: 9091
+		Ctrl_VERTALB,
+		// Token: 0x04002384 RID: 9092
+		Ctrl_VERTALC,
+		// Token: 0x04002385 RID: 9093
+		Ctrl_VERTALJ,
+		// Token: 0x04002386 RID: 9094
+		Ctrl_VERTALT,
+		// Token: 0x04002387 RID: 9095
+		Ctrl_VERTDOC,
+		// Token: 0x04002388 RID: 9096
+		Ctrl_VERTSECT,
+		// Token: 0x04002389 RID: 9097
+		Ctrl_VIEWKIND,
+		// Token: 0x0400238A RID: 9098
+		Ctrl_VIEWSCALE,
+		// Token: 0x0400238B RID: 9099
+		Ctrl_VIEWZK,
+		// Token: 0x0400238C RID: 9100
+		Ctrl_WBITMAP,
+		// Token: 0x0400238D RID: 9101
+		Ctrl_WBMBITSPIXEL,
+		// Token: 0x0400238E RID: 9102
+		Ctrl_WBMPLANES,
+		// Token: 0x0400238F RID: 9103
+		Ctrl_WBMWIDTHBYTES,
+		// Token: 0x04002390 RID: 9104
+		Ctrl_WEBHIDDEN,
+		// Token: 0x04002391 RID: 9105
+		Ctrl_WIDCTLPAR,
+		// Token: 0x04002392 RID: 9106
+		Ctrl_WIDOWCTRL,
+		// Token: 0x04002393 RID: 9107
+		Ctrl_WINDOWCAPTION,
+		// Token: 0x04002394 RID: 9108
+		Ctrl_WMETAFILE,
+		// Token: 0x04002395 RID: 9109
+		Ctrl_WPEQN,
+		// Token: 0x04002396 RID: 9110
+		Ctrl_WPJST,
+		// Token: 0x04002397 RID: 9111
+		Ctrl_WPSP,
+		// Token: 0x04002398 RID: 9112
+		Ctrl_WRAPTRSP,
+		// Token: 0x04002399 RID: 9113
+		Ctrl_XE,
+		// Token: 0x0400239A RID: 9114
+		Ctrl_XEF,
+		// Token: 0x0400239B RID: 9115
+		Ctrl_YR,
+		// Token: 0x0400239C RID: 9116
+		Ctrl_YXE,
+		// Token: 0x0400239D RID: 9117
+		Ctrl_ZWBO,
+		// Token: 0x0400239E RID: 9118
+		Ctrl_ZWJ,
+		// Token: 0x0400239F RID: 9119
+		Ctrl_ZWNBO,
+		// Token: 0x040023A0 RID: 9120
+		Ctrl_ZWNJ
+	}
+}

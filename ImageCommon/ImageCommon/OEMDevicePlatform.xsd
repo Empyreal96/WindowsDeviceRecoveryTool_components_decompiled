@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://schemas.microsoft.com/embedded/2004/10/ImageUpdate" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/embedded/2004/10/ImageUpdate" xmlns:mstns="http://schemas.microsoft.com/embedded/2004/10/ImageUpdate" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="OEMDevicePlatform">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="MinSectorCount" type="xs:positiveInteger" minOccurs="1" maxOccurs="1" />
+            <!-- Either DevicePlatformID or DevicePlatformIDs must be specified to satisfy the ID specification -->
+            <xs:element ref="IDSpecification" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="AdditionalMainOSFreeSectorsRequest" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="MMOSPartitionTotalSectorsOverride" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="MainOSRTCDataReservedSectors" type="xs:unsignedInt" minOccurs="0" maxOccurs="1" default="0"/>
+             <!-- Deprecated --> <xs:element name="CompressedPartitions" type="NameElement" minOccurs="0" maxOccurs="1" />
+            <xs:element name="UncompressedPartitions" type="NameElement" minOccurs="0" maxOccurs="1" />
+          </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <!--
+    Type defined for reference below.
+    -->
+    <xs:complexType name="IDCollection">
+        <xs:sequence>
+            <xs:element name="ID" minOccurs="1" maxOccurs="unbounded" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="NameElement">
+        <xs:sequence>
+            <xs:element name="Name" minOccurs="0" maxOccurs="unbounded" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--
+    Abstract element with substition logic ensures we specify either a DevicePlatformID
+    or a set of DevicePlatformIDs.
+    -->
+    <xs:element name="IDSpecification" abstract="true" />
+    <xs:element name="DevicePlatformID" type="xs:string" substitutionGroup="IDSpecification" />
+    <xs:element name="DevicePlatformIDs" type="IDCollection" substitutionGroup="IDSpecification" />
+</xs:schema>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3FD0999-A422-44D1-9C14-23A16AF09D58}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Nokia.Mira</RootNamespace>
+    <AssemblyName>Nokia.Mira</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Chunks\ChunkInformation.cs" />
+    <Compile Include="Chunks\ChunkInformationCollector.cs" />
+    <Compile Include="Chunks\ChunkInformationConverter.cs" />
+    <Compile Include="Chunks\ChunkInformationXmlReader.cs" />
+    <Compile Include="Chunks\ChunkInformationXmlWriter.cs" />
+    <Compile Include="Chunks\ChunkRaw.cs" />
+    <Compile Include="Chunks\CollectionBasedChunkInformationProvider.cs" />
+    <Compile Include="Chunks\IChunkInformationCollector.cs" />
+    <Compile Include="Chunks\IChunkInformationConverter.cs" />
+    <Compile Include="Chunks\IChunkInformationProvider.cs" />
+    <Compile Include="Chunks\IChunkInformationReader.cs" />
+    <Compile Include="Chunks\IChunkInformationWriter.cs" />
+    <Compile Include="Chunks\Serialization\ChunkSerializable.cs" />
+    <Compile Include="Chunks\Serialization\WebFileSerializable.cs" />
+    <Compile Include="Cryptography\CRC32.cs" />
+    <Compile Include="DownloadPool.cs" />
+    <Compile Include="DownloadProgressInfo.cs" />
+    <Compile Include="DownloadSettings.cs" />
+    <Compile Include="Extensions\HttpWebRequestExtenstionMethods.cs" />
+    <Compile Include="Extensions\WebResponseExtensionMethods.cs" />
+    <Compile Include="HttpWebRequestFactory.cs" />
+    <Compile Include="IDownloadPool.cs" />
+    <Compile Include="IHttpWebRequestFactory.cs" />
+    <Compile Include="IO\CoreSynchronizedFileStream.cs" />
+    <Compile Include="IO\DirectFileStreamFactory.cs" />
+    <Compile Include="IO\IFileStream.cs" />
+    <Compile Include="IO\IFileStreamFactory.cs" />
+    <Compile Include="IO\SynchronizedFileStream.cs" />
+    <Compile Include="IO\SynchronizedFileStreamFactory.cs" />
+    <Compile Include="IProgress.cs" />
+    <Compile Include="IWebFile.cs" />
+    <Compile Include="Metadata\MetadataStreamContainer.cs" />
+    <Compile Include="Primitives\BlockingDispatcher.cs" />
+    <Compile Include="Primitives\ChunkStatus.cs" />
+    <Compile Include="Primitives\Disposable.cs" />
+    <Compile Include="Primitives\DownloadTask.cs" />
+    <Compile Include="Primitives\IStreamContainer.cs" />
+    <Compile Include="Primitives\IStreamReservationContext.cs" />
+    <Compile Include="Primitives\IWebResponse.cs" />
+    <Compile Include="Primitives\WebResponseAdapter.cs" />
+    <Compile Include="Progress.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategies\ChunkedDownloadStrategy.cs" />
+    <Compile Include="Strategies\ChunklessDownloadStrategy.cs" />
+    <Compile Include="Strategies\CompletedDownloadStrategy.cs" />
+    <Compile Include="Strategies\DownloadStrategyFactory.cs" />
+    <Compile Include="Strategies\EnvironmentSetup.cs" />
+    <Compile Include="Strategies\IDownloadStrategy.cs" />
+    <Compile Include="Strategies\IDownloadStrategyFactory.cs" />
+    <Compile Include="WebFile.cs" />
+    <Compile Include="WebFileExtensionMethods.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

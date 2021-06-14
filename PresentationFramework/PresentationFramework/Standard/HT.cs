@@ -1,0 +1,67 @@
+﻿using System;
+
+namespace Standard
+{
+	// Token: 0x02000018 RID: 24
+	internal enum HT
+	{
+		// Token: 0x040000D8 RID: 216
+		ERROR = -2,
+		// Token: 0x040000D9 RID: 217
+		TRANSPARENT,
+		// Token: 0x040000DA RID: 218
+		NOWHERE,
+		// Token: 0x040000DB RID: 219
+		CLIENT,
+		// Token: 0x040000DC RID: 220
+		CAPTION,
+		// Token: 0x040000DD RID: 221
+		SYSMENU,
+		// Token: 0x040000DE RID: 222
+		GROWBOX,
+		// Token: 0x040000DF RID: 223
+		SIZE = 4,
+		// Token: 0x040000E0 RID: 224
+		MENU,
+		// Token: 0x040000E1 RID: 225
+		HSCROLL,
+		// Token: 0x040000E2 RID: 226
+		VSCROLL,
+		// Token: 0x040000E3 RID: 227
+		MINBUTTON,
+		// Token: 0x040000E4 RID: 228
+		MAXBUTTON,
+		// Token: 0x040000E5 RID: 229
+		LEFT,
+		// Token: 0x040000E6 RID: 230
+		RIGHT,
+		// Token: 0x040000E7 RID: 231
+		TOP,
+		// Token: 0x040000E8 RID: 232
+		TOPLEFT,
+		// Token: 0x040000E9 RID: 233
+		TOPRIGHT,
+		// Token: 0x040000EA RID: 234
+		BOTTOM,
+		// Token: 0x040000EB RID: 235
+		BOTTOMLEFT,
+		// Token: 0x040000EC RID: 236
+		BOTTOMRIGHT,
+		// Token: 0x040000ED RID: 237
+		BORDER,
+		// Token: 0x040000EE RID: 238
+		REDUCE = 8,
+		// Token: 0x040000EF RID: 239
+		ZOOM,
+		// Token: 0x040000F0 RID: 240
+		SIZEFIRST,
+		// Token: 0x040000F1 RID: 241
+		SIZELAST = 17,
+		// Token: 0x040000F2 RID: 242
+		OBJECT = 19,
+		// Token: 0x040000F3 RID: 243
+		CLOSE,
+		// Token: 0x040000F4 RID: 244
+		HELP
+	}
+}

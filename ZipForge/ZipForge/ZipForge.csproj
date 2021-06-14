@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D42CEC8-E315-4BAE-82F9-DB42646E73FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ComponentAce</RootNamespace>
+    <AssemblyName>ZipForge</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Compression\Archiver\ArchiveItem.cs" />
+    <Compile Include="Compression\Archiver\ArchiverException.cs" />
+    <Compile Include="Compression\Archiver\ArchiverForgeBase.cs" />
+    <Compile Include="Compression\Archiver\ArchiverOptions.cs" />
+    <Compile Include="Compression\Archiver\BaseArchiveItem.cs" />
+    <Compile Include="Compression\Archiver\BaseArchiver.cs" />
+    <Compile Include="Compression\Archiver\BaseCompressor.cs" />
+    <Compile Include="Compression\Archiver\BZIP2Compressor.cs" />
+    <Compile Include="Compression\Archiver\CentralDirectorySearcher.cs" />
+    <Compile Include="Compression\Archiver\CompressionConst.cs" />
+    <Compile Include="Compression\Archiver\CompressionDirection.cs" />
+    <Compile Include="Compression\Archiver\CompressionItemsArray.cs" />
+    <Compile Include="Compression\Archiver\CompressionLevel.cs" />
+    <Compile Include="Compression\Archiver\CompressionMethod.cs" />
+    <Compile Include="Compression\Archiver\CompressionUtils.cs" />
+    <Compile Include="Compression\Archiver\CompressorFactory.cs" />
+    <Compile Include="Compression\Archiver\DeflateCompressor.cs" />
+    <Compile Include="Compression\Archiver\DoOnStreamOperationFailureDelegate.cs" />
+    <Compile Include="Compression\Archiver\EncryptionAlgorithm.cs" />
+    <Compile Include="Compression\Archiver\ErrorCode.cs" />
+    <Compile Include="Compression\Archiver\FailureAction.cs" />
+    <Compile Include="Compression\Archiver\InternalSearchRec.cs" />
+    <Compile Include="Compression\Archiver\OverwriteMode.cs" />
+    <Compile Include="Compression\Archiver\PPMdCompressor.cs" />
+    <Compile Include="Compression\Archiver\ProcessOperation.cs" />
+    <Compile Include="Compression\Archiver\ProgressPhase.cs" />
+    <Compile Include="Compression\Archiver\SpanningMode.cs" />
+    <Compile Include="Compression\Archiver\SpanningOptions.cs" />
+    <Compile Include="Compression\Archiver\StoreCompressor.cs" />
+    <Compile Include="Compression\Archiver\StorePathMode.cs" />
+    <Compile Include="Compression\Archiver\VolumeSize.cs" />
+    <Compile Include="Compression\Archiver\Zip64Mode.cs" />
+    <Compile Include="Compression\ConfirmOverwriteDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compression\ConfirmOverwriteDialog.Designer.cs">
+      <DependentUpon>ConfirmOverwriteDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compression\Exception\ArchiverConst.cs" />
+    <Compile Include="Compression\Exception\ExceptionBuilder.cs" />
+    <Compile Include="Compression\FileUtils.cs" />
+    <Compile Include="Compression\GZip\CompressionLevel.cs" />
+    <Compile Include="Compression\GZip\GzipArchiveItem.cs" />
+    <Compile Include="Compression\GZip\GzipArchiveOptions.cs" />
+    <Compile Include="Compression\GZip\GzipCompressionItemsArray.cs" />
+    <Compile Include="Compression\GZip\GzipConsts.cs" />
+    <Compile Include="Compression\GZip\GzipForge.cs" />
+    <Compile Include="Compression\GZip\GzipHeader.cs" />
+    <Compile Include="Compression\GZip\GzipItem.cs" />
+    <Compile Include="Compression\GZip\GzipItemsHandler.cs" />
+    <Compile Include="Compression\GZip\GzipReader.cs" />
+    <Compile Include="Compression\InputPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compression\InputPasswordForm.Designer.cs">
+      <DependentUpon>InputPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compression\Interfaces\IArchiveItem.cs" />
+    <Compile Include="Compression\Interfaces\IInternalSearchRec.cs" />
+    <Compile Include="Compression\Interfaces\IItem.cs" />
+    <Compile Include="Compression\Interfaces\IItemsArray.cs" />
+    <Compile Include="Compression\Interfaces\IItemsHandler.cs" />
+    <Compile Include="Compression\Libs\bzip2\BZip2Constants_Fields.cs" />
+    <Compile Include="Compression\Libs\bzip2\CBZip2InputStream.cs" />
+    <Compile Include="Compression\Libs\bzip2\CBZip2OutputStream.cs" />
+    <Compile Include="Compression\Libs\bzip2\CRC.cs" />
+    <Compile Include="Compression\Libs\bzip2\SupportClass.cs" />
+    <Compile Include="Compression\Libs\PPMd\Allocator.cs" />
+    <Compile Include="Compression\Libs\PPMd\Coder.cs" />
+    <Compile Include="Compression\Libs\PPMd\MemoryNode.cs" />
+    <Compile Include="Compression\Libs\PPMd\Model.cs" />
+    <Compile Include="Compression\Libs\PPMd\ModelRestorationMethod.cs" />
+    <Compile Include="Compression\Libs\PPMd\Options.cs" />
+    <Compile Include="Compression\Libs\PPMd\Pointer.cs" />
+    <Compile Include="Compression\Libs\PPMd\PpmState.cs" />
+    <Compile Include="Compression\Libs\PPMd\See2Context.cs" />
+    <Compile Include="Compression\Libs\ZLib\Adler32.cs" />
+    <Compile Include="Compression\Libs\ZLib\BlockType.cs" />
+    <Compile Include="Compression\Libs\ZLib\CompressionDirection.cs" />
+    <Compile Include="Compression\Libs\ZLib\CompressionStrategy.cs" />
+    <Compile Include="Compression\Libs\ZLib\Deflate.cs" />
+    <Compile Include="Compression\Libs\ZLib\DeflateState.cs" />
+    <Compile Include="Compression\Libs\ZLib\FlushStrategy.cs" />
+    <Compile Include="Compression\Libs\ZLib\InfBlocks.cs" />
+    <Compile Include="Compression\Libs\ZLib\InfCodes.cs" />
+    <Compile Include="Compression\Libs\ZLib\Inflate.cs" />
+    <Compile Include="Compression\Libs\ZLib\InflateBlockMode.cs" />
+    <Compile Include="Compression\Libs\ZLib\InflateCodesMode.cs" />
+    <Compile Include="Compression\Libs\ZLib\InflateMode.cs" />
+    <Compile Include="Compression\Libs\ZLib\InfTree.cs" />
+    <Compile Include="Compression\Libs\ZLib\InfTreeUtil.cs" />
+    <Compile Include="Compression\Libs\ZLib\StaticTree.cs" />
+    <Compile Include="Compression\Libs\ZLib\Tree.cs" />
+    <Compile Include="Compression\Libs\ZLib\ZInputStream.cs" />
+    <Compile Include="Compression\Libs\ZLib\ZLibCompressionLevel.cs" />
+    <Compile Include="Compression\Libs\ZLib\ZLibResultCode.cs" />
+    <Compile Include="Compression\Libs\ZLib\ZLibStream.cs" />
+    <Compile Include="Compression\Libs\ZLib\ZLibUtil.cs" />
+    <Compile Include="Compression\Libs\ZLib\ZOutputStream.cs" />
+    <Compile Include="Compression\Libs\ZLib\ZStream.cs" />
+    <Compile Include="Compression\Libs\ZLib\ZStreamException.cs" />
+    <Compile Include="Compression\Properties\Resources.cs" />
+    <Compile Include="Compression\Tar\ITarHeader.cs" />
+    <Compile Include="Compression\Tar\LegacyTarWriter.cs" />
+    <Compile Include="Compression\Tar\LongPathExtraHeader.cs" />
+    <Compile Include="Compression\Tar\OldStyleHeader.cs" />
+    <Compile Include="Compression\Tar\OnExtractFileDelegate.cs" />
+    <Compile Include="Compression\Tar\OnIncorrectFileNameDelegate.cs" />
+    <Compile Include="Compression\Tar\OnIncorrectStorePathDelegate.cs" />
+    <Compile Include="Compression\Tar\OnStoreFileDelegate.cs" />
+    <Compile Include="Compression\Tar\ReadWriteHelper.cs" />
+    <Compile Include="Compression\Tar\TarArchiveItem.cs" />
+    <Compile Include="Compression\Tar\TarBaseForge.cs" />
+    <Compile Include="Compression\Tar\TarForge.cs" />
+    <Compile Include="Compression\Tar\TarItem.cs" />
+    <Compile Include="Compression\Tar\TarItemsHandler.cs" />
+    <Compile Include="Compression\Tar\TarReader.cs" />
+    <Compile Include="Compression\Tar\TarWriter.cs" />
+    <Compile Include="Compression\Tar\UnixStandartHeader.cs" />
+    <Compile Include="Compression\Tgz\OnExtractFileDelegate.cs" />
+    <Compile Include="Compression\Tgz\OnStoreFileDelegate.cs" />
+    <Compile Include="Compression\Tgz\TgzArchiveItem.cs" />
+    <Compile Include="Compression\Tgz\TgzForge.cs" />
+    <Compile Include="Compression\ZipForgeRealTime\RealTimeArchiverParameters.cs" />
+    <Compile Include="Compression\ZipForgeRealTime\RealTimeCompressionLevel.cs" />
+    <Compile Include="Compression\ZipForgeRealTime\RealTimeCompressionMethod.cs" />
+    <Compile Include="Compression\ZipForgeRealTime\RealTimeDirManager.cs" />
+    <Compile Include="Compression\ZipForgeRealTime\RealTimeEncryptionAlgorithm.cs" />
+    <Compile Include="Compression\ZipForgeRealTime\ZipForgeRealTime.cs" />
+    <Compile Include="Compression\ZipForge\AESExtraFieldData.cs" />
+    <Compile Include="Compression\ZipForge\Compression.cs" />
+    <Compile Include="Compression\ZipForge\CompressionMethods.cs" />
+    <Compile Include="Compression\ZipForge\DirItem.cs" />
+    <Compile Include="Compression\ZipForge\DirItemDataDescriptor.cs" />
+    <Compile Include="Compression\ZipForge\DirManager.cs" />
+    <Compile Include="Compression\ZipForge\Encryption\AESCryptoTransform.cs" />
+    <Compile Include="Compression\ZipForge\Encryption\BaseZipForgeCryptoTransform.cs" />
+    <Compile Include="Compression\ZipForge\Encryption\CryptoTransformMode.cs" />
+    <Compile Include="Compression\ZipForge\Encryption\PBKDF2.cs" />
+    <Compile Include="Compression\ZipForge\Encryption\PkzipClassicCryptoTransform.cs" />
+    <Compile Include="Compression\ZipForge\Encryption\ZipForgeCryptoTransformFactory.cs" />
+    <Compile Include="Compression\ZipForge\ExtraFieldData.cs" />
+    <Compile Include="Compression\ZipForge\ExtraFieldIDs.cs" />
+    <Compile Include="Compression\ZipForge\ExtraFieldsDataBlock.cs" />
+    <Compile Include="Compression\ZipForge\ExtraFieldsTarget.cs" />
+    <Compile Include="Compression\ZipForge\FXCFileHeader.cs" />
+    <Compile Include="Compression\ZipForge\NTFSExtraFieldData.cs" />
+    <Compile Include="Compression\ZipForge\UnicodeExtraFieldData.cs" />
+    <Compile Include="Compression\ZipForge\Zip64CentralDirEnd.cs" />
+    <Compile Include="Compression\ZipForge\Zip64CentralDirEndLocator.cs" />
+    <Compile Include="Compression\ZipForge\Zip64ExtraFieldData.cs" />
+    <Compile Include="Compression\ZipForge\ZipCentralDirEnd.cs" />
+    <Compile Include="Compression\ZipForge\ZipFileHeader.cs" />
+    <Compile Include="Compression\ZipForge\ZipForge.cs" />
+    <Compile Include="Compression\ZipForge\ZipUtil.cs" />
+    <Compile Include="Encryption\Cipher.cs" />
+    <Compile Include="Encryption\CipherBlockMode.cs" />
+    <Compile Include="Encryption\CipherUtil.cs" />
+    <Compile Include="Encryption\DecConst.cs" />
+    <Compile Include="Encryption\DecUtil.cs" />
+    <Compile Include="Encryption\ECipherException.cs" />
+    <Compile Include="Encryption\EProtection.cs" />
+    <Compile Include="Encryption\EStringFormat.cs" />
+    <Compile Include="Encryption\RijndaelCipher.cs" />
+    <Compile Include="Encryption\TChecksum.cs" />
+    <Compile Include="Encryption\TCipher_Blowfish.cs" />
+    <Compile Include="Encryption\THash.cs" />
+    <Compile Include="Encryption\TLongRec.cs" />
+    <Compile Include="Encryption\TPAction.cs" />
+    <Compile Include="Encryption\TProtection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="resfinder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Compression\ConfirmOverwriteDialog.resources" />
+    <EmbeddedResource Include="Compression\InputPasswordForm.resources" />
+    <EmbeddedResource Include="Compression\Properties\Resources.resources" />
+    <EmbeddedResource Include="Compression\Resources\gzip16.ico" />
+    <EmbeddedResource Include="Compression\Resources\rtzip16.ico" />
+    <EmbeddedResource Include="Compression\Resources\tar16.ico" />
+    <EmbeddedResource Include="Compression\Resources\tgz16.ico" />
+    <EmbeddedResource Include="Compression\Resources\zip16.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

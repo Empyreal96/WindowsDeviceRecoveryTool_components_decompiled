@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1737032-E401-4EE5-BF08-7B5781A23E95}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>System.Windows.Interactivity</RootNamespace>
+    <AssemblyName>System.Windows.Interactivity</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttachableCollection.cs" />
+    <Compile Include="Behavior.2.cs" />
+    <Compile Include="Behavior.cs" />
+    <Compile Include="BehaviorCollection.cs" />
+    <Compile Include="CustomPropertyValueEditor.cs" />
+    <Compile Include="CustomPropertyValueEditorAttribute.cs" />
+    <Compile Include="DefaultTriggerAttribute.cs" />
+    <Compile Include="DependencyObjectHelper.cs" />
+    <Compile Include="EventObserver.cs" />
+    <Compile Include="EventTrigger.cs" />
+    <Compile Include="EventTriggerBase.2.cs" />
+    <Compile Include="EventTriggerBase.cs" />
+    <Compile Include="ExceptionStringTable.cs" />
+    <Compile Include="IAttachedObject.cs" />
+    <Compile Include="Interaction.cs" />
+    <Compile Include="InvokeCommandAction.cs" />
+    <Compile Include="Microsoft\Expression\BlendSDK\RuntimeVersion.cs" />
+    <Compile Include="Microsoft\Expression\BlendSDK\VersionConstants.cs" />
+    <Compile Include="NameResolvedEventArgs.cs" />
+    <Compile Include="NameResolver.cs" />
+    <Compile Include="PreviewInvokeEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TargetedTriggerAction.2.cs" />
+    <Compile Include="TargetedTriggerAction.cs" />
+    <Compile Include="TriggerAction.2.cs" />
+    <Compile Include="TriggerAction.cs" />
+    <Compile Include="TriggerActionCollection.cs" />
+    <Compile Include="TriggerBase.2.cs" />
+    <Compile Include="TriggerBase.cs" />
+    <Compile Include="TriggerCollection.cs" />
+    <Compile Include="TypeConstraintAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExceptionStringTable.resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,47 @@
+<Grid
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Settings.MainSettingsView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:framework="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Framework" xmlns:resources="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Resources" xmlns:settings="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Settings" xmlns:localization="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization" xmlns:behaviors="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Styles.Behaviors;assembly=Microsoft.WindowsDeviceRecoveryTool.Styles">
+	<Grid.ColumnDefinitions>
+		<ColumnDefinition
+			Width="200" />
+		<ColumnDefinition
+			Width="*" />
+	</Grid.ColumnDefinitions>
+	<ListView
+		Name="ListView"
+		Grid.Column="0"
+		Grid.RowSpan="2"
+		KeyboardNavigation.AcceptsReturn="True"
+		Background="#00FFFFFF"
+		BorderThickness="0"
+		Focusable="False"
+		SelectionMode="Single"
+		behaviors:ListBoxBehavior.AllowUnselect="False"
+		ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+		SelectedValuePath="Page"
+		DisplayMemberPath="Title"
+		ItemContainerStyle="{DynamicResource SettingsPageListViewItemStyle}"
+		AutomationProperties.Name="{localization:Localization SettingsPages}"
+		SelectedValue="{Binding SelectedPage}">
+		<settings:SettingsPageListItem
+			Page="Preferences"
+			Title="{localization:Localization Preferences}" />
+		<settings:SettingsPageListItem
+			Page="Network"
+			Title="{localization:Localization Network}" />
+		<settings:SettingsPageListItem
+			Page="Troubleshooting"
+			Title="{localization:Localization Troubleshooting}" />
+		<settings:SettingsPageListItem
+			Page="Packages"
+			Title="{localization:Localization Packages}" />
+		<settings:SettingsPageListItem
+			Page="ApplicationData"
+			Title="{localization:Localization ApplicationData}" />
+	</ListView>
+	<ContentControl
+		Grid.Column="1"
+		framework:RegionManager.RegionName="{x:Static resources:Consts.SettingsMainArea}"
+		Margin="20,0"
+		Focusable="False"
+		FocusVisualStyle="{x:Null}" />
+</Grid>

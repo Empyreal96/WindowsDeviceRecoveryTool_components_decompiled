@@ -1,0 +1,47 @@
+﻿using System;
+
+namespace System.Management
+{
+	// Token: 0x02000080 RID: 128
+	internal enum tag_CIMTYPE_ENUMERATION
+	{
+		// Token: 0x040002AD RID: 685
+		CIM_ILLEGAL = 4095,
+		// Token: 0x040002AE RID: 686
+		CIM_EMPTY = 0,
+		// Token: 0x040002AF RID: 687
+		CIM_SINT8 = 16,
+		// Token: 0x040002B0 RID: 688
+		CIM_UINT8,
+		// Token: 0x040002B1 RID: 689
+		CIM_SINT16 = 2,
+		// Token: 0x040002B2 RID: 690
+		CIM_UINT16 = 18,
+		// Token: 0x040002B3 RID: 691
+		CIM_SINT32 = 3,
+		// Token: 0x040002B4 RID: 692
+		CIM_UINT32 = 19,
+		// Token: 0x040002B5 RID: 693
+		CIM_SINT64,
+		// Token: 0x040002B6 RID: 694
+		CIM_UINT64,
+		// Token: 0x040002B7 RID: 695
+		CIM_REAL32 = 4,
+		// Token: 0x040002B8 RID: 696
+		CIM_REAL64,
+		// Token: 0x040002B9 RID: 697
+		CIM_BOOLEAN = 11,
+		// Token: 0x040002BA RID: 698
+		CIM_STRING = 8,
+		// Token: 0x040002BB RID: 699
+		CIM_DATETIME = 101,
+		// Token: 0x040002BC RID: 700
+		CIM_REFERENCE,
+		// Token: 0x040002BD RID: 701
+		CIM_CHAR16,
+		// Token: 0x040002BE RID: 702
+		CIM_OBJECT = 13,
+		// Token: 0x040002BF RID: 703
+		CIM_FLAG_ARRAY = 8192
+	}
+}

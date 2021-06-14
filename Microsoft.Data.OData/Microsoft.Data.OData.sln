@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Data.OData", "Microsoft.Data.OData\Microsoft.Data.OData.csproj", "{DA8A416C-4ABC-4215-B0F7-8134D1342FF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA8A416C-4ABC-4215-B0F7-8134D1342FF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8A416C-4ABC-4215-B0F7-8134D1342FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8A416C-4ABC-4215-B0F7-8134D1342FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8A416C-4ABC-4215-B0F7-8134D1342FF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

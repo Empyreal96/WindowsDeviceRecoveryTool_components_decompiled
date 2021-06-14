@@ -1,0 +1,50 @@
+<Grid
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Error.Templates.AutoUpdateError" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:localization="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization" xmlns:resources="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Resources"
+	Style="{DynamicResource ContentRoot}" xmlns:templates="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Error.Templates">
+	<StackPanel
+		VerticalAlignment="Center">
+		<StackPanel
+			KeyboardNavigation.TabNavigation="None">
+			<TextBlock
+				Style="{DynamicResource SubheaderTextStyle}"
+				Margin="0,0,0,20"
+				Focusable="True"
+				Text="{Binding ErrorHeader}"
+				FocusVisualStyle="{x:Null}" />
+			<TextBlock
+				Style="{DynamicResource BasicTextStyle}"
+				Margin="0,0,0,20"
+				Focusable="True"
+				Text="{Binding ErrorDescription}"
+				FocusVisualStyle="{x:Null}" />
+		</StackPanel>
+		<Expander
+			Margin="10,0,0,20"
+			Header="{localization:Localization DetailsHeader}"
+			IsExpanded="{Binding ExpanderExpanded}"
+			Visibility="{Binding ErrorDetailsVisibile, Converter={StaticResource BoolToVisibilityConverter}}">
+			<Grid
+				KeyboardNavigation.TabNavigation="None">
+				<TextBlock
+					Style="{DynamicResource BasicTextStyle}"
+					Focusable="True"
+					Text="{Binding ErrorDetails}"
+					FocusVisualStyle="{x:Null}" />
+			</Grid>
+		</Expander>
+		<StackPanel
+			Orientation="Horizontal">
+			<Button
+				CommandParameter="{x:Static resources:Consts.CheckAppAutoUpdateState}"
+				Content="{localization:Localization ButtonTryAgain}"
+				Command="{Binding Commands[SwitchToState]}" />
+			<Button
+				Content="{localization:Localization ButtonExit}"
+				Command="{Binding Commands[ExitApplication]}" />
+			<Button
+				CommandParameter="{x:Static resources:Consts.SettingsState}"
+				Content="{localization:Localization Settings}"
+				Command="{Binding Commands[SwitchToState]}" />
+		</StackPanel>
+	</StackPanel>
+</Grid>

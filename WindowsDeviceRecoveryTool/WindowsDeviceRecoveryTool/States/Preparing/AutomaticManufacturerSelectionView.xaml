@@ -1,0 +1,42 @@
+<Grid
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Preparing.AutomaticManufacturerSelectionView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:localization="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Controls"
+	Style="{DynamicResource ContentRoot}" xmlns:preparing="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Preparing">
+	<TextBlock
+		Style="{DynamicResource InvisibleLiveRegionStyle}"
+		Text="{Binding LiveText}" />
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition
+				Height="*" />
+			<RowDefinition
+				Height="Auto" />
+		</Grid.RowDefinitions>
+		<Grid
+			Row="0"
+			KeyboardNavigation.TabNavigation="None">
+			<TextBlock
+				Style="{DynamicResource SubheaderTextStyle}"
+				Focusable="True"
+				Text="{localization:Localization PleaseConnectDevice}"
+				FocusVisualStyle="{x:Null}" />
+		</Grid>
+		<controls:DeviceConnectionCanvas
+			Row="1"
+			VerticalAlignment="Center"
+			HorizontalAlignment="Center"
+			Margin="100,30"
+			MaxHeight="250"
+			FlowDirection="LeftToRight"
+			PlayAnimation="{Binding AnalogSupported}" />
+		<Button
+			Grid.Row="2"
+			HorizontalAlignment="Center"
+			Margin="20,10"
+			Focusable="True"
+			KeyboardNavigation.TabNavigation="Local"
+			Content="{localization:Localization ButtonMyPhoneWasNotDetected}"
+			Command="{Binding DeviceNotDetectedCommand}" />
+	</Grid>
+</Grid>

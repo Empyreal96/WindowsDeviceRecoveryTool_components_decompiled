@@ -1,0 +1,23 @@
+﻿using System;
+
+namespace System.Management
+{
+	// Token: 0x02000087 RID: 135
+	internal enum tag_WBEM_COMPILER_OPTIONS
+	{
+		// Token: 0x040003A2 RID: 930
+		WBEM_FLAG_CHECK_ONLY = 1,
+		// Token: 0x040003A3 RID: 931
+		WBEM_FLAG_AUTORECOVER,
+		// Token: 0x040003A4 RID: 932
+		WBEM_FLAG_WMI_CHECK = 4,
+		// Token: 0x040003A5 RID: 933
+		WBEM_FLAG_CONSOLE_PRINT = 8,
+		// Token: 0x040003A6 RID: 934
+		WBEM_FLAG_DONT_ADD_TO_LIST = 16,
+		// Token: 0x040003A7 RID: 935
+		WBEM_FLAG_SPLIT_FILES = 32,
+		// Token: 0x040003A8 RID: 936
+		WBEM_FLAG_CONNECT_REPOSITORY_ONLY = 64
+	}
+}

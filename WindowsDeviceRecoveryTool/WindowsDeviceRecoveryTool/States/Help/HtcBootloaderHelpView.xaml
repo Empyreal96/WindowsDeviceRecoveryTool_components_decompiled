@@ -1,0 +1,37 @@
+<UserControl
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Help.HtcBootloaderHelpView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:l="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization"
+	Focusable="True"
+	KeyboardNavigation.IsTabStop="True" xmlns:help="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Help"
+	FocusVisualStyle="{x:Null}">
+	<StackPanel
+		Width="Auto"
+		Orientation="Horizontal">
+		<Image
+			Source="../../Resources/Help_Bootloader.png"
+			MaxHeight="300"
+			Margin="30,0"
+			VerticalAlignment="Top" />
+		<StackPanel
+			Width="400"
+			KeyboardNavigation.TabNavigation="None">
+			<TextBlock
+				Style="{DynamicResource BasicTextStyle}"
+				Margin="0,0,0,12"
+				Focusable="True"
+				Text="{l:Localization TrySoftResetInEmergencyMode}"
+				FocusVisualStyle="{x:Null}" />
+			<TextBlock
+				Style="{DynamicResource BasicTextStyle}"
+				Margin="0,0,0,12"
+				Focusable="True"
+				Text="{Binding GoToMyPhoneHasNotBeenDetectedText}"
+				FocusVisualStyle="{x:Null}" />
+			<TextBlock
+				Style="{DynamicResource BasicTextStyle}"
+				Margin="0,0,0,12"
+				Focusable="True"
+				Text="{l:Localization FollowInstructions}"
+				FocusVisualStyle="{x:Null}" />
+		</StackPanel>
+	</StackPanel>
+</UserControl>

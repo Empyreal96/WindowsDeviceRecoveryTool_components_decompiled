@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C9906E5-CA5B-4C87-B9A0-15A14C6A0131}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppContextDefaultValues.cs" />
+    <Compile Include="AssemblyRef.cs" />
+    <Compile Include="ComponentModel\CompModSwitches.cs" />
+    <Compile Include="ComponentModel\CoreSwitches.cs" />
+    <Compile Include="Configuration\ConfigurationStringConstants.cs" />
+    <Compile Include="Drawing\Bitmap.cs" />
+    <Compile Include="Drawing\BitmapSelector.cs" />
+    <Compile Include="Drawing\BitmapSuffixInSameAssemblyAttribute.cs" />
+    <Compile Include="Drawing\BitmapSuffixInSatelliteAssemblyAttribute.cs" />
+    <Compile Include="Drawing\Brush.cs" />
+    <Compile Include="Drawing\Brushes.cs" />
+    <Compile Include="Drawing\BufferedGraphics.cs" />
+    <Compile Include="Drawing\BufferedGraphicsContext.cs" />
+    <Compile Include="Drawing\BufferedGraphicsManager.cs" />
+    <Compile Include="Drawing\CharacterRange.cs" />
+    <Compile Include="Drawing\ClientUtils.cs" />
+    <Compile Include="Drawing\Color.cs" />
+    <Compile Include="Drawing\ColorConverter.cs" />
+    <Compile Include="Drawing\ColorTranslator.cs" />
+    <Compile Include="Drawing\Configuration\SystemDrawingSection.cs" />
+    <Compile Include="Drawing\ContentAlignment.cs" />
+    <Compile Include="Drawing\CopyPixelOperation.cs" />
+    <Compile Include="Drawing\Design\CategoryNameCollection.cs" />
+    <Compile Include="Drawing\Design\IPropertyValueUIService.cs" />
+    <Compile Include="Drawing\Design\IToolboxItemProvider.cs" />
+    <Compile Include="Drawing\Design\IToolboxService.cs" />
+    <Compile Include="Drawing\Design\IToolboxUser.cs" />
+    <Compile Include="Drawing\Design\PaintValueEventArgs.cs" />
+    <Compile Include="Drawing\Design\PropertyValueUIHandler.cs" />
+    <Compile Include="Drawing\Design\PropertyValueUIItem.cs" />
+    <Compile Include="Drawing\Design\PropertyValueUIItemInvokeHandler.cs" />
+    <Compile Include="Drawing\Design\ToolboxComponentsCreatedEventArgs.cs" />
+    <Compile Include="Drawing\Design\ToolboxComponentsCreatedEventHandler.cs" />
+    <Compile Include="Drawing\Design\ToolboxComponentsCreatingEventArgs.cs" />
+    <Compile Include="Drawing\Design\ToolboxComponentsCreatingEventHandler.cs" />
+    <Compile Include="Drawing\Design\ToolboxItem.cs" />
+    <Compile Include="Drawing\Design\ToolboxItemCollection.cs" />
+    <Compile Include="Drawing\Design\ToolboxItemCreatorCallback.cs" />
+    <Compile Include="Drawing\Design\UITypeEditor.cs" />
+    <Compile Include="Drawing\Design\UITypeEditorEditStyle.cs" />
+    <Compile Include="Drawing\Drawing2D\AdjustableArrowCap.cs" />
+    <Compile Include="Drawing\Drawing2D\Blend.cs" />
+    <Compile Include="Drawing\Drawing2D\BrushType.cs" />
+    <Compile Include="Drawing\Drawing2D\ColorBlend.cs" />
+    <Compile Include="Drawing\Drawing2D\CombineMode.cs" />
+    <Compile Include="Drawing\Drawing2D\CompositingMode.cs" />
+    <Compile Include="Drawing\Drawing2D\CompositingQuality.cs" />
+    <Compile Include="Drawing\Drawing2D\CoordinateSpace.cs" />
+    <Compile Include="Drawing\Drawing2D\CustomLineCap.cs" />
+    <Compile Include="Drawing\Drawing2D\CustomLineCapType.cs" />
+    <Compile Include="Drawing\Drawing2D\DashCap.cs" />
+    <Compile Include="Drawing\Drawing2D\DashStyle.cs" />
+    <Compile Include="Drawing\Drawing2D\FillMode.cs" />
+    <Compile Include="Drawing\Drawing2D\FlushIntention.cs" />
+    <Compile Include="Drawing\Drawing2D\GraphicsContainer.cs" />
+    <Compile Include="Drawing\Drawing2D\GraphicsPath.cs" />
+    <Compile Include="Drawing\Drawing2D\GraphicsPathIterator.cs" />
+    <Compile Include="Drawing\Drawing2D\GraphicsState.cs" />
+    <Compile Include="Drawing\Drawing2D\HatchBrush.cs" />
+    <Compile Include="Drawing\Drawing2D\HatchStyle.cs" />
+    <Compile Include="Drawing\Drawing2D\InterpolationMode.cs" />
+    <Compile Include="Drawing\Drawing2D\LinearGradientBrush.cs" />
+    <Compile Include="Drawing\Drawing2D\LinearGradientMode.cs" />
+    <Compile Include="Drawing\Drawing2D\LineCap.cs" />
+    <Compile Include="Drawing\Drawing2D\LineJoin.cs" />
+    <Compile Include="Drawing\Drawing2D\Matrix.cs" />
+    <Compile Include="Drawing\Drawing2D\MatrixOrder.cs" />
+    <Compile Include="Drawing\Drawing2D\PathData.cs" />
+    <Compile Include="Drawing\Drawing2D\PathGradientBrush.cs" />
+    <Compile Include="Drawing\Drawing2D\PathPointType.cs" />
+    <Compile Include="Drawing\Drawing2D\PenAlignment.cs" />
+    <Compile Include="Drawing\Drawing2D\PenType.cs" />
+    <Compile Include="Drawing\Drawing2D\PixelOffsetMode.cs" />
+    <Compile Include="Drawing\Drawing2D\QualityMode.cs" />
+    <Compile Include="Drawing\Drawing2D\RegionData.cs" />
+    <Compile Include="Drawing\Drawing2D\SafeCustomLineCapHandle.cs" />
+    <Compile Include="Drawing\Drawing2D\SmoothingMode.cs" />
+    <Compile Include="Drawing\Drawing2D\WarpMode.cs" />
+    <Compile Include="Drawing\Drawing2D\WrapMode.cs" />
+    <Compile Include="Drawing\Font.cs" />
+    <Compile Include="Drawing\FontConverter.cs" />
+    <Compile Include="Drawing\FontFamily.cs" />
+    <Compile Include="Drawing\FontStyle.cs" />
+    <Compile Include="Drawing\Graphics.cs" />
+    <Compile Include="Drawing\GraphicsContext.cs" />
+    <Compile Include="Drawing\GraphicsUnit.cs" />
+    <Compile Include="Drawing\Icon.cs" />
+    <Compile Include="Drawing\IconConverter.cs" />
+    <Compile Include="Drawing\IDeviceContext.cs" />
+    <Compile Include="Drawing\Image.cs" />
+    <Compile Include="Drawing\ImageAnimator.cs" />
+    <Compile Include="Drawing\ImageConverter.cs" />
+    <Compile Include="Drawing\ImageFormatConverter.cs" />
+    <Compile Include="Drawing\Imaging\BitmapData.cs" />
+    <Compile Include="Drawing\Imaging\ColorAdjustType.cs" />
+    <Compile Include="Drawing\Imaging\ColorChannelFlag.cs" />
+    <Compile Include="Drawing\Imaging\ColorMap.cs" />
+    <Compile Include="Drawing\Imaging\ColorMapType.cs" />
+    <Compile Include="Drawing\Imaging\ColorMatrix.cs" />
+    <Compile Include="Drawing\Imaging\ColorMatrixFlag.cs" />
+    <Compile Include="Drawing\Imaging\ColorMode.cs" />
+    <Compile Include="Drawing\Imaging\ColorPalette.cs" />
+    <Compile Include="Drawing\Imaging\EmfPlusFlags.cs" />
+    <Compile Include="Drawing\Imaging\EmfPlusRecordType.cs" />
+    <Compile Include="Drawing\Imaging\EmfType.cs" />
+    <Compile Include="Drawing\Imaging\Encoder.cs" />
+    <Compile Include="Drawing\Imaging\EncoderParameter.cs" />
+    <Compile Include="Drawing\Imaging\EncoderParameters.cs" />
+    <Compile Include="Drawing\Imaging\EncoderParameterValueType.cs" />
+    <Compile Include="Drawing\Imaging\EncoderValue.cs" />
+    <Compile Include="Drawing\Imaging\FrameDimension.cs" />
+    <Compile Include="Drawing\Imaging\ImageAttributes.cs" />
+    <Compile Include="Drawing\Imaging\ImageCodecFlags.cs" />
+    <Compile Include="Drawing\Imaging\ImageCodecInfo.cs" />
+    <Compile Include="Drawing\Imaging\ImageCodecInfoPrivate.cs" />
+    <Compile Include="Drawing\Imaging\ImageFlags.cs" />
+    <Compile Include="Drawing\Imaging\ImageFormat.cs" />
+    <Compile Include="Drawing\Imaging\ImageLockMode.cs" />
+    <Compile Include="Drawing\Imaging\Metafile.cs" />
+    <Compile Include="Drawing\Imaging\MetafileFrameUnit.cs" />
+    <Compile Include="Drawing\Imaging\MetafileHeader.cs" />
+    <Compile Include="Drawing\Imaging\MetafileHeaderEmf.cs" />
+    <Compile Include="Drawing\Imaging\MetafileHeaderWmf.cs" />
+    <Compile Include="Drawing\Imaging\MetafileType.cs" />
+    <Compile Include="Drawing\Imaging\MetaHeader.cs" />
+    <Compile Include="Drawing\Imaging\PaletteFlags.cs" />
+    <Compile Include="Drawing\Imaging\PixelFormat.cs" />
+    <Compile Include="Drawing\Imaging\PlayRecordCallback.cs" />
+    <Compile Include="Drawing\Imaging\PropertyItem.cs" />
+    <Compile Include="Drawing\Imaging\PropertyItemInternal.cs" />
+    <Compile Include="Drawing\Imaging\WmfPlaceableFileHeader.cs" />
+    <Compile Include="Drawing\Internal\ApplyGraphicsProperties.cs" />
+    <Compile Include="Drawing\Internal\DbgUtil.cs" />
+    <Compile Include="Drawing\Internal\DeviceContext.cs" />
+    <Compile Include="Drawing\Internal\DeviceContextGraphicsMode.cs" />
+    <Compile Include="Drawing\Internal\DeviceContexts.cs" />
+    <Compile Include="Drawing\Internal\DeviceContextType.cs" />
+    <Compile Include="Drawing\Internal\GdiObjectType.cs" />
+    <Compile Include="Drawing\Internal\GPPOINT.cs" />
+    <Compile Include="Drawing\Internal\GPPOINTF.cs" />
+    <Compile Include="Drawing\Internal\GPRECT.cs" />
+    <Compile Include="Drawing\Internal\GPRECTF.cs" />
+    <Compile Include="Drawing\Internal\GPStream.cs" />
+    <Compile Include="Drawing\Internal\IntNativeMethods.cs" />
+    <Compile Include="Drawing\Internal\IntSafeNativeMethods.cs" />
+    <Compile Include="Drawing\Internal\IntUnsafeNativeMethods.cs" />
+    <Compile Include="Drawing\Internal\ISystemColorTracker.cs" />
+    <Compile Include="Drawing\Internal\RegionCombineMode.cs" />
+    <Compile Include="Drawing\Internal\SystemColorTracker.cs" />
+    <Compile Include="Drawing\Internal\WindowsGraphics.cs" />
+    <Compile Include="Drawing\Internal\WindowsRegion.cs" />
+    <Compile Include="Drawing\IntSecurity.cs" />
+    <Compile Include="Drawing\KnownColor.cs" />
+    <Compile Include="Drawing\KnownColorTable.cs" />
+    <Compile Include="Drawing\LocalAppContextSwitches.cs" />
+    <Compile Include="Drawing\NativeMethods.cs" />
+    <Compile Include="Drawing\Pen.cs" />
+    <Compile Include="Drawing\Pens.cs" />
+    <Compile Include="Drawing\Point.cs" />
+    <Compile Include="Drawing\PointConverter.cs" />
+    <Compile Include="Drawing\PointF.cs" />
+    <Compile Include="Drawing\Printing\Duplex.cs" />
+    <Compile Include="Drawing\Printing\InvalidPrinterException.cs" />
+    <Compile Include="Drawing\Printing\Margins.cs" />
+    <Compile Include="Drawing\Printing\MarginsConverter.cs" />
+    <Compile Include="Drawing\Printing\ModeField.cs" />
+    <Compile Include="Drawing\Printing\PageSettings.cs" />
+    <Compile Include="Drawing\Printing\PaperKind.cs" />
+    <Compile Include="Drawing\Printing\PaperSize.cs" />
+    <Compile Include="Drawing\Printing\PaperSource.cs" />
+    <Compile Include="Drawing\Printing\PaperSourceKind.cs" />
+    <Compile Include="Drawing\Printing\PreviewPageInfo.cs" />
+    <Compile Include="Drawing\Printing\PreviewPrintController.cs" />
+    <Compile Include="Drawing\Printing\PrintAction.cs" />
+    <Compile Include="Drawing\Printing\PrintController.cs" />
+    <Compile Include="Drawing\Printing\PrintDocument.cs" />
+    <Compile Include="Drawing\Printing\PrinterResolution.cs" />
+    <Compile Include="Drawing\Printing\PrinterResolutionKind.cs" />
+    <Compile Include="Drawing\Printing\PrinterSettings.cs" />
+    <Compile Include="Drawing\Printing\PrinterUnit.cs" />
+    <Compile Include="Drawing\Printing\PrinterUnitConvert.cs" />
+    <Compile Include="Drawing\Printing\PrintEventArgs.cs" />
+    <Compile Include="Drawing\Printing\PrintEventHandler.cs" />
+    <Compile Include="Drawing\Printing\PrintingPermission.cs" />
+    <Compile Include="Drawing\Printing\PrintingPermissionAttribute.cs" />
+    <Compile Include="Drawing\Printing\PrintingPermissionLevel.cs" />
+    <Compile Include="Drawing\Printing\PrintPageEventArgs.cs" />
+    <Compile Include="Drawing\Printing\PrintPageEventHandler.cs" />
+    <Compile Include="Drawing\Printing\PrintRange.cs" />
+    <Compile Include="Drawing\Printing\QueryPageSettingsEventArgs.cs" />
+    <Compile Include="Drawing\Printing\QueryPageSettingsEventHandler.cs" />
+    <Compile Include="Drawing\Printing\StandardPrintController.cs" />
+    <Compile Include="Drawing\Printing\TriState.cs" />
+    <Compile Include="Drawing\PrintPreviewGraphics.cs" />
+    <Compile Include="Drawing\Rectangle.cs" />
+    <Compile Include="Drawing\RectangleConverter.cs" />
+    <Compile Include="Drawing\RectangleF.cs" />
+    <Compile Include="Drawing\Region.cs" />
+    <Compile Include="Drawing\RotateFlipType.cs" />
+    <Compile Include="Drawing\SafeNativeMethods.cs" />
+    <Compile Include="Drawing\Size.cs" />
+    <Compile Include="Drawing\SizeConverter.cs" />
+    <Compile Include="Drawing\SizeF.cs" />
+    <Compile Include="Drawing\SizeFConverter.cs" />
+    <Compile Include="Drawing\SolidBrush.cs" />
+    <Compile Include="Drawing\SR.cs" />
+    <Compile Include="Drawing\SRCategoryAttribute.cs" />
+    <Compile Include="Drawing\SRDescriptionAttribute.cs" />
+    <Compile Include="Drawing\StringAlignment.cs" />
+    <Compile Include="Drawing\StringDigitSubstitute.cs" />
+    <Compile Include="Drawing\StringFormat.cs" />
+    <Compile Include="Drawing\StringFormatFlags.cs" />
+    <Compile Include="Drawing\StringTrimming.cs" />
+    <Compile Include="Drawing\StringUnit.cs" />
+    <Compile Include="Drawing\SystemBrushes.cs" />
+    <Compile Include="Drawing\SystemColors.cs" />
+    <Compile Include="Drawing\SystemFonts.cs" />
+    <Compile Include="Drawing\SystemIcons.cs" />
+    <Compile Include="Drawing\SystemPens.cs" />
+    <Compile Include="Drawing\TextureBrush.cs" />
+    <Compile Include="Drawing\Text\FontCollection.cs" />
+    <Compile Include="Drawing\Text\GenericFontFamilies.cs" />
+    <Compile Include="Drawing\Text\HotkeyPrefix.cs" />
+    <Compile Include="Drawing\Text\InstalledFontCollection.cs" />
+    <Compile Include="Drawing\Text\PrivateFontCollection.cs" />
+    <Compile Include="Drawing\Text\TextRenderingHint.cs" />
+    <Compile Include="Drawing\ToolboxBitmapAttribute.cs" />
+    <Compile Include="Drawing\UnsafeNativeMethods.cs" />
+    <Compile Include="ExternDll.cs" />
+    <Compile Include="FXAssembly.cs" />
+    <Compile Include="Internal\DebugHandleTracker.cs" />
+    <Compile Include="Internal\HandleChangeEventHandler.cs" />
+    <Compile Include="Internal\HandleCollector.cs" />
+    <Compile Include="InvariantComparer.cs" />
+    <Compile Include="LocalAppContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThisAssembly.cs" />
+    <Compile Include="Windows\Forms\ConfigurationOptions.cs" />
+    <Compile Include="Windows\Forms\DpiAwarenessContext.cs" />
+    <Compile Include="Windows\Forms\DpiHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Drawing\DefaultComponent.bmp" />
+    <EmbeddedResource Include="Drawing\Printing\PrintDocument.bmp" />
+    <EmbeddedResource Include="Drawing\Res.resources" />
+    <EmbeddedResource Include="Drawing\ShieldIcon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

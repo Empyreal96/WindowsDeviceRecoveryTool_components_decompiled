@@ -1,0 +1,89 @@
+<Grid
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Preparing.AppUpdateCheckingView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:localization="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization"
+	Style="{DynamicResource ContentRoot}" xmlns:preparing="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Preparing">
+	<Grid.RowDefinitions>
+		<RowDefinition
+			Height="Auto" />
+		<RowDefinition
+			Height="*" />
+	</Grid.RowDefinitions>
+	<StackPanel
+		Grid.Row="0"
+		KeyboardNavigation.TabNavigation="None"
+		Visibility="{Binding IsChecking, Converter={StaticResource InvertedBooleanToVisibilityConverter}}">
+		<TextBlock
+			Style="{DynamicResource SubheaderTextStyle}"
+			Focusable="True"
+			Text="{localization:Localization ThereIsMandatoryApplicationUpdateVersion}"
+			FocusVisualStyle="{x:Null}" />
+	</StackPanel>
+	<StackPanel
+		Grid.Row="1"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Center"
+		Margin="-80,0,0,0"
+		Orientation="Horizontal"
+		KeyboardNavigation.TabNavigation="None"
+		Visibility="{Binding IsChecking, Converter={StaticResource BoolToVisibilityConverter}}">
+		<ProgressBar
+			Style="{DynamicResource ProgressRingStyle}"
+			Width="80"
+			Height="80"
+			AutomationProperties.Name="Checking Application Updates Progress Ring" />
+		<TextBlock
+			HorizontalAlignment="Center"
+			Style="{DynamicResource SubheaderTextStyleOneLine}"
+			VerticalAlignment="Center"
+			Focusable="True"
+			Text="{localization:Localization CheckingAppUpdate}"
+			FocusVisualStyle="{x:Null}" />
+	</StackPanel>
+	<Grid
+		Row="1"
+		VerticalAlignment="Center"
+		Visibility="{Binding IsChecking, Converter={StaticResource InvertedBooleanToVisibilityConverter}}">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="Auto" />
+			</Grid.RowDefinitions>
+			<Grid
+				Row="0"
+				KeyboardNavigation.TabNavigation="None">
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="Auto" />
+					<RowDefinition
+						Height="Auto" />
+				</Grid.RowDefinitions>
+				<TextBlock
+					Grid.Row="0"
+					Style="{DynamicResource BasicTextStyle}"
+					Foreground="{DynamicResource ApplicationSecondaryForegroundThemeBrush}"
+					Focusable="True"
+					Text="{localization:Localization ThisUpdateMustBeInstalledVersion}"
+					FocusVisualStyle="{x:Null}" />
+				<TextBlock
+					Grid.Row="1"
+					Style="{DynamicResource BasicTextStyle}"
+					Foreground="{DynamicResource ApplicationSecondaryForegroundThemeBrush}"
+					Margin="0,30"
+					Focusable="True"
+					Text="{Binding Description}"
+					FocusVisualStyle="{x:Null}" />
+			</Grid>
+			<StackPanel
+				Grid.Row="2"
+				Orientation="Horizontal">
+				<Button
+					Content="{localization:Localization ButtonInstall}"
+					Command="{Binding Commands[InstallAppUpdate]}" />
+				<Button
+					Content="{localization:Localization ButtonExit}"
+					Command="{Binding Commands[ExitApplication]}" />
+			</StackPanel>
+		</Grid>
+	</Grid>
+</Grid>

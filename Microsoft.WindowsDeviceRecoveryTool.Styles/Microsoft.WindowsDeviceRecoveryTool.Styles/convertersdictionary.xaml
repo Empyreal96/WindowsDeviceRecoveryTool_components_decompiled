@@ -1,0 +1,34 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:converters="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Styles.Converters" xmlns:assets="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Styles.Assets">
+	<BooleanToVisibilityConverter
+		x:Key="BoolToVisibilityConverter" />
+	<converters:InverseBooleanConverter
+		x:Key="InverseBooleanConverter" />
+	<converters:BooleanToVisibilityHiddenConverter
+		x:Key="BooleanToVisibilityHiddenConverter" />
+	<converters:InvertedBooleanToVisibilityConverter
+		x:Key="InvertedBooleanToVisibilityConverter" />
+	<converters:ObjectNullToVisibilityConverter
+		x:Key="ObjectNullToVisibilityConverter" />
+	<assets:DictionaryStyleToStringConverter
+		x:Key="StyleNameConverter" />
+	<converters:BoolToOffOnConverter
+		x:Key="BoolToOffOnConverter" />
+	<converters:StringNullOrEmptyToVisibilityConverter
+		x:Key="StringNullOrEmptyToVisibilityConverter" />
+	<converters:EqualityToBoolConverter
+		x:Key="EqualityToBoolConverter" />
+	<converters:NotEqualToBoolConverter
+		x:Key="NotEqualToBoolConverter" />
+	<converters:TextCombinatorConverter
+		x:Key="TextCombinator" />
+	<converters:GenericBoolConverter
+		FalseValue="{x:Static Visibility.Hidden}"
+		TrueValue="{x:Static Visibility.Visible}"
+		x:Key="VisibilityFixedHeightConverter" />
+	<converters:SalesNameConverter
+		x:Key="SalesNameConverter" />
+	<converters:EqualToVisibilityConverter
+		x:Key="EqualToVisibilityConverter" />
+	<converters:NotEqualToVisibilityConverter
+		x:Key="NotEqualToVisibilityConverter" />
+</ResourceDictionary>

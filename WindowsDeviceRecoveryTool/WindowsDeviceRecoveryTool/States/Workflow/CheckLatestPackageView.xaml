@@ -1,0 +1,102 @@
+<Grid
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Workflow.CheckLatestPackageView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:l="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization" xmlns:controls="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Controls"
+	Name="CheckLatestPackageViewName"
+	Style="{DynamicResource ContentRoot}" xmlns:workflow="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Workflow">
+	<StackPanel
+		VerticalAlignment="Center">
+		<StackPanel
+			Orientation="Vertical"
+			Margin="0,0,0,10"
+			KeyboardNavigation.TabNavigation="None">
+			<TextBlock
+				Style="{StaticResource SubheaderTextStyleOneLine}"
+				Margin="5"
+				Focusable="True"
+				Text="{l:Localization Device}"
+				FocusVisualStyle="{x:Null}" />
+			<controls:DeviceSwInfoControl
+				Margin="0,20,0,0"
+				DataContext="{Binding AppContext.CurrentPhone}"
+				FirmwareVersionVisibility="{Binding ElementName=CheckLatestPackageViewName, Path=DataContext.IsFirmwareVersionVisible, Converter={StaticResource BoolToVisibilityConverter}}"
+				AkVersionVisibility="{Binding ElementName=CheckLatestPackageViewName, Path=DataContext.IsAkVersionVisible, Converter={StaticResource BoolToVisibilityConverter}}" />
+		</StackPanel>
+		<Grid>
+			<StackPanel
+				Orientation="Vertical"
+				Margin="0,20,0,10">
+				<StackPanel
+					KeyboardNavigation.TabNavigation="None">
+					<TextBlock
+						Style="{StaticResource SubheaderTextStyleOneLine}"
+						HorizontalAlignment="Left"
+						Margin="5,5,5,0"
+						Focusable="True"
+						Text="{Binding SoftwareInfoHeader}"
+						Visibility="{Binding IsPackageFound, Converter={StaticResource BoolToVisibilityConverter}}"
+						FocusVisualStyle="{x:Null}" />
+					<Grid>
+						<StackPanel>
+							<controls:VariantPackageControl
+								DataContext="{Binding AppContext.CurrentPhone.PackageFileInfo}"
+								AkVersionVisibility="{Binding ElementName=CheckLatestPackageViewName, Path=DataContext.IsAkVersionVisible, Converter={StaticResource BoolToVisibilityConverter}}"
+								PlatformIdVisibility="{Binding ElementName=CheckLatestPackageViewName, Path=DataContext.IsPlatformIdVisible, Converter={StaticResource BoolToVisibilityConverter}}"
+								FirmwareVersionVisibility="{Binding ElementName=CheckLatestPackageViewName, Path=DataContext.IsFirmwareVersionVisible, Converter={StaticResource BoolToVisibilityConverter}}"
+								BuildVersionVisibility="{Binding ElementName=CheckLatestPackageViewName, Path=DataContext.IsBuildVersionVisible, Converter={StaticResource BoolToVisibilityConverter}}"
+								IsControlVisible="{Binding DataContext.IsBusy, Converter={StaticResource InverseBooleanConverter}, ElementName=CheckLatestPackageViewName}"
+								Visibility="{Binding DataContext.IsPackageFound, Converter={StaticResource BoolToVisibilityConverter}, ElementName=CheckLatestPackageViewName}" />
+							<TextBlock
+								Style="{StaticResource SubheaderTextStyleOneLine}"
+								Margin="5, 10"
+								Focusable="True"
+								Text="{Binding Description}"
+								Visibility="{Binding Description, Converter={StaticResource StringNullOrEmptyToVisibilityConverter}}"
+								FocusVisualStyle="{x:Null}" />
+						</StackPanel>
+						<StackPanel
+							VerticalAlignment="Center"
+							HorizontalAlignment="Center"
+							Orientation="Horizontal"
+							Margin="-80,0,0,0"
+							Visibility="{Binding IsBusy, Converter={StaticResource BoolToVisibilityConverter}}">
+							<ProgressBar
+								Style="{DynamicResource ProgressRingStyle}"
+								Width="80"
+								Height="80"
+								AutomationProperties.Name="Checking Latest Package Progress Ring" />
+							<TextBlock
+								Style="{DynamicResource SubheaderTextStyleOneLine}"
+								VerticalAlignment="Center"
+								Focusable="True"
+								Text="{l:Localization PleaseWait}"
+								FocusVisualStyle="{x:Null}" />
+						</StackPanel>
+					</Grid>
+				</StackPanel>
+				<StackPanel>
+					<CheckBox
+						Content="{l:Localization CheckLatestPackageView_UseSignatureCheck_CheckBox_Content}"
+						IsChecked="{Binding UseSignatureCheck, UpdateSourceTrigger=PropertyChanged}"
+						Visibility="{Binding IsUseSignatureCheckChoiceAvailable, Converter={StaticResource BoolToVisibilityConverter}}" />
+				</StackPanel>
+			</StackPanel>
+		</Grid>
+		<StackPanel
+			Orientation="Horizontal">
+			<Button
+				Margin="2,5"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Command="{Binding StartSoftwareInstallCommand}"
+				CommandParameter="{Binding SoftwareComparisonStatus}"
+				Content="{Binding ContinueButtonText}"
+				IsEnabled="{Binding IsNextEnabled}" />
+			<Button
+				Margin="2,5"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Command="{Binding Commands[ChangePackagePathCommand]}"
+				Content="{l:Localization ManualPackageSelection}"
+				Visibility="{Binding IsManualSelectionEnabled, Converter={StaticResource BoolToVisibilityConverter}}" />
+		</StackPanel>
+	</StackPanel>
+</Grid>

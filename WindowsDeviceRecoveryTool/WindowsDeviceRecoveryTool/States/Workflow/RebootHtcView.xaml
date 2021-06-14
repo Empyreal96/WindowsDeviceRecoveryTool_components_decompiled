@@ -1,0 +1,56 @@
+<Grid
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Workflow.RebootHtcView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:localization="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization" xmlns:resources="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Resources" xmlns:controls="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Controls"
+	Style="{DynamicResource ContentRoot}" xmlns:workflow="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Workflow">
+	<Grid.RowDefinitions>
+		<RowDefinition
+			Height="Auto" />
+		<RowDefinition
+			Height="*" />
+		<RowDefinition
+			Height="Auto" />
+	</Grid.RowDefinitions>
+	<Grid.ColumnDefinitions>
+		<ColumnDefinition
+			Width="*" />
+		<ColumnDefinition
+			Width="Auto" />
+	</Grid.ColumnDefinitions>
+	<StackPanel
+		Grid.Row="0"
+		KeyboardNavigation.TabNavigation="None">
+		<TextBlock
+			Style="{DynamicResource SubheaderTextStyle}"
+			Focusable="True"
+			Text="{Binding Header}"
+			FocusVisualStyle="{x:Null}" />
+	</StackPanel>
+	<StackPanel
+		Grid.Column="0"
+		Grid.Row="1"
+		VerticalAlignment="Center"
+		KeyboardNavigation.TabNavigation="None">
+		<TextBlock
+			Style="{DynamicResource BasicTextStyle}"
+			VerticalAlignment="Center"
+			Grid.Column="0"
+			Grid.Row="1"
+			Foreground="{DynamicResource ApplicationSecondaryForegroundThemeBrush}"
+			Focusable="True"
+			Text="{localization:Localization RebootHtc}"
+			FocusVisualStyle="{x:Null}" />
+	</StackPanel>
+	<controls:PhonePowerCanvas
+		Column="1"
+		Row="1"
+		Margin="50,0,0,50"
+		MaxHeight="300"
+		PhoneColor="{DynamicResource ProgressBarForegroundThemeBrush}"
+		ButtonColor="{DynamicResource ApplicationForegroundThemeBrush}" />
+	<Button
+		Grid.Row="2"
+		HorizontalAlignment="Center"
+		Grid.Column="0"
+		CommandParameter="{x:Static resources:Consts.AutomaticManufacturerSelectionState}"
+		Content="{localization:Localization ButtonFinish}"
+		Command="{Binding Commands[SwitchToState]}" />
+</Grid>

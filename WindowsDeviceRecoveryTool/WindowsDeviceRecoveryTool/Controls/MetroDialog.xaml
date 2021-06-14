@@ -1,0 +1,144 @@
+<Window
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.Controls.MetroDialog" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:localization="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization" xmlns:controls="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Styles.Controls;assembly=Microsoft.WindowsDeviceRecoveryTool.Styles"
+	Name="MetroDialogWindow"
+	WindowStyle="None"
+	ResizeMode="NoResize"
+	ShowInTaskbar="False"
+	AllowsTransparency="True"
+	Background="#00FFFFFF"
+	WindowStartupLocation="CenterOwner" xmlns:controls1="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Controls"
+	Title="{Binding Text, ElementName=TitleMessage}"
+	FocusManager.FocusedElement="{Binding ElementName=ButtonNo}">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<Style
+				TargetType="{x:Type Rectangle}"
+				x:Key="{x:Type Rectangle}">
+				<Style.Triggers>
+					<EventTrigger
+						RoutedEvent="FrameworkElement.Loaded">
+						<BeginStoryboard>
+							<Storyboard>
+								<DoubleAnimation
+									Duration="0:0:0:0.5"
+									From="0"
+									To="0.7"
+									Storyboard.TargetProperty="(UIElement.Opacity)" />
+							</Storyboard>
+						</BeginStoryboard>
+					</EventTrigger>
+				</Style.Triggers>
+			</Style>
+			<Storyboard
+				x:Key="FadeoutBackground">
+				<DoubleAnimation
+					Storyboard.TargetName="Shadow"
+					Storyboard.TargetProperty="(UIElement.Opacity)"
+					From="0.7"
+					To="0"
+					Duration="0:0:0:0.25" />
+				<DoubleAnimation
+					Storyboard.TargetName="GridContent"
+					Storyboard.TargetProperty="(UIElement.Opacity)"
+					From="1"
+					To="0"
+					Duration="0:0:0:0.25" />
+			</Storyboard>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid>
+		<Rectangle
+			Name="Shadow"
+			Fill="{DynamicResource ApplicationForegroundThemeBrush}" />
+		<Grid
+			VerticalAlignment="Center"
+			Margin="0"
+			Background="{DynamicResource FlyoutBackgroundThemeBrush}"
+			Height="200">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="*" />
+				<ColumnDefinition
+					Width="2*" />
+				<ColumnDefinition
+					Width="*" />
+			</Grid.ColumnDefinitions>
+			<controls:TitleBar
+				Grid.Column="1"
+				Grid.Row="0">
+				<TextBlock
+					Name="TitleMessage"
+					Style="{DynamicResource HeaderTextStyle}"
+					Margin="0, 10"
+					Foreground="{DynamicResource SliderTrackDecreasePressedBackgroundThemeBrush}" />
+			</controls:TitleBar>
+			<UserControl
+				Grid.Column="1"
+				Grid.Row="1"
+				Focusable="False">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition
+							Height="*" />
+						<RowDefinition
+							Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid
+						Name="GridContent"
+						Column="0"
+						Row="0">
+						<Grid
+							Name="BodyMessagePanel"
+							KeyboardNavigation.TabNavigation="None">
+							<TextBlock
+								Name="BodyMessage"
+								Focusable="True"
+								Style="{DynamicResource BasicTextStyle}"
+								VerticalAlignment="Center"
+								Foreground="{DynamicResource ApplicationSecondaryForegroundThemeBrush}"
+								FocusVisualStyle="{x:Null}" />
+						</Grid>
+					</Grid>
+					<StackPanel
+						Name="ButtonPanel"
+						Grid.Row="1"
+						Grid.Column="0"
+						Orientation="Horizontal"
+						HorizontalAlignment="Right"
+						Margin="10">
+						<Button
+							Name="ButtonYes"
+							Content="{localization:Localization ButtonYes}"
+							Click="OnYesButtonClicked" />
+						<Button
+							Name="ButtonNo"
+							Content="{localization:Localization ButtonNo}"
+							Click="OnNoButtonClicked" />
+						<FrameworkElement.Triggers>
+							<EventTrigger
+								RoutedEvent="StackPanel.Loaded">
+								<EventTrigger.Actions>
+									<BeginStoryboard>
+										<Storyboard>
+											<DoubleAnimation
+												Storyboard.TargetProperty="(UIElement.Opacity)"
+												From="0"
+												To="1"
+												Duration="0:0:0:0.5" />
+										</Storyboard>
+									</BeginStoryboard>
+								</EventTrigger.Actions>
+							</EventTrigger>
+						</FrameworkElement.Triggers>
+					</StackPanel>
+				</Grid>
+			</UserControl>
+		</Grid>
+	</Grid>
+</Window>

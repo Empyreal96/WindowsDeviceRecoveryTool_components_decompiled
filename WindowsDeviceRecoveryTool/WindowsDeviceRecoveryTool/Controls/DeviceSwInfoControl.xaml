@@ -1,0 +1,145 @@
+<ContentControl
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.Controls.DeviceSwInfoControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:controls="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Controls" xmlns:localization="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization" xmlns:enums="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Model.Enums;assembly=Microsoft.WindowsDeviceRecoveryTool.Model"
+	Name="DeviceSwInfoControlName"
+	KeyboardNavigation.TabNavigation="None"
+	Focusable="False">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary
+					Source="Resources.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<StackPanel
+		Orientation="Horizontal">
+		<Grid>
+			<Image
+				Width="90"
+				Margin="5 5 10 5"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				Stretch="Uniform"
+				Source="{StaticResource AnalogDeviceIconImage}"
+				Visibility="{Binding Type, Converter={StaticResource EqualToVisibilityConverter}, ConverterParameter={x:Static enums:PhoneTypes.Analog}}" />
+			<Image
+				Width="90"
+				Margin="5 5 10 5"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				Stretch="Uniform"
+				Source="{StaticResource FawkesDeviceIconImage}"
+				Visibility="{Binding Type, Converter={StaticResource EqualToVisibilityConverter}, ConverterParameter={x:Static enums:PhoneTypes.HoloLensAccessory}}" />
+			<Image
+				Width="90"
+				Margin="5 5 10 5"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				Stretch="Uniform"
+				Source="{StaticResource DeviceIconImage}">
+				<FrameworkElement.Style>
+					<Style
+						TargetType="{x:Type Image}">
+						<Style.Triggers>
+							<DataTrigger
+								Binding="{Binding Type}">
+								<DataTrigger.Value>
+									<enums:PhoneTypes>HoloLensAccessory</enums:PhoneTypes>
+								</DataTrigger.Value>
+								<Setter
+									Property="Visibility"
+									Value="Collapsed" />
+							</DataTrigger>
+							<DataTrigger
+								Binding="{Binding Type}">
+								<DataTrigger.Value>
+									<enums:PhoneTypes>Analog</enums:PhoneTypes>
+								</DataTrigger.Value>
+								<Setter
+									Property="Visibility"
+									Value="Collapsed" />
+							</DataTrigger>
+						</Style.Triggers>
+					</Style>
+				</FrameworkElement.Style>
+			</Image>
+		</Grid>
+		<StackPanel
+			Name="MainStackPanel"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Center"
+			Margin="0 0 5 0">
+			<controls:LocalizationTextBlock
+				Style="{StaticResource MediumTextStyle}"
+				TextWrapping="NoWrap"
+				TextTrimming="CharacterEllipsis"
+				Focusable="True"
+				LocalizationText="{localization:Localization Model}"
+				NullValue="{localization:Localization ModelUnknown}"
+				FocusVisualStyle="{x:Null}">
+				<TextBlock.Text>
+					<MultiBinding
+						Converter="{StaticResource TextCombinator}">
+						<Binding
+							Path="LocalizationText"
+							RelativeSource="{RelativeSource Self}" />
+						<Binding
+							Path="SalesName"
+							Converter="{StaticResource SalesNameConverter}" />
+						<Binding
+							Path="NullValue"
+							RelativeSource="{RelativeSource Self}" />
+					</MultiBinding>
+				</TextBlock.Text>
+			</controls:LocalizationTextBlock>
+			<controls:LocalizationTextBlock
+				Style="{StaticResource MediumTextStyle}"
+				TextWrapping="NoWrap"
+				TextTrimming="CharacterEllipsis"
+				Foreground="{DynamicResource ApplicationSecondaryForegroundThemeBrush}"
+				Focusable="True"
+				LocalizationText="{localization:Localization FirmwareVersion}"
+				NullValue="{localization:Localization FirmwareVersionUnknown}"
+				Visibility="{Binding ElementName=DeviceSwInfoControlName, Path=FirmwareVersionVisibility}"
+				FocusVisualStyle="{x:Null}">
+				<TextBlock.Text>
+					<MultiBinding
+						Converter="{StaticResource TextCombinator}">
+						<Binding
+							Path="LocalizationText"
+							RelativeSource="{RelativeSource Self}" />
+						<Binding
+							Path="SoftwareVersion" />
+						<Binding
+							Path="NullValue"
+							RelativeSource="{RelativeSource Self}" />
+					</MultiBinding>
+				</TextBlock.Text>
+			</controls:LocalizationTextBlock>
+			<controls:LocalizationTextBlock
+				Style="{StaticResource MediumTextStyle}"
+				TextWrapping="NoWrap"
+				TextTrimming="CharacterEllipsis"
+				Foreground="{DynamicResource ApplicationSecondaryForegroundThemeBrush}"
+				Focusable="True"
+				LocalizationText="{localization:Localization OperatingSystemVersion}"
+				NullValue="{localization:Localization OperatingSystemUnknown}"
+				Visibility="{Binding ElementName=DeviceSwInfoControlName, Path=AkVersionVisibility}"
+				FocusVisualStyle="{x:Null}">
+				<TextBlock.Text>
+					<MultiBinding
+						Converter="{StaticResource TextCombinator}">
+						<Binding
+							Path="LocalizationText"
+							RelativeSource="{RelativeSource Self}" />
+						<Binding
+							Path="AkVersion" />
+						<Binding
+							Path="NullValue"
+							RelativeSource="{RelativeSource Self}" />
+					</MultiBinding>
+				</TextBlock.Text>
+			</controls:LocalizationTextBlock>
+		</StackPanel>
+	</StackPanel>
+</ContentControl>

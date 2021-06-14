@@ -1,0 +1,23 @@
+﻿using System;
+
+namespace Interop.SirepClient
+{
+	// Token: 0x02000004 RID: 4
+	public enum ServiceStates
+	{
+		// Token: 0x04000010 RID: 16
+		SERVICE_NO_INIT,
+		// Token: 0x04000011 RID: 17
+		SERVICE_INIT_NO_CONFIGURE,
+		// Token: 0x04000012 RID: 18
+		SERVICE_INIT_CONFIGURE_NO_CONNECT,
+		// Token: 0x04000013 RID: 19
+		SERVICE_INIT_CONFIGURE_PENDING_CONNECT,
+		// Token: 0x04000014 RID: 20
+		SERVICE_INIT_CONFIGURE_CONNECT,
+		// Token: 0x04000015 RID: 21
+		SERVICE_GLOBAL_MASK = 7,
+		// Token: 0x04000016 RID: 22
+		SERVICE_LOCKED
+	}
+}

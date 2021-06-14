@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{2ADF7F14-AA94-4A70-B28F-668964626E8F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.WindowsDeviceRecoveryTool.LogicCommon</RootNamespace>
+    <AssemblyName>Microsoft.WindowsDeviceRecoveryTool.LogicCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ImageCommon">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\ImageCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Common">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.FfuFileReader">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.FfuFileReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Localization">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Model">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Nokia.Lucid">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Nokia.Lucid.dll</HintPath>
+    </Reference>
+    <Reference Include="Nokia.Mira">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Nokia.Mira.dll</HintPath>
+    </Reference>
+    <Reference Include="SoftwareRepository">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\SoftwareRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseAdaptation.cs" />
+    <Compile Include="BaseRemoteRepository.cs" />
+    <Compile Include="BaseSalesNameProvider.cs" />
+    <Compile Include="Contracts\ExportAdaptationAttribute.cs" />
+    <Compile Include="Contracts\IAdaptation.cs" />
+    <Compile Include="Contracts\IExportAdaptationMetadata.cs" />
+    <Compile Include="Contracts\IUseProxy.cs" />
+    <Compile Include="File4.cs" />
+    <Compile Include="Helpers\EnvironmentInfo.cs" />
+    <Compile Include="Helpers\IEnvironmentInfo.cs" />
+    <Compile Include="Helpers\IOHelper.cs" />
+    <Compile Include="Helpers\SpeedCalculator.cs" />
+    <Compile Include="Helpers\TimeStampUtility.cs" />
+    <Compile Include="Helpers\UriData.cs" />
+    <Compile Include="Helpers\UriDataArgument.cs" />
+    <Compile Include="Helpers\UriDescriptionAttribute.cs" />
+    <Compile Include="Helpers\VersionComparer.cs" />
+    <Compile Include="Helpers\WebClientEx.cs" />
+    <Compile Include="Helpers\WorkerHelper.cs" />
+    <Compile Include="LucidConnectivity\InterfaceHandlingLocks.cs" />
+    <Compile Include="LucidConnectivity\JsonCommunication.cs" />
+    <Compile Include="LucidConnectivity\JsonConnectivity.cs" />
+    <Compile Include="LucidConnectivity\LucidConnectivityHelper.cs" />
+    <Compile Include="LucidConnectivity\UsbDeviceScanner.cs" />
+    <Compile Include="Msr\MsrDownloadConfig.cs" />
+    <Compile Include="Msr\MsrReporting.cs" />
+    <Compile Include="Msr\MsrReportSender.cs" />
+    <Compile Include="Msr\MsrServiceData.cs" />
+    <Compile Include="MTP\MtpInterfaceDevice.cs" />
+    <Compile Include="MTP\MtpInterfaceDeviceProvider.cs" />
+    <Compile Include="MTP\SynchronizationHelper.cs" />
+    <Compile Include="PhoneExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporting\Enums\ProcessingThreadState.cs" />
+    <Compile Include="Reporting\Enums\ReportFileType.cs" />
+    <Compile Include="Reporting\Enums\ReportingOperation.cs" />
+    <Compile Include="Reporting\Enums\ReportOperationType.cs" />
+    <Compile Include="Reporting\Interfaces\IReport.cs" />
+    <Compile Include="Reporting\MsrReport.cs" />
+    <Compile Include="Reporting\Report.cs" />
+    <Compile Include="Reporting\ReportBuilder.cs" />
+    <Compile Include="Reporting\ReportData.cs" />
+    <Compile Include="Reporting\ReportSendCompletedEventArgs.cs" />
+    <Compile Include="Reporting\ReportStatusAsyncState.cs" />
+    <Compile Include="Reporting\ReportUpdateStatus4Parameters.cs" />
+    <Compile Include="Reporting\RequestBody.cs" />
+    <Compile Include="Reporting\SurveyReport.cs" />
+    <Compile Include="Services\AutoUpdateService.cs" />
+    <Compile Include="Services\Crc32Service.cs" />
+    <Compile Include="Services\DataPackageRules\FileChecker.cs" />
+    <Compile Include="Services\DataPackageRules\FileHelper.cs" />
+    <Compile Include="Services\DataPackageRules\LocalDataPackageAccess.cs" />
+    <Compile Include="Services\FfuFileInfoService.cs" />
+    <Compile Include="Services\FlowConditionService.cs" />
+    <Compile Include="Services\IChecksumService.cs" />
+    <Compile Include="Services\IManufacturerDataProvider.cs" />
+    <Compile Include="Services\ManufacturerAutodetectionService.cs" />
+    <Compile Include="Services\Md5Sevice.cs" />
+    <Compile Include="Services\MsrReportingService.cs" />
+    <Compile Include="Services\MsrService.cs" />
+    <Compile Include="Services\ReportingService.cs" />
+    <Compile Include="Services\Sha256Service.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\default_device.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

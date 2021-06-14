@@ -1,0 +1,53 @@
+<UserControl
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Help.LumiaChooseHelpView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:l="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization" xmlns:framework="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Framework" xmlns:resources="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Resources" xmlns:help="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Help"
+	Name="LumiaChooseModeHelpView">
+	<StackPanel>
+		<Label
+			HorizontalAlignment="Center"
+			Width="600"
+			Margin="0,0,0,10">
+			<TextBlock
+				Style="{StaticResource MediumTextStyle}"
+				TextWrapping="Wrap"
+				HorizontalAlignment="Center"
+				Text="{l:Localization PleaseSelectTheImage}" />
+		</Label>
+		<StackPanel
+			Orientation="Horizontal"
+			VerticalAlignment="Top"
+			HorizontalAlignment="Center">
+			<Button
+				Name="EmergencyModeButton"
+				Margin="5,0"
+				Style="{DynamicResource ChooseHelpButtonStyle}"
+				CommandParameter="{x:Static resources:Consts.LumiaEmergencyHelpState}"
+				Content="/Resources/Help_Black.png"
+				Command="{Binding Commands[SwitchHelpState]}"
+				AutomationProperties.Name="{l:Localization EmergencyMode}" />
+			<Button
+				Name="FlashModeButton"
+				Margin="5,0"
+				Style="{DynamicResource ChooseHelpButtonStyle}"
+				CommandParameter="{x:Static resources:Consts.LumiaFlashingHelpState}"
+				Content="/Resources/Help_Arrows.png"
+				Command="{Binding Commands[SwitchHelpState]}"
+				AutomationProperties.Name="{l:Localization FlashMode}" />
+			<Button
+				Name="FlashModeOldButton"
+				Margin="5,0"
+				Style="{DynamicResource ChooseHelpButtonStyle}"
+				CommandParameter="{x:Static resources:Consts.LumiaOldFlashingHelpState}"
+				Content="/Resources/Help_Nokia.png"
+				Command="{Binding Commands[SwitchHelpState]}"
+				AutomationProperties.Name="{l:Localization FlashMode}" />
+			<Button
+				Name="NormalModeButton"
+				Margin="5,0"
+				Style="{DynamicResource ChooseHelpButtonStyle}"
+				CommandParameter="{x:Static resources:Consts.LumiaNormalHelpState}"
+				Content="/Resources/Help_Normal.png"
+				Command="{Binding Commands[SwitchHelpState]}"
+				AutomationProperties.Name="{l:Localization NormalMode}" />
+		</StackPanel>
+	</StackPanel>
+</UserControl>

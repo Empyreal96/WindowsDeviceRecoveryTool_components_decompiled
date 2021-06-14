@@ -1,0 +1,16 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Color
+		x:Key="PageColor">White</Color>
+	<Color
+		x:Key="MajorColor">#FF0050EF</Color>
+	<Color
+		x:Key="HighlightMajorColor">#FF004CDB</Color>
+	<Color
+		x:Key="MinorColor">#FF1C65ED</Color>
+	<Color
+		x:Key="HighlightMinorColor">#FF4787FF</Color>
+	<Color
+		x:Key="HeaderFontColor">#FF003089</Color>
+	<Color
+		x:Key="FontColor">#FF00002A</Color>
+</ResourceDictionary>

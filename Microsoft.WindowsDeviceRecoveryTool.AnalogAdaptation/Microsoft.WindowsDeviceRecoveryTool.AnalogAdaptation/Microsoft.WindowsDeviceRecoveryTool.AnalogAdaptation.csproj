@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28F81BB6-6CD0-4474-B0FD-263687A12C55}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.WindowsDeviceRecoveryTool.AnalogAdaptation</RootNamespace>
+    <AssemblyName>Microsoft.WindowsDeviceRecoveryTool.AnalogAdaptation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FFUComponents">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\FFUComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCommon">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\ImageCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Tools.Connectivity">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.Tools.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Common">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Core">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Ffu">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Ffu.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.LogicCommon">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.LogicCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Model">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Nokia.Lucid">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Nokia.Lucid.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="ToolsCommon">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\ToolsCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalogSupport.cs" />
+    <Compile Include="BitmapExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Services\AnalogAdaptation.cs" />
+    <Compile Include="Services\DeviceException.cs" />
+    <Compile Include="Services\FfuSignatureCheckException.cs" />
+    <Compile Include="Services\IpDeviceCommand.cs" />
+    <Compile Include="Services\IpDeviceCommunicator.cs" />
+    <Compile Include="Services\IpDeviceDeviceUpdateUtilCommand.cs" />
+    <Compile Include="Services\SignatureCheck\FfuSignatureCheckService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="Resources\Analog.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

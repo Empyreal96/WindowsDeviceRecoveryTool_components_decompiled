@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{04BC0E21-1539-438B-8248-3C5649FF5A72}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Microsoft.WindowsDeviceRecoveryTool</RootNamespace>
+    <AssemblyName>WindowsDeviceRecoveryTool</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>WindowsDeviceRecoveryTool.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.AnalogAdaptation">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.AnalogAdaptation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.BusinessLogic">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.BusinessLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Common">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Core">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Localization">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.LogicCommon">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.LogicCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Lucid">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Lucid.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.LumiaAdaptation">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.LumiaAdaptation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Model">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.StateMachine">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.StateMachine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Styles">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Styles.dll</HintPath>
+    </Reference>
+    <Reference Include="Nokia.Lucid">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Nokia.Lucid.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="ZipForge">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\ZipForge.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationLogic\AppBootstrapper.cs" />
+    <Compile Include="ApplicationLogic\AppContext.cs" />
+    <Compile Include="ApplicationLogic\AppInfo.cs" />
+    <Compile Include="ApplicationLogic\ApplicationBuildSettings.cs" />
+    <Compile Include="Controllers\AppController.cs" />
+    <Compile Include="Controllers\FfuController.cs" />
+    <Compile Include="Controllers\FlowController.cs" />
+    <Compile Include="Controllers\LumiaController.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
+    <Compile Include="Controls\AnnounceablePasswordBoxAutomationPeer.cs" />
+    <Compile Include="Controls\CalculateMessageBoxPositionDelegate.cs" />
+    <Compile Include="Controls\CalculateMessageBoxSizeDelegate.cs" />
+    <Compile Include="Controls\DeviceConnectionCanvas.xaml.cs">
+      <DependentUpon>DeviceConnectionCanvas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DeviceSelectionItemAutomationPeer.cs" />
+    <Compile Include="Controls\DeviceSelectionListBox.cs" />
+    <Compile Include="Controls\DeviceSelectionListBoxAutomationPeer.cs" />
+    <Compile Include="Controls\DeviceSwInfoControl.xaml.cs">
+      <DependentUpon>DeviceSwInfoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DialogMessageManager.cs" />
+    <Compile Include="Controls\ExtendedMessageBox.xaml.cs">
+      <DependentUpon>ExtendedMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FlipListView.cs" />
+    <Compile Include="Controls\GenericRoot.cs" />
+    <Compile Include="Controls\HyperlinkButton.cs" />
+    <Compile Include="Controls\InvokableToggleButton.cs" />
+    <Compile Include="Controls\LocalizationTextBlock.cs" />
+    <Compile Include="Controls\MainAreaControl.cs" />
+    <Compile Include="Controls\MetroDialog.xaml.cs">
+      <DependentUpon>MetroDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MetroInformationDialog.cs" />
+    <Compile Include="Controls\MetroQuestionDialog.cs" />
+    <Compile Include="Controls\MetroTextBlockDialog.cs" />
+    <Compile Include="Controls\NotificationControl.xaml.cs">
+      <DependentUpon>NotificationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PhonePowerCanvas.xaml.cs">
+      <DependentUpon>PhonePowerCanvas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PhoneVolumesCanvas.xaml.cs">
+      <DependentUpon>PhoneVolumesCanvas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SettingsControl.xaml.cs">
+      <DependentUpon>SettingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TextBlockFixedWidthBehaviour.cs" />
+    <Compile Include="Controls\TextBoxes\NumericTextBox.cs" />
+    <Compile Include="Controls\TextBoxes\PasswordHelper.cs" />
+    <Compile Include="Controls\TextBoxes\ProxyAddressValidationRule.cs" />
+    <Compile Include="Controls\TextBoxes\Validation\ExistingFolderValidationRule.cs" />
+    <Compile Include="Controls\TextBoxes\Validation\NonZeroNumericValidationRule.cs" />
+    <Compile Include="Controls\TextBoxes\Validation\ValidatedTextBox.cs" />
+    <Compile Include="Controls\TileAutomationPeer.cs" />
+    <Compile Include="Controls\VariantPackageControl.xaml.cs">
+      <DependentUpon>VariantPackageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Detection\DetectionHandler.cs" />
+    <Compile Include="Detection\DetectionHandlerFactory.cs" />
+    <Compile Include="Detection\DeviceInfo.cs" />
+    <Compile Include="Detection\DeviceInfoAction.cs" />
+    <Compile Include="Detection\DeviceInfoEventArgs.cs" />
+    <Compile Include="Detection\IDetectionHandler.cs" />
+    <Compile Include="Detection\IUsbDeviceMonitor.cs" />
+    <Compile Include="Detection\LegacySupport\PhoneFactory.cs" />
+    <Compile Include="Detection\UsbDeviceChangeEvent.cs" />
+    <Compile Include="Detection\UsbDeviceMonitor.cs" />
+    <Compile Include="Framework\AsyncDelegateCommand.cs" />
+    <Compile Include="Framework\BaseController.cs" />
+    <Compile Include="Framework\BaseViewModel.cs" />
+    <Compile Include="Framework\CommandRepository.cs" />
+    <Compile Include="Framework\CustomCommandAttribute.cs" />
+    <Compile Include="Framework\DelegateCommand.cs" />
+    <Compile Include="Framework\DialogManager.cs" />
+    <Compile Include="Framework\EventAggregator.cs" />
+    <Compile Include="Framework\Extenstions.cs" />
+    <Compile Include="Framework\IAsyncDelegateCommand.cs" />
+    <Compile Include="Framework\ICanHandle.2.cs" />
+    <Compile Include="Framework\ICanHandle.cs" />
+    <Compile Include="Framework\ICommandRepository.cs" />
+    <Compile Include="Framework\IController.cs" />
+    <Compile Include="Framework\IDelegateCommand.cs" />
+    <Compile Include="Framework\RegionAttribute.cs" />
+    <Compile Include="Framework\RegionManager.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="Messages\ApplicationDataSizeMessage.cs" />
+    <Compile Include="Messages\ApplicationInvalidateSizeMessage.cs" />
+    <Compile Include="Messages\ApplicationUpdateMessage.cs" />
+    <Compile Include="Messages\BlockWindowMessage.cs" />
+    <Compile Include="Messages\CompatibleFfuFilesMessage.cs" />
+    <Compile Include="Messages\ConnectedPhonesMessage.cs" />
+    <Compile Include="Messages\DetectionTypeMessage.cs" />
+    <Compile Include="Messages\DeviceBatteryStatusReadMessage.cs" />
+    <Compile Include="Messages\DeviceConnectedMessage.cs" />
+    <Compile Include="Messages\DeviceConnectionStatusReadMessage.cs" />
+    <Compile Include="Messages\DeviceDisconnectedMessage.cs" />
+    <Compile Include="Messages\DeviceInfoReadMessage.cs" />
+    <Compile Include="Messages\ErrorMessage.cs" />
+    <Compile Include="Messages\FfuFilePlatformIdMessage.cs" />
+    <Compile Include="Messages\FfuIntegrityCheckMessage.cs" />
+    <Compile Include="Messages\FirmwareVersionsCompareMessage.cs" />
+    <Compile Include="Messages\FlashResultMessage.cs" />
+    <Compile Include="Messages\FoundSoftwareVersionMessage.cs" />
+    <Compile Include="Messages\HeaderMessage.cs" />
+    <Compile Include="Messages\HelpScreenChangedMessage.cs" />
+    <Compile Include="Messages\IsBackButtonMessage.cs" />
+    <Compile Include="Messages\IsBusyMessage.cs" />
+    <Compile Include="Messages\LanguageChangedMessage.cs" />
+    <Compile Include="Messages\NotificationMessage.cs" />
+    <Compile Include="Messages\PackageDirectoryMessage.cs" />
+    <Compile Include="Messages\ProgressMessage.cs" />
+    <Compile Include="Messages\SelectedDeviceMessage.cs" />
+    <Compile Include="Messages\SelectedPathMessage.cs" />
+    <Compile Include="Messages\SettingsPreviousStateMessage.cs" />
+    <Compile Include="Messages\SupportedAdaptationModelsMessage.cs" />
+    <Compile Include="Messages\SupportedManufacturersMessage.cs" />
+    <Compile Include="Messages\SwitchStateMessage.cs" />
+    <Compile Include="Messages\ThemeColorChangedMessage.cs" />
+    <Compile Include="Messages\TraceParametersMessage.cs" />
+    <Compile Include="Messages\WaitMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Resources\Consts.cs" />
+    <Compile Include="States\BaseStates\BaseStateMachineState.cs" />
+    <Compile Include="States\BaseStates\Conditions.cs" />
+    <Compile Include="States\BaseStates\PreviousStateTransition.cs" />
+    <Compile Include="States\BaseStates\UiBaseState.cs" />
+    <Compile Include="States\BaseStates\UiState.cs" />
+    <Compile Include="States\BaseStates\UiStateMachineState.cs" />
+    <Compile Include="States\Error\ErrorTemplateSelector.cs" />
+    <Compile Include="States\Error\ErrorView.xaml.cs">
+      <DependentUpon>ErrorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Error\ErrorViewModel.cs" />
+    <Compile Include="States\Error\Templates\AutoUpdateError.xaml.cs">
+      <DependentUpon>AutoUpdateError.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Error\Templates\DefaultError.xaml.cs">
+      <DependentUpon>DefaultError.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Error\Templates\TryAgainError.xaml.cs">
+      <DependentUpon>TryAgainError.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Help\HelpState.cs" />
+    <Compile Include="States\Help\HelpTabs.cs" />
+    <Compile Include="States\Help\HtcBootloaderHelpView.xaml.cs">
+      <DependentUpon>HtcBootloaderHelpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Help\HtcBootloaderHelpViewModel.cs" />
+    <Compile Include="States\Help\HtcChooseHelpView.xaml.cs">
+      <DependentUpon>HtcChooseHelpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Help\HtcChooseHelpViewModel.cs" />
+    <Compile Include="States\Help\HtcNormalHelpView.xaml.cs">
+      <DependentUpon>HtcNormalHelpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Help\HtcNormalHelpViewModel.cs" />
+    <Compile Include="States\Help\LumiaChooseHelpView.xaml.cs">
+      <DependentUpon>LumiaChooseHelpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Help\LumiaChooseHelpViewModel.cs" />
+    <Compile Include="States\Help\LumiaEmergencyHelpView.xaml.cs">
+      <DependentUpon>LumiaEmergencyHelpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Help\LumiaEmergencyHelpViewModel.cs" />
+    <Compile Include="States\Help\LumiaFlashingHelpView.xaml.cs">
+      <DependentUpon>LumiaFlashingHelpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Help\LumiaFlashingHelpViewModel.cs" />
+    <Compile Include="States\Help\LumiaNormalHelpView.xaml.cs">
+      <DependentUpon>LumiaNormalHelpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Help\LumiaNormalHelpViewModel.cs" />
+    <Compile Include="States\Help\LumiaOldFlashingHelpView.xaml.cs">
+      <DependentUpon>LumiaOldFlashingHelpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Help\LumiaOldFlashingHelpViewModel.cs" />
+    <Compile Include="States\Help\MainHelpView.xaml.cs">
+      <DependentUpon>MainHelpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Help\MainHelpViewModel.cs" />
+    <Compile Include="States\Preparing\AbsoluteConfirmationView.xaml.cs">
+      <DependentUpon>AbsoluteConfirmationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\AbsoluteConfirmationViewModel.cs" />
+    <Compile Include="States\Preparing\AppUpdateCheckingView.xaml.cs">
+      <DependentUpon>AppUpdateCheckingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\AppUpdateCheckingViewModel.cs" />
+    <Compile Include="States\Preparing\AutomaticManufacturerSelectionView.xaml.cs">
+      <DependentUpon>AutomaticManufacturerSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\AutomaticManufacturerSelectionViewModel.cs" />
+    <Compile Include="States\Preparing\AwaitAnalogDeviceView.xaml.cs">
+      <DependentUpon>AwaitAnalogDeviceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\AwaitAnalogDeviceViewModel.cs" />
+    <Compile Include="States\Preparing\AwaitFawkesDeviceView.xaml.cs">
+      <DependentUpon>AwaitFawkesDeviceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\AwaitFawkesDeviceViewModel.cs" />
+    <Compile Include="States\Preparing\AwaitGenericDeviceView.xaml.cs">
+      <DependentUpon>AwaitGenericDeviceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\AwaitGenericDeviceViewModel.cs" />
+    <Compile Include="States\Preparing\AwaitHtcView.xaml.cs">
+      <DependentUpon>AwaitHtcView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\AwaitHtcViewModel.cs" />
+    <Compile Include="States\Preparing\AwaitRecoveryAfterEmergencyDeviceViewModel.cs" />
+    <Compile Include="States\Preparing\AwaitRecoveryDeviceView.xaml.cs">
+      <DependentUpon>AwaitRecoveryDeviceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\AwaitRecoveryDeviceViewModel.cs" />
+    <Compile Include="States\Preparing\BatteryCheckingView.xaml.cs">
+      <DependentUpon>BatteryCheckingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\BatteryCheckingViewModel.cs" />
+    <Compile Include="States\Preparing\DeviceSelectionView.xaml.cs">
+      <DependentUpon>DeviceSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\DeviceSelectionViewModel.cs" />
+    <Compile Include="States\Preparing\DisclaimerView.xaml.cs">
+      <DependentUpon>DisclaimerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\DisclaimerViewModel.cs" />
+    <Compile Include="States\Preparing\DownloadAppUpdateView.xaml.cs">
+      <DependentUpon>DownloadAppUpdateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\DownloadAppUpdateViewModel.cs" />
+    <Compile Include="States\Preparing\ManualGenericModelSelectionView.xaml.cs">
+      <DependentUpon>ManualGenericModelSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\ManualGenericModelSelectionViewModel.cs" />
+    <Compile Include="States\Preparing\ManualGenericVariantSelectionView.xaml.cs">
+      <DependentUpon>ManualGenericVariantSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\ManualGenericVariantSelectionViewModel.cs" />
+    <Compile Include="States\Preparing\ManualHtcRestartView.xaml.cs">
+      <DependentUpon>ManualHtcRestartView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\ManualHtcRestartViewModel.cs" />
+    <Compile Include="States\Preparing\ManualManufacturerSelectionView.xaml.cs">
+      <DependentUpon>ManualManufacturerSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\ManualManufacturerSelectionViewModel.cs" />
+    <Compile Include="States\Preparing\ManualManuFacturerSelectionViewState.cs" />
+    <Compile Include="States\Preparing\ReadingDeviceInfoView.xaml.cs">
+      <DependentUpon>ReadingDeviceInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Preparing\ReadingDeviceInfoViewModel.cs" />
+    <Compile Include="States\Preparing\ReadingDeviceInfoWithThorViewModel.cs" />
+    <Compile Include="States\Settings\ApplicationDataView.xaml.cs">
+      <DependentUpon>ApplicationDataView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Settings\ApplicationDataViewModel.cs" />
+    <Compile Include="States\Settings\FolderBrowsingView.xaml.cs">
+      <DependentUpon>FolderBrowsingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Settings\FolderBrowsingViewModel.cs" />
+    <Compile Include="States\Settings\MainSettingsView.xaml.cs">
+      <DependentUpon>MainSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Settings\MainSettingsViewModel.cs" />
+    <Compile Include="States\Settings\NetworkView.xaml.cs">
+      <DependentUpon>NetworkView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Settings\NetworkViewModel.cs" />
+    <Compile Include="States\Settings\PackagesView.xaml.cs">
+      <DependentUpon>PackagesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Settings\PackagesViewModel.cs" />
+    <Compile Include="States\Settings\PreferencesView.xaml.cs">
+      <DependentUpon>PreferencesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Settings\PreferencesViewModel.cs" />
+    <Compile Include="States\Settings\SettingsPage.cs" />
+    <Compile Include="States\Settings\SettingsPageListItem.cs" />
+    <Compile Include="States\Settings\SettingsState.cs" />
+    <Compile Include="States\Settings\TraceView.xaml.cs">
+      <DependentUpon>TraceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Settings\TraceViewModel.cs" />
+    <Compile Include="States\Shell\ShellState.cs" />
+    <Compile Include="States\Shell\ShellView.xaml.cs">
+      <DependentUpon>ShellView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Shell\ShellViewModel.cs" />
+    <Compile Include="States\Workflow\AutomaticPackageSelectionView.xaml.cs">
+      <DependentUpon>AutomaticPackageSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Workflow\AutomaticPackageSelectionViewModel.cs" />
+    <Compile Include="States\Workflow\CheckLatestPackageView.xaml.cs">
+      <DependentUpon>CheckLatestPackageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Workflow\CheckLatestPackageViewModel.cs" />
+    <Compile Include="States\Workflow\DownloadEmergencyPackageView.xaml.cs">
+      <DependentUpon>DownloadEmergencyPackageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Workflow\DownloadEmergencyPackageViewModel.cs" />
+    <Compile Include="States\Workflow\DownloadPackageView.xaml.cs">
+      <DependentUpon>DownloadPackageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Workflow\DownloadPackageViewModel.cs" />
+    <Compile Include="States\Workflow\FlashingView.xaml.cs">
+      <DependentUpon>FlashingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Workflow\FlashingViewModel.cs" />
+    <Compile Include="States\Workflow\ManualDeviceTypeSelectionState.cs" />
+    <Compile Include="States\Workflow\ManualDeviceTypeSelectionView.xaml.cs">
+      <DependentUpon>ManualDeviceTypeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Workflow\ManualDeviceTypeSelectionViewModel.cs" />
+    <Compile Include="States\Workflow\ManualPackageSelectionView.xaml.cs">
+      <DependentUpon>ManualPackageSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Workflow\ManualPackageSelectionViewModel.cs" />
+    <Compile Include="States\Workflow\PackageIntegrityCheckView.xaml.cs">
+      <DependentUpon>PackageIntegrityCheckView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Workflow\PackageIntegrityCheckViewModel.cs" />
+    <Compile Include="States\Workflow\RebootHtcView.xaml.cs">
+      <DependentUpon>RebootHtcView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Workflow\RebootHtcViewModel.cs" />
+    <Compile Include="States\Workflow\SummaryView.xaml.cs">
+      <DependentUpon>SummaryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Workflow\SummaryViewModel.cs" />
+    <Compile Include="States\Workflow\SurveyView.xaml.cs">
+      <DependentUpon>SurveyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Workflow\SurveyViewModel.cs" />
+    <Compile Include="States\Workflow\UnsupportedDeviceView.xaml.cs">
+      <DependentUpon>UnsupportedDeviceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Workflow\UnsupportedDeviceViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\DeviceConnectionCanvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DeviceSwInfoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ExtendedMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MetroDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\NotificationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PhonePowerCanvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PhoneVolumesCanvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\resources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SettingsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\VariantPackageControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Error\ErrorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Error\Templates\AutoUpdateError.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Error\Templates\DefaultError.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Error\Templates\TryAgainError.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Help\HtcBootloaderHelpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Help\HtcChooseHelpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Help\HtcNormalHelpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Help\LumiaChooseHelpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Help\LumiaEmergencyHelpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Help\LumiaFlashingHelpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Help\LumiaNormalHelpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Help\LumiaOldFlashingHelpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Help\MainHelpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\AbsoluteConfirmationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\AppUpdateCheckingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\AutomaticManufacturerSelectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\AwaitAnalogDeviceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\AwaitFawkesDeviceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\AwaitGenericDeviceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\AwaitHtcView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\AwaitRecoveryDeviceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\BatteryCheckingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\DeviceSelectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\DisclaimerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\DownloadAppUpdateView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\ManualGenericModelSelectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\ManualGenericVariantSelectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\ManualHtcRestartView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\ManualManufacturerSelectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Preparing\ReadingDeviceInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Settings\ApplicationDataView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Settings\FolderBrowsingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Settings\MainSettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Settings\NetworkView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Settings\PackagesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Settings\PreferencesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Settings\TraceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Shell\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Workflow\AutomaticPackageSelectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Workflow\CheckLatestPackageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Workflow\DownloadEmergencyPackageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Workflow\DownloadPackageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Workflow\FlashingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Workflow\ManualDeviceTypeSelectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Workflow\ManualPackageSelectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Workflow\PackageIntegrityCheckView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Workflow\RebootHtcView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Workflow\SummaryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Workflow\SurveyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="States\Workflow\UnsupportedDeviceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="themes\generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\app_icon.ico" />
+    <Resource Include="Resources\blueprint.png" />
+    <Resource Include="Resources\help_arrows.png" />
+    <Resource Include="Resources\help_black.png" />
+    <Resource Include="Resources\help_bootloader.png" />
+    <Resource Include="Resources\help_nokia.png" />
+    <Resource Include="Resources\help_normal.png" />
+    <Resource Include="Resources\splashscreen.png" />
+    <Resource Include="Resources\unknown_wp.png" />
+    <Resource Include="Resources\unsupporteddevice.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

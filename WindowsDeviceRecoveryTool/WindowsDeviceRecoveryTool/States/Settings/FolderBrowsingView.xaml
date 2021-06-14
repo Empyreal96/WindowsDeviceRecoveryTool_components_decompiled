@@ -1,0 +1,230 @@
+<Grid
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Settings.FolderBrowsingView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:localization="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization" xmlns:settings="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Settings">
+	<Grid.RowDefinitions>
+		<RowDefinition
+			Height="Auto" />
+		<RowDefinition
+			Height="Auto" />
+		<RowDefinition
+			Height="*" />
+		<RowDefinition
+			Height="Auto" />
+	</Grid.RowDefinitions>
+	<UIElement.InputBindings>
+		<KeyBinding
+			Key="Back"
+			Command="{Binding GoUpCommand}" />
+	</UIElement.InputBindings>
+	<WrapPanel
+		Grid.Row="0">
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="Auto" />
+				<ColumnDefinition
+					Width="*" />
+			</Grid.ColumnDefinitions>
+			<ComboBox
+				Name="RootList"
+				Grid.Column="0"
+				Style="{DynamicResource FolderComboBoxMetroStyle}"
+				Margin="10,2,2,2"
+				IsSynchronizedWithCurrentItem="True"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				BorderThickness="0"
+				MinWidth="200"
+				ItemsSource="{Binding RootCollection}"
+				SelectedItem="{Binding SelectedRoot, Mode=TwoWay}"
+				AutomationProperties.Name="{localization:Localization FeaturedFolders}">
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="16" />
+								<ColumnDefinition
+									Width="*" />
+							</Grid.ColumnDefinitions>
+							<Path
+								Name="IconGlyph"
+								Grid.Column="0"
+								Stretch="Uniform"
+								Fill="{Binding (TextBlock.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}}" />
+							<TextBlock
+								Grid.Column="1"
+								Margin="6,0,0,0"
+								Style="{DynamicResource BasicTextStyle}"
+								Text="{Binding Title}"
+								Foreground="{Binding (TextBlock.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}}" />
+						</Grid>
+						<DataTemplate.Triggers>
+							<DataTrigger
+								Value="0"
+								Binding="{Binding Type}">
+								<Setter
+									TargetName="IconGlyph"
+									Value="{DynamicResource FolderIconGeometry}"
+									Property="Data" />
+							</DataTrigger>
+							<DataTrigger
+								Value="1"
+								Binding="{Binding Type}">
+								<Setter
+									TargetName="IconGlyph"
+									Value="{DynamicResource DesktopIconGeometry}"
+									Property="Data" />
+							</DataTrigger>
+							<DataTrigger
+								Value="2"
+								Binding="{Binding Type}">
+								<Setter
+									TargetName="IconGlyph"
+									Value="{DynamicResource UserIconGeometry}"
+									Property="Data" />
+							</DataTrigger>
+						</DataTemplate.Triggers>
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ComboBox>
+			<TextBlock
+				Grid.Column="1"
+				Style="{DynamicResource BasicTextStyle}"
+				Margin="10,0,0,0"
+				VerticalAlignment="Center"
+				Foreground="{DynamicResource SliderTrackDecreasePressedBackgroundThemeBrush}"
+				Text="{Binding SelectedPath}" />
+		</Grid>
+	</WrapPanel>
+	<Button
+		Style="{DynamicResource GoUpButtonStyle}"
+		Grid.Row="1"
+		IsEnabled="{Binding GoUpButtonEnable}"
+		Content="{localization:Localization ButtonGoUp}"
+		Command="{Binding GoUpCommand}" />
+	<ScrollViewer
+		Name="FolderScrollViewer"
+		Grid.Row="2"
+		HorizontalScrollBarVisibility="Auto"
+		VerticalScrollBarVisibility="Disabled"
+		HorizontalAlignment="Stretch"
+		CanContentScroll="True">
+		<ContentControl.Content>
+			<ListBox
+				Name="ListBox"
+				BorderThickness="0"
+				Background="{DynamicResource ApplicationPageBackgroundThemeBrush}"
+				ScrollViewer.VerticalScrollBarVisibility="Disabled"
+				HorizontalContentAlignment="Stretch"
+				AlternationCount="5"
+				ItemsSource="{Binding FolderListItems}"
+				FocusVisualStyle="{x:Null}"
+				AutomationProperties.Name="{localization:Localization Folders}">
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="50" />
+								<ColumnDefinition
+									Width="200" />
+							</Grid.ColumnDefinitions>
+							<Path
+								Name="ContentIcon"
+								Grid.Column="0"
+								Stretch="Uniform"
+								Margin="10"
+								Width="32"
+								Height="32"
+								Data="{DynamicResource FolderIconGeometry}"
+								Fill="{Binding (TextBlock.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}}" />
+							<TextBlock
+								Grid.Column="1"
+								Margin="5"
+								VerticalAlignment="Center"
+								FontFamily="Segoe UI Light"
+								FontSize="16"
+								TextWrapping="Wrap"
+								Foreground="{Binding (TextBlock.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}}"
+								Text="{Binding Title}" />
+						</Grid>
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+				<ItemsControl.ItemContainerStyle>
+					<Style
+						TargetType="{x:Type ListBoxItem}">
+						<Setter
+							Property="Focusable"
+							Value="False" />
+						<Setter
+							Property="Template">
+							<Setter.Value>
+								<ControlTemplate
+									TargetType="{x:Type ListBoxItem}">
+									<Button
+										Name="Button"
+										Style="{DynamicResource FolderItemButtonStyle}"
+										Content="{TemplateBinding Content}"
+										ContentStringFormat="{TemplateBinding ContentStringFormat}"
+										ContentTemplate="{TemplateBinding ContentTemplate}"
+										ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+										HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+										VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+										Command="{Binding DataContext.SelectFolderCommand, Source={x:Reference ListBox}}"
+										CommandParameter="{Binding}" />
+								</ControlTemplate>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</ItemsControl.ItemContainerStyle>
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<!--Unknown connection ID: 4-->
+						<WrapPanel
+							IsItemsHost="True"
+							Orientation="Vertical"
+							Background="{DynamicResource ApplicationPageBackgroundThemeBrush}" />
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+			</ListBox>
+		</ContentControl.Content>
+	</ScrollViewer>
+	<DockPanel
+		Grid.Row="3"
+		Margin="10">
+		<Button
+			HorizontalAlignment="Left"
+			Content="{localization:Localization ButtonNewFolder}"
+			IsEnabled="{Binding OkButtonEnable}"
+			Command="{Binding NewFolderCommand}" />
+		<StackPanel
+			Name="ButtonPanel"
+			Orientation="Horizontal"
+			HorizontalAlignment="Right">
+			<Button
+				Content="{localization:Localization ButtonOk}"
+				IsEnabled="{Binding OkButtonEnable}"
+				Command="{Binding OkClickedCommand}" />
+			<Button
+				IsDefault="True"
+				Content="{localization:Localization ButtonCancel}"
+				Command="{Binding CancelCommand}" />
+		</StackPanel>
+		<FrameworkElement.Triggers>
+			<EventTrigger
+				RoutedEvent="StackPanel.Loaded">
+				<EventTrigger.Actions>
+					<BeginStoryboard>
+						<Storyboard>
+							<DoubleAnimation
+								Storyboard.TargetProperty="(UIElement.Opacity)"
+								From="0"
+								To="1"
+								Duration="0:0:0:0.5" />
+						</Storyboard>
+					</BeginStoryboard>
+				</EventTrigger.Actions>
+			</EventTrigger>
+		</FrameworkElement.Triggers>
+	</DockPanel>
+</Grid>

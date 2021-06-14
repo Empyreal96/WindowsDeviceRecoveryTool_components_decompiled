@@ -1,0 +1,15 @@
+<Window
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Width="840"
+	Height="472"
+	MinWidth="1100"
+	MinHeight="640"
+	Icon="Resources/app_icon.ico"
+	Style="{DynamicResource WindowStyle}" xmlns:windowsdevicerecoverytool="clr-namespace:Microsoft.WindowsDeviceRecoveryTool"
+	Title="{Binding AppName}">
+	<Grid
+		Name="Root"
+		Style="{DynamicResource ContentRoot}"
+		Margin="5,30,5,5"
+		KeyboardNavigation.TabNavigation="Local" />
+</Window>

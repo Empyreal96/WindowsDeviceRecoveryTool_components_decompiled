@@ -1,0 +1,20 @@
+﻿using System;
+
+namespace Standard
+{
+	// Token: 0x0200006B RID: 107
+	[Flags]
+	internal enum STPF
+	{
+		// Token: 0x040004F5 RID: 1269
+		NONE = 0,
+		// Token: 0x040004F6 RID: 1270
+		USEAPPTHUMBNAILALWAYS = 1,
+		// Token: 0x040004F7 RID: 1271
+		USEAPPTHUMBNAILWHENACTIVE = 2,
+		// Token: 0x040004F8 RID: 1272
+		USEAPPPEEKALWAYS = 4,
+		// Token: 0x040004F9 RID: 1273
+		USEAPPPEEKWHENACTIVE = 8
+	}
+}

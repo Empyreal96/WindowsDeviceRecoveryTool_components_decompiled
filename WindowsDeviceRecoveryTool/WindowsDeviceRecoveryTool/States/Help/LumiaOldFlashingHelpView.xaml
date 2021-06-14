@@ -1,0 +1,35 @@
+<UserControl
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Help.LumiaOldFlashingHelpView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:l="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization"
+	Focusable="True"
+	KeyboardNavigation.IsTabStop="True" xmlns:help="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Help"
+	FocusVisualStyle="{x:Null}">
+	<DockPanel>
+		<Image
+			Source="../../Resources/Help_Nokia.png"
+			MaxHeight="300"
+			Margin="30,0"
+			VerticalAlignment="Top" />
+		<StackPanel
+			Width="400"
+			KeyboardNavigation.TabNavigation="None">
+			<TextBlock
+				Style="{DynamicResource BasicTextStyle}"
+				Margin="0,0,0,12"
+				Focusable="True"
+				Text="{l:Localization TrySoftResetInFlashMode}"
+				FocusVisualStyle="{x:Null}" />
+			<TextBlock
+				Style="{DynamicResource BasicTextStyle}"
+				Margin="0,0,0,12"
+				Focusable="True"
+				Text="{l:Localization SelectPhoneAndFollowInstructions}"
+				FocusVisualStyle="{x:Null}" />
+			<TextBlock
+				Style="{DynamicResource BasicTextStyle}"
+				Margin="0,0,0,12"
+				Focusable="True"
+				Text="{Binding GoToMyPhoneHasNotBeenDetectedIfNotDetectedText}"
+				FocusVisualStyle="{x:Null}" />
+		</StackPanel>
+	</DockPanel>
+</UserControl>

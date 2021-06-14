@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0BA1A6F4-E417-4AB3-AB1D-264CC7735F25}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Nokia.Lucid</RootNamespace>
+    <AssemblyName>Nokia.Lucid</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeviceDetection\DeviceChangeAction.cs" />
+    <Compile Include="DeviceDetection\DeviceChangedEventArgs.cs" />
+    <Compile Include="DeviceDetection\DeviceWatcher.cs" />
+    <Compile Include="DeviceDetection\DeviceWatcherStatus.cs" />
+    <Compile Include="DeviceDetection\PortChecker.cs" />
+    <Compile Include="DeviceDetection\Primitives\CriticalRegion.cs" />
+    <Compile Include="DeviceDetection\Primitives\IHandleDeviceChanged.cs" />
+    <Compile Include="DeviceDetection\Primitives\IHandleThreadException.cs" />
+    <Compile Include="DeviceDetection\Primitives\MessageLoop.cs" />
+    <Compile Include="DeviceDetection\Primitives\MessageWindow.cs" />
+    <Compile Include="DeviceDetection\Primitives\MessageWindowClass.cs" />
+    <Compile Include="DeviceDetection\Primitives\MessageWindowStatus.cs" />
+    <Compile Include="DeviceDetection\Primitives\ThreadAffinity.cs" />
+    <Compile Include="DeviceDetection\ThreadExceptionEventArgs.cs" />
+    <Compile Include="DeviceInformation\DeviceInfo.cs" />
+    <Compile Include="DeviceInformation\DeviceInfoSet.cs" />
+    <Compile Include="DeviceInformation\DevicePropertySetExtensions.cs" />
+    <Compile Include="DeviceInformation\DeviceStatus.cs" />
+    <Compile Include="DeviceInformation\IDevicePropertySet.cs" />
+    <Compile Include="DeviceInformation\INativeDeviceInfoSet.cs" />
+    <Compile Include="DeviceInformation\IPropertyValueFormatter.cs" />
+    <Compile Include="DeviceInformation\NativeDeviceInfoSetExtensions.cs" />
+    <Compile Include="DeviceInformation\PropertyKey.cs" />
+    <Compile Include="DeviceInformation\PropertyNameMap.cs" />
+    <Compile Include="DeviceInformation\PropertyType.cs" />
+    <Compile Include="DeviceInformation\PropertyValueFormatter.cs" />
+    <Compile Include="DeviceType.cs" />
+    <Compile Include="DeviceTypeMap.cs" />
+    <Compile Include="Diagnostics\DeviceDetectionTraceEventId.cs" />
+    <Compile Include="Diagnostics\DeviceDetectionTraceSource.cs" />
+    <Compile Include="Diagnostics\EntryExitLogger.cs" />
+    <Compile Include="Diagnostics\KnownNames.cs" />
+    <Compile Include="Diagnostics\LucidTraceSources.cs" />
+    <Compile Include="Diagnostics\MessageTraceEventId.cs" />
+    <Compile Include="Diagnostics\MessageTraceSource.cs" />
+    <Compile Include="Diagnostics\RobustTrace.cs" />
+    <Compile Include="Diagnostics\UsbDeviceIoTraceEventId.cs" />
+    <Compile Include="Diagnostics\UsbDeviceIoTraceSource.cs" />
+    <Compile Include="FilterExpression.cs" />
+    <Compile Include="Interop\Kernel32NativeMethods.cs" />
+    <Compile Include="Interop\SafeHandles\SafeDeviceInfoSetHandle.cs" />
+    <Compile Include="Interop\SetupApiNativeMethods.cs" />
+    <Compile Include="Interop\User32NativeMethods.cs" />
+    <Compile Include="Interop\Win32Types\DEV_BROADCAST_DEVICEINTERFACE.cs" />
+    <Compile Include="Interop\Win32Types\DEV_BROADCAST_HDR.cs" />
+    <Compile Include="Interop\Win32Types\MSG.cs" />
+    <Compile Include="Interop\Win32Types\POINT.cs" />
+    <Compile Include="Interop\Win32Types\SP_DEVICE_INTERFACE_DATA.cs" />
+    <Compile Include="Interop\Win32Types\SP_DEVICE_INTERFACE_DETAIL_DATA.cs" />
+    <Compile Include="Interop\Win32Types\SP_DEVINFO_DATA.cs" />
+    <Compile Include="Interop\Win32Types\WNDCLASSEX.cs" />
+    <Compile Include="Interop\WNDPROC.cs" />
+    <Compile Include="Primitives\DeviceIdentifier.cs" />
+    <Compile Include="Primitives\ExceptionServices.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="TcpServer\MessageIoEventArgs.cs" />
+    <Compile Include="TcpServer\TcpServerIo.cs" />
+    <Compile Include="UsbDeviceIo\NativeMethods.cs" />
+    <Compile Include="UsbDeviceIo\OnReceivedEventArgs.cs" />
+    <Compile Include="UsbDeviceIo\OnSendingEventArgs.cs" />
+    <Compile Include="UsbDeviceIo\UsbDeviceIo.cs" />
+    <Compile Include="UsbDeviceIo\WinUsbIo.cs" />
+    <Compile Include="WindowsPhoneIdentifiers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

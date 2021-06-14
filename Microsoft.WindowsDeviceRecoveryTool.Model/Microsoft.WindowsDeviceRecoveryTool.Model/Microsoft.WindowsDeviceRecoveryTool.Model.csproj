@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{0FCB723B-55FA-4794-8262-8EC9D399F6E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.WindowsDeviceRecoveryTool.Model</RootNamespace>
+    <AssemblyName>Microsoft.WindowsDeviceRecoveryTool.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsDeviceRecoveryTool.Common">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\Microsoft.WindowsDeviceRecoveryTool.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationInfo.cs" />
+    <Compile Include="ApplicationUpdate.cs" />
+    <Compile Include="CollectionObservable.cs" />
+    <Compile Include="ConnectedDevice.cs" />
+    <Compile Include="Credentials.cs" />
+    <Compile Include="DataPackage\DownloadParameters.cs" />
+    <Compile Include="DataPackage\FfuPackageFileInfo.cs" />
+    <Compile Include="DataPackage\MsrPackageInfo.cs" />
+    <Compile Include="DataPackage\PackageFileInfo.cs" />
+    <Compile Include="DataPackage\QueryParameters.cs" />
+    <Compile Include="DataPackage\VplContent.cs" />
+    <Compile Include="DataPackage\VplFile.cs" />
+    <Compile Include="DataPackage\VplPackageFileInfo.cs" />
+    <Compile Include="DetectionParameters.cs" />
+    <Compile Include="DeviceIdentifier.cs" />
+    <Compile Include="DownloadedFile.cs" />
+    <Compile Include="EmergencyPackageInfo.cs" />
+    <Compile Include="Enums\BatteryStatus.cs" />
+    <Compile Include="Enums\ConnectedDeviceMode.cs" />
+    <Compile Include="Enums\DetectionType.cs" />
+    <Compile Include="Enums\InfoType.cs" />
+    <Compile Include="Enums\PhoneModes.cs" />
+    <Compile Include="Enums\PhoneTypes.cs" />
+    <Compile Include="Enums\SpecialFolder.cs" />
+    <Compile Include="Enums\SwVersionComparisonResult.cs" />
+    <Compile Include="Enums\Thor2EmergencyV1ExitCodes.cs" />
+    <Compile Include="Enums\Thor2EmergencyV3ExitCodes.cs" />
+    <Compile Include="Enums\Thor2Error.cs" />
+    <Compile Include="Enums\Thor2ErrorType.cs" />
+    <Compile Include="Enums\Thor2ExitCode.cs" />
+    <Compile Include="EventArgs\DeviceConnectedEventArgs.cs" />
+    <Compile Include="EventArgs\DeviceModeChangedEventArgs.cs" />
+    <Compile Include="EventArgs\DeviceReadyChangedEventArgs.cs" />
+    <Compile Include="EventArgs\DownloadingProgressChangedEventArgs.cs" />
+    <Compile Include="EventArgs\ProgressChangedEventArgs.cs" />
+    <Compile Include="EventArgs\UsbDeviceEventArgs.cs" />
+    <Compile Include="Exceptions\AutoUpdateException.cs" />
+    <Compile Include="Exceptions\AutoUpdateNotEnoughSpaceException.cs" />
+    <Compile Include="Exceptions\CannotAccessDirectoryException.cs" />
+    <Compile Include="Exceptions\CheckResetProtectionException.cs" />
+    <Compile Include="Exceptions\Crc32Exception.cs" />
+    <Compile Include="Exceptions\DeviceDisconnectedException.cs" />
+    <Compile Include="Exceptions\DeviceNotFoundException.cs" />
+    <Compile Include="Exceptions\DownloadPackageException.cs" />
+    <Compile Include="Exceptions\EmergencyPackageNotFoundOnServerException.cs" />
+    <Compile Include="Exceptions\FfuFileInfoReadException.cs" />
+    <Compile Include="Exceptions\FirmwareFileNotFoundException.cs" />
+    <Compile Include="Exceptions\FlashException.cs" />
+    <Compile Include="Exceptions\FlashModeChangeException.cs" />
+    <Compile Include="Exceptions\HTC\HtcDeviceCommunicationException.cs" />
+    <Compile Include="Exceptions\HTC\HtcDeviceHandshakingException.cs" />
+    <Compile Include="Exceptions\HTC\HtcPackageFileCheckException.cs" />
+    <Compile Include="Exceptions\HTC\HtcServiceControlException.cs" />
+    <Compile Include="Exceptions\HTC\HtcUsbCommunicationException.cs" />
+    <Compile Include="Exceptions\HTC\HtcUsbPortOpenException.cs" />
+    <Compile Include="Exceptions\NoDeviceException.cs" />
+    <Compile Include="Exceptions\NoInternetConnectionException.cs" />
+    <Compile Include="Exceptions\NotEnoughSpaceException.cs" />
+    <Compile Include="Exceptions\PackageNotFoundException.cs" />
+    <Compile Include="Exceptions\PlannedServiceBreakException.cs" />
+    <Compile Include="Exceptions\ReadPhoneInformationException.cs" />
+    <Compile Include="Exceptions\RestartApplicationException.cs" />
+    <Compile Include="Exceptions\SoftwareIsNotCorrectlySignedException.cs" />
+    <Compile Include="FileCrcInfo.cs" />
+    <Compile Include="FileSystemInfo.cs" />
+    <Compile Include="FolderItem.cs" />
+    <Compile Include="FolderType.cs" />
+    <Compile Include="GroupTile.cs" />
+    <Compile Include="HtcDeviceInfo.cs" />
+    <Compile Include="ISalesNameProvider.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="ManufacturerInfo.cs" />
+    <Compile Include="Phone.cs" />
+    <Compile Include="PlatformId.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionAndLanguage.cs" />
+    <Compile Include="ServiceBreak.cs" />
+    <Compile Include="Tile.cs" />
+    <Compile Include="UsbDevice.cs" />
+    <Compile Include="UsbDeviceEndpoint.cs" />
+    <Compile Include="VariantInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

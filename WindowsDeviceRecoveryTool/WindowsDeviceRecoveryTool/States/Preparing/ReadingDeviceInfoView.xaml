@@ -1,0 +1,32 @@
+<Grid
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.States.Preparing.ReadingDeviceInfoView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:l="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization"
+	Style="{DynamicResource ContentRoot}" xmlns:preparing="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.States.Preparing">
+	<StackPanel
+		VerticalAlignment="Center"
+		KeyboardNavigation.TabNavigation="None">
+		<StackPanel
+			VerticalAlignment="Center"
+			HorizontalAlignment="Center"
+			Orientation="Horizontal"
+			Margin="-80,50,0,0">
+			<ProgressBar
+				Style="{DynamicResource ProgressRingStyle}"
+				Width="80"
+				Height="80"
+				AutomationProperties.Name="Reading Device Information Progress Ring" />
+			<TextBlock
+				Style="{DynamicResource SubheaderTextStyleOneLine}"
+				VerticalAlignment="Center"
+				Focusable="True"
+				Text="{l:Localization PleaseWait}"
+				FocusVisualStyle="{x:Null}" />
+		</StackPanel>
+		<TextBlock
+			Width="500"
+			Style="{DynamicResource BasicTextStyle}"
+			Foreground="{DynamicResource ApplicationSecondaryForegroundThemeBrush}"
+			Focusable="True"
+			Text="{l:Localization FlashWarningMessage1}"
+			FocusVisualStyle="{x:Null}" />
+	</StackPanel>
+</Grid>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{8248EE38-DDB5-4F07-BA09-CACBDEA3AC4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.WindowsPhone.Imaging</RootNamespace>
+    <AssemblyName>ImageCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FeatureAPI" />
+    <Reference Include="PkgCommonManaged" />
+    <Reference Include="PlatformManifest" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ToolsCommon">
+      <HintPath>C:\Program Files (x86)\Microsoft Care Suite\Windows Device Recovery Tool\ToolsCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildPaths.cs" />
+    <Compile Include="DeviceLayoutInput.cs" />
+    <Compile Include="DeviceLayoutInputv2.cs" />
+    <Compile Include="EqualityComparerPublishingPackage.cs" />
+    <Compile Include="FeatureIdentifierPackage.cs" />
+    <Compile Include="FMCollection.cs" />
+    <Compile Include="FMCollectionItem.cs" />
+    <Compile Include="FMCollectionManifest.cs" />
+    <Compile Include="FullFlashUpdateHeaders.cs" />
+    <Compile Include="FullFlashUpdateImage.cs" />
+    <Compile Include="ImageCommonException.cs" />
+    <Compile Include="ImageGenerator.cs" />
+    <Compile Include="ImageGeneratorParameters.cs" />
+    <Compile Include="ImageSigner.cs" />
+    <Compile Include="InputHelpers.cs" />
+    <Compile Include="InputPartition.cs" />
+    <Compile Include="InputStore.cs" />
+    <Compile Include="IPayloadWrapper.cs" />
+    <Compile Include="ManifestWrapper.cs" />
+    <Compile Include="OEMDevicePlatformInput.cs" />
+    <Compile Include="OutputWrapper.cs" />
+    <Compile Include="PlatformManifestGen.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropsFile.cs" />
+    <Compile Include="PropsProject.cs" />
+    <Compile Include="PublishingPackageInfo.cs" />
+    <Compile Include="PublishingPackageInfoComparer.cs" />
+    <Compile Include="PublishingPackageList.cs" />
+    <Compile Include="SecurityWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DeviceLayout.xsd" />
+    <EmbeddedResource Include="DeviceLayoutv2.xsd" />
+    <EmbeddedResource Include="FMCollection.xsd" />
+    <EmbeddedResource Include="OEMDevicePlatform.xsd" />
+    <EmbeddedResource Include="PropsProject.xsd" />
+    <EmbeddedResource Include="PublishingPackageInfo.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

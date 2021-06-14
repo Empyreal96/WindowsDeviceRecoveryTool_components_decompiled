@@ -1,0 +1,482 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Controls" xmlns:system="clr-namespace:System;assembly=mscorlib" xmlns:l="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.Localization;assembly=Microsoft.WindowsDeviceRecoveryTool.Localization">
+	<Style
+		TargetType="{x:Type Button}"
+		x:Key="FlipImagePathButtonStyle">
+		<Setter
+			Property="Background"
+			Value="{x:Static Brushes.Transparent}" />
+		<Setter
+			Property="BorderBrush"
+			Value="{x:Static Brushes.Transparent}" />
+		<Setter
+			Property="BorderThickness"
+			Value="0" />
+		<Setter
+			Property="HorizontalAlignment"
+			Value="Stretch" />
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="VerticalAlignment"
+			Value="Stretch" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="Padding"
+			Value="5" />
+		<Setter
+			Property="Margin"
+			Value="0,5" />
+		<Setter
+			Property="Foreground"
+			Value="{DynamicResource ButtonForegroundThemeBrush}" />
+		<Setter
+			Property="ContentTemplate">
+			<Setter.Value>
+				<DataTemplate
+					DataType="{x:Type ImageSource}">
+					<Image
+						Width="{TemplateBinding Width}"
+						Height="{TemplateBinding Height}"
+						Stretch="Uniform"
+						SnapsToDevicePixels="True">
+						<Image.Source>
+							<DrawingImage>
+								<DrawingImage.Drawing>
+									<GeometryDrawing
+										x:Name="ImageIconDrawing"
+										Brush="{Binding (TextBlock.Foreground), RelativeSource={RelativeSource TemplatedParent}}"
+										Geometry="{Binding Content, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" />
+								</DrawingImage.Drawing>
+							</DrawingImage>
+						</Image.Source>
+					</Image>
+				</DataTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Button}">
+					<Grid
+						HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+						VerticalAlignment="{TemplateBinding VerticalAlignment}">
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup
+								x:Name="CommonStates">
+								<VisualStateGroup.Transitions>
+									<VisualTransition
+										From="MouseOver"
+										To="Normal">
+										<Storyboard
+											FillBehavior="HoldEnd">
+											<DoubleAnimation
+												Storyboard.TargetName="PART_BorderPointerOver"
+												Storyboard.TargetProperty="Opacity"
+												BeginTime="0"
+												Duration="0:0:0.5"
+												From="1"
+												To="0" />
+										</Storyboard>
+									</VisualTransition>
+								</VisualStateGroup.Transitions>
+								<VisualState
+									x:Name="Normal" />
+								<VisualState
+									x:Name="MouseOver">
+									<Storyboard
+										FillBehavior="HoldEnd">
+										<ObjectAnimationUsingKeyFrames
+											Storyboard.TargetName="PART_BorderPointerOver"
+											Storyboard.TargetProperty="Background">
+											<DiscreteObjectKeyFrame
+												KeyTime="0"
+												Value="{DynamicResource ButtonPointerOverBackgroundThemeBrush}" />
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames
+											Storyboard.TargetName="PART_ContentPresenter"
+											Storyboard.TargetProperty="(TextBlock.Foreground)">
+											<DiscreteObjectKeyFrame
+												KeyTime="0"
+												Value="{DynamicResource ButtonPointerOverForegroundThemeBrush}" />
+										</ObjectAnimationUsingKeyFrames>
+										<DoubleAnimation
+											Storyboard.TargetName="PART_BorderPointerOver"
+											Storyboard.TargetProperty="Opacity"
+											BeginTime="0"
+											Duration="0:0:0.5"
+											From="0"
+											To="1" />
+									</Storyboard>
+								</VisualState>
+								<VisualState
+									x:Name="Pressed">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames
+											Storyboard.TargetName="PART_Border"
+											Storyboard.TargetProperty="Background">
+											<DiscreteObjectKeyFrame
+												KeyTime="0"
+												Value="{DynamicResource ButtonPressedBackgroundThemeBrush}" />
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames
+											Storyboard.TargetName="PART_ContentPresenter"
+											Storyboard.TargetProperty="(TextBlock.Foreground)">
+											<DiscreteObjectKeyFrame
+												KeyTime="0"
+												Value="{DynamicResource ButtonPressedForegroundThemeBrush}" />
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState
+									x:Name="Disabled">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames
+											Storyboard.TargetProperty="Visibility">
+											<DiscreteObjectKeyFrame
+												KeyTime="0"
+												Value="{x:Static Visibility.Hidden}" />
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+							<VisualStateGroup
+								x:Name="FocusStates">
+								<VisualState
+									x:Name="Focused" />
+								<VisualState
+									x:Name="Unfocused" />
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<Border
+							Name="PART_Border"
+							Background="{TemplateBinding Background}"
+							BorderBrush="{TemplateBinding BorderBrush}"
+							BorderThickness="{TemplateBinding BorderThickness}"
+							HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+							VerticalAlignment="{TemplateBinding VerticalAlignment}" />
+						<Border
+							Name="PART_BorderPointerOver"
+							Opacity="0"
+							Background="{DynamicResource ButtonPointerOverBackgroundThemeBrush}"
+							BorderBrush="{TemplateBinding BorderBrush}"
+							BorderThickness="{TemplateBinding BorderThickness}"
+							HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+							VerticalAlignment="{TemplateBinding VerticalAlignment}" />
+						<ContentPresenter
+							Name="PART_ContentPresenter"
+							Margin="{TemplateBinding Padding}"
+							HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+							VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<PathGeometry
+		x:Key="PrevArrowGeometry">m 33.928572,992.71929 -80,60.00001 80,60 30,0 -80,-60 80,-60.00001 z</PathGeometry>
+	<PathGeometry
+		x:Key="NextArrowGeometry">m 105.71429,993.07643 80,59.99997 -80,60 -30.000004,0 80.000004,-60 -80.000004,-59.99997 z</PathGeometry>
+	<PathGeometry
+		x:Key="PrevArrowGeometryCurved">m 29.5,-42.625 c -0.903454,0.09787 -1.778276,0.447802 -2.5,1 l -80,60 c -1.236216,0.927419 -1.999667,2.454576 -1.999667,4 0,1.545424 0.763451,3.072581 1.999667,4 l 80,60 c 0.85802,0.64347 1.927502,0.999964 3,1 l 30,0 c 2.081451,-6.24e-4 4.084179,-1.444565 4.742391,-3.419203 C 65.400604,81.981159 64.664787,79.62437 63,78.375 l -74.65625,-56 74.65625,-56 c 1.664787,-1.24937 2.400604,-3.606159 1.742391,-5.580797 C 64.084179,-41.180435 62.081451,-42.624376 60,-42.625 l -30,0 c -0.166528,-0.0083 -0.333472,-0.0083 -0.5,0 z</PathGeometry>
+	<PathGeometry
+		x:Key="NextArrowGeometryCurved">m 88.21875,-42.28125 c -2.081451,6.24e-4 -4.084179,1.444565 -4.742391,3.419203 -0.658213,1.974638 0.0776,4.331427 1.742391,5.580797 l 74.65625,56 -74.65625,56 c -1.664787,1.24937 -2.400604,3.606159 -1.742391,5.580797 0.658212,1.974638 2.66094,3.418579 4.742391,3.419203 l 30,0 c 1.0725,-3.6e-5 2.14198,-0.35653 3,-1 l 80,-60 c 1.23622,-0.927419 1.99967,-2.454576 1.99967,-4 0,-1.545424 -0.76345,-3.072581 -1.99967,-4 l -80,-60 c -0.85802,-0.64347 -1.9275,-0.999964 -3,-1 z</PathGeometry>
+	<Style
+		TargetType="{x:Type Button}"
+		BasedOn="{StaticResource FlipImagePathButtonStyle}"
+		x:Key="PagedListViewPreviousSwitchButtonTemplate">
+		<Setter
+			Property="Content"
+			Value="{StaticResource PrevArrowGeometry}" />
+		<Setter
+			Property="Width"
+			Value="30" />
+	</Style>
+	<Style
+		TargetType="{x:Type Button}"
+		BasedOn="{StaticResource FlipImagePathButtonStyle}"
+		x:Key="PagedListViewNextSwitchButtonTemplate">
+		<Setter
+			Property="Content"
+			Value="{StaticResource NextArrowGeometry}" />
+		<Setter
+			Property="Width"
+			Value="30" />
+	</Style>
+	<Style
+		TargetType="{x:Type controls:HyperlinkButton}"
+		x:Key="{x:Type controls:HyperlinkButton}">
+		<Setter
+			Property="FrameworkElement.FocusVisualStyle"
+			Value="{x:Null}" />
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="Foreground"
+			Value="{DynamicResource HyperlinkForegroundThemeBrush}" />
+		<Setter
+			Property="Background"
+			Value="{DynamicResource HyperlinkButtonBackgroundThemeBrush}" />
+		<Setter
+			Property="BorderBrush"
+			Value="{DynamicResource HyperlinkButtonBorderThemeBrush}" />
+		<Setter
+			Property="BorderThickness"
+			Value="{DynamicResource HyperlinkButtonBorderThemeThickness}" />
+		<Setter
+			Property="Padding"
+			Value="12,4,12,5" />
+		<Setter
+			Property="HorizontalAlignment"
+			Value="Left" />
+		<Setter
+			Property="VerticalAlignment"
+			Value="Center" />
+		<Setter
+			Property="FontFamily"
+			Value="{DynamicResource ContentControlThemeFontFamily}" />
+		<Setter
+			Property="FontWeight"
+			Value="SemiBold" />
+		<Setter
+			Property="FontSize"
+			Value="{DynamicResource ControlContentThemeFontSize}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type controls:HyperlinkButton}">
+					<Grid>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup
+								x:Name="CommonStates">
+								<VisualState
+									x:Name="Normal" />
+								<VisualState
+									x:Name="MouseOver">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames
+											Storyboard.TargetName="ContentPresenter"
+											Storyboard.TargetProperty="(TextBlock.Foreground)">
+											<DiscreteObjectKeyFrame
+												KeyTime="0"
+												Value="{DynamicResource HyperlinkPointerOverForegroundThemeBrush}" />
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState
+									x:Name="Pressed">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames
+											Storyboard.TargetName="ContentPresenter"
+											Storyboard.TargetProperty="(TextBlock.Foreground)">
+											<DiscreteObjectKeyFrame
+												KeyTime="0"
+												Value="{DynamicResource HyperlinkPressedForegroundThemeBrush}" />
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState
+									x:Name="Disabled">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames
+											Storyboard.TargetName="ContentPresenter"
+											Storyboard.TargetProperty="(TextBlock.Foreground)">
+											<DiscreteObjectKeyFrame
+												KeyTime="0"
+												Value="{DynamicResource HyperlinkDisabledThemeBrush}" />
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+							<VisualStateGroup
+								x:Name="FocusStates">
+								<VisualState
+									x:Name="Focused">
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="FocusVisualWhite"
+											Storyboard.TargetProperty="Opacity"
+											To="1"
+											Duration="0" />
+										<DoubleAnimation
+											Storyboard.TargetName="FocusVisualBlack"
+											Storyboard.TargetProperty="Opacity"
+											To="1"
+											Duration="0" />
+									</Storyboard>
+								</VisualState>
+								<VisualState
+									x:Name="Unfocused" />
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<Border
+							Name="Border"
+							Background="{TemplateBinding Background}"
+							BorderBrush="{TemplateBinding BorderBrush}"
+							BorderThickness="{TemplateBinding BorderThickness}"
+							Margin="3">
+							<ContentPresenter
+								Name="ContentPresenter"
+								Margin="{TemplateBinding Padding}"
+								HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+								VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+						</Border>
+						<Rectangle
+							Name="FocusVisualWhite"
+							UseLayoutRounding="True"
+							IsHitTestVisible="False"
+							Stroke="{DynamicResource FocusVisualWhiteStrokeThemeBrush}"
+							StrokeEndLineCap="Square"
+							StrokeDashArray="1,1"
+							Opacity="0"
+							StrokeDashOffset="1.5" />
+						<Rectangle
+							Name="FocusVisualBlack"
+							UseLayoutRounding="True"
+							IsHitTestVisible="False"
+							Stroke="{DynamicResource FocusVisualBlackStrokeThemeBrush}"
+							StrokeEndLineCap="Square"
+							StrokeDashArray="1,1"
+							Opacity="0"
+							StrokeDashOffset="0.5" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type controls:FlipListView}"
+		x:Key="{x:Type controls:FlipListView}">
+		<Setter
+			Property="IsTabStop"
+			Value="False" />
+		<Setter
+			Property="HorizontalScrollBarVisibility"
+			Value="Disabled" />
+		<Setter
+			Property="VerticalScrollBarVisibility"
+			Value="Hidden" />
+		<Setter
+			Property="ScrollViewer.IsDeferredScrollingEnabled"
+			Value="False" />
+		<Setter
+			Property="controls:FlipListView.SwitchPreviousButtonStyle"
+			Value="{StaticResource PagedListViewPreviousSwitchButtonTemplate}" />
+		<Setter
+			Property="controls:FlipListView.SwitchNextButtonStyle"
+			Value="{StaticResource PagedListViewNextSwitchButtonTemplate}" />
+		<Setter
+			Property="FrameworkElement.FocusVisualStyle"
+			Value="{x:Null}" />
+		<Setter
+			Property="Focusable"
+			Value="False" />
+		<Setter
+			Property="controls:FlipListView.ItemsOrientantion"
+			Value="Horizontal" />
+		<Setter
+			Property="ItemsPanel">
+			<Setter.Value>
+				<ItemsPanelTemplate>
+					<WrapPanel
+						Orientation="Horizontal"
+						VerticalAlignment="Stretch"
+						HorizontalAlignment="Stretch" />
+				</ItemsPanelTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter
+			Property="RenderTransform">
+			<Setter.Value>
+				<TranslateTransform
+					x:Name="TranslateTransform"
+					X="0" />
+			</Setter.Value>
+		</Setter>
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type controls:FlipListView}">
+					<Border
+						Name="Border"
+						BorderBrush="{TemplateBinding BorderBrush}"
+						Background="{TemplateBinding Background}"
+						BorderThickness="{TemplateBinding BorderThickness}">
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup
+								x:Name="FlipStates">
+								<VisualState
+									x:Name="ShowingPage" />
+								<VisualState
+									x:Name="FlipNext" />
+								<VisualState
+									x:Name="FlipPrevious" />
+								<VisualStateGroup.Transitions>
+									<VisualTransition
+										To="ShowingPage">
+										<Storyboard
+											TargetName="PART_ItemsScrollViewer">
+											<DoubleAnimation
+												From="50"
+												To="0"
+												BeginTime="0:0:0.00"
+												Duration="0:0:0:0.500"
+												Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)">
+												<DoubleAnimation.EasingFunction>
+													<CubicEase
+														EasingMode="EaseOut" />
+												</DoubleAnimation.EasingFunction>
+											</DoubleAnimation>
+										</Storyboard>
+									</VisualTransition>
+								</VisualStateGroup.Transitions>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<Grid
+							Margin="{TemplateBinding Padding}">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="Auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="Auto" />
+							</Grid.ColumnDefinitions>
+							<Button
+								Name="PART_SwitchPrevButton"
+								Style="{TemplateBinding controls:SwitchPreviousButtonStyle}"
+								IsEnabled="{TemplateBinding controls:CanFlipPrevious}"
+								AutomationProperties.Name="{l:Localization PagePrevious}" />
+							<ScrollViewer
+								Name="PART_ItemsScrollViewer"
+								Grid.Column="1"
+								CanContentScroll="True"
+								HorizontalScrollBarVisibility="{TemplateBinding HorizontalScrollBarVisibility}"
+								VerticalScrollBarVisibility="{TemplateBinding VerticalScrollBarVisibility}"
+								IsDeferredScrollingEnabled="{TemplateBinding IsDeferredScrollingEnabled}"
+								FocusVisualStyle="{x:Null}">
+								<ItemsPresenter
+									Name="PART_ItemsPresenter" />
+								<UIElement.RenderTransform>
+									<TranslateTransform />
+								</UIElement.RenderTransform>
+							</ScrollViewer>
+							<Button
+								Name="PART_SwitchNextButton"
+								Grid.Column="2"
+								Style="{TemplateBinding controls:SwitchNextButtonStyle}"
+								IsEnabled="{TemplateBinding controls:CanFlipNext}"
+								AutomationProperties.Name="{l:Localization PageNext}" />
+						</Grid>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

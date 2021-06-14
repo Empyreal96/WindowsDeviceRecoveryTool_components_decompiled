@@ -1,0 +1,21 @@
+﻿using System;
+
+namespace System.Management
+{
+	// Token: 0x0200008A RID: 138
+	internal enum tag_WBEM_EXTRA_RETURN_CODES
+	{
+		// Token: 0x040003B1 RID: 945
+		WBEM_S_INITIALIZED,
+		// Token: 0x040003B2 RID: 946
+		WBEM_S_LIMITED_SERVICE = 274433,
+		// Token: 0x040003B3 RID: 947
+		WBEM_S_INDIRECTLY_UPDATED,
+		// Token: 0x040003B4 RID: 948
+		WBEM_S_SUBJECT_TO_SDS,
+		// Token: 0x040003B5 RID: 949
+		WBEM_E_RETRY_LATER = -2147209215,
+		// Token: 0x040003B6 RID: 950
+		WBEM_E_RESOURCE_CONTENTION
+	}
+}

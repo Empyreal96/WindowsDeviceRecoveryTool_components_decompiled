@@ -1,0 +1,21 @@
+<Application
+	x:Class="Microsoft.WindowsDeviceRecoveryTool.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:applicationLogic="clr-namespace:Microsoft.WindowsDeviceRecoveryTool.ApplicationLogic" xmlns:windowsdevicerecoverytool="clr-namespace:Microsoft.WindowsDeviceRecoveryTool">
+	<Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary
+					Source="/Microsoft.WindowsDeviceRecoveryTool.Styles;component/Colors/IndigoDictionary.xaml" />
+				<ResourceDictionary
+					Source="/Microsoft.WindowsDeviceRecoveryTool.Styles;component/LightTheme.xaml" />
+				<ResourceDictionary
+					Source="/Microsoft.WindowsDeviceRecoveryTool.Styles;component/SystemStyles.xaml" />
+				<ResourceDictionary
+					Source="/Microsoft.WindowsDeviceRecoveryTool.Styles;component/ConvertersDictionary.xaml" />
+				<ResourceDictionary>
+					<applicationLogic:AppBootstrapper
+						x:Key="Bootstrapper" />
+				</ResourceDictionary>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>
